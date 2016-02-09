@@ -39,14 +39,10 @@
                 </div>
                 <div class="content-slider">
                     <div id="slider">
-                      <ul>
-                        <li> <img class="slider_img" src="public/img/slide1.jpg"/> </li>
-                        <li> <img class="slider_img" src="public/img/slide2.jpg"/> </li>
-                        <li> <img class="slider_img" src="public/img/slide3.jpg"/> </li>
-                        <li> <img class="slider_img" src="public/img/slide4.jpg"/> </li>
-                      </ul>
-                        <a href="#" class="control_next">></a>
-                        <a href="#" class="control_prev"><</a>
+                        <img src="public/img/slide1.jpg">
+                        <img src="public/img/slide2.jpg">
+                        <img src="public/img/slide3.jpg">
+                        <img src="public/img/slide4.jpg">
                     </div>
                 </div>
                 <div class="content-zone">
