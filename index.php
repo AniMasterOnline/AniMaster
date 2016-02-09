@@ -16,6 +16,8 @@
         <!-- Debug Mode --> 
         <?php include "system/Errors.php"; ?>
         
+        
+        
         <!-- Header content box -->
         <?php include "public/layouts/menu.php";?>
         
