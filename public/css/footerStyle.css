@@ -1,0 +1,14 @@
+.footer-box {
+    width: 80%;
+    float: left;
+    background-color: rgb(0,52,89);
+    border-radius: 0px 0px 6px 6px;
+    padding: 6px;
+    text-decoration: none;
+    color:white;
+    font-size: 90%;
+    margin-bottom: 3px;
+    margin-left: 10%;
+}
+
+
