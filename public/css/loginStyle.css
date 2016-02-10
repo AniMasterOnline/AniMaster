@@ -79,28 +79,6 @@
             border: 1px solid #56b4ef;
             border-radius: 3px;
         }
-    #name{
-        margin-top: 6px;
-        padding: 4px;
-        border: 1px solid #e1e8ed;
-        border-radius: 3px;
-    }
-        #name:focus{
-            padding: 4px;
-            border: 1px solid #56b4ef;
-            border-radius: 3px;
-        }
-    #surname{
-        margin-top: 6px;
-        padding: 4px;
-        border: 1px solid #e1e8ed;
-        border-radius: 3px;
-    }
-        #surname:focus{
-            padding: 4px;
-            border: 1px solid #56b4ef;
-            border-radius: 3px;
-        }
     #email{
         margin-top: 6px;
         padding: 4px;
