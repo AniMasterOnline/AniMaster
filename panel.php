@@ -23,9 +23,40 @@ and open the template in the editor.
         
         <!-- Body box -->
         <div class="body-box">
-            <div class="content-box-panel">
-                <p>Hola</p>
+            <!-- Body content box -->
+            <div class="content-boxPanel">
+                <div class="content-titlePanel">
+                    PHP usuario SESSION
+                    <?php
+                        if(isset($_SESSION['usuario_nombre'])) {
+                    ?>
+                    Benvingut: <a href="perfil.php?id=<?=$_SESSION['usuario_id']?>"><strong><?=$_SESSION['usuario_nombre']?></strong></a>
+                    <a href="logout.php">Cerrar Sesión</a>
+                    <?php
+                        }
+                    ?>
+                </div>
+                <div class="content-zone">
+                    <div class="content-capçalera">
+                    <div class="content-image-perfil"></div>
+                    <div class="content-box-estadistiques">
+                        <h2>Estadístiques</h2>
+                        <lu>
+                            <li>Espai disponible</li>
+                            <li>Ús d'espai</li>
+                            <li>Sessió iniciada X vegades</li>
+                            <li>A</li>
+                        </lu>
+                        
+                    </div>
+                    </div>
+                    Secció Master 
+                    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                </div>
             </div>
         </div>
+        <!-- Footer content box -->
+        <?php include "public/layouts/footer.php";?>
     </body>
 </html>
