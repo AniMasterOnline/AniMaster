@@ -3,30 +3,44 @@
     ini_set('display_errors', '1');
     require_once('../Classes/usuari.php');
     
-    $id =$_POST['TempId'];
-    $name = $_POST['nom'];
-    $surname = $_POST['cognoms'];
-    $dni = $_POST['dni'];
-    $direccio = $_POST['direccio'];
-    $poblacio = $_POST['poblacio'];
-    $provincia = $_POST['provincia'];
-    $nacionalitat = $_POST['nacionalitat'];
-    $email = $_POST['email'];
-    $telefon = $_POST['telefon'];
-    $data_naixement = $_POST['data_naixement'];
+    $newUser = $_POST['TempUser'];
+    $testUser = strtolower($newUser);
+    $newPass = $_POST['TempPassword'];
+    $newEmail = $_POST['TempEmail'];
+    $newTelefon = $_POST['TempTelefon'];
     
-    if ($id !== "null"){
+    $usuari = new Usuari();
+    $usuari = $usuari->view_all();
+    $msg = "";
+    $fail = false;
+    foreach($usuari as $obj):
+        $user = strtolower($obj->getUser());
+        $email = $obj->getEmail();
+        $telefon = $obj->getTelefon();
         
-        $usuari = new Usuari($id, $name, $surname, $dni, $direccio, $poblacio, $provincia, $nacionalitat, $email, $telefon, $data_naixement);
-        var_dump($usuari);
-        $usuari->mod();
-        header('Location: /usuaris.php');
+        if ($user == $testUser){
+            $fail = true;
+            $msg = $msg + "L'usuari ja existeix! \n";
+        }else if($email == $newEmail){
+            $fail = true;
+            $msg = $msg + "Aquest email ja esta en us! \n";
+        }else if($email == $newEmail){
+            $fail = true;
+            $msg = $msg + "El telefon introduit ja esta registrat! \n";
+        }
+    endforeach;
+    
+    if($fail){
+        //echo '<script language="javascript">alert("'.$msg.'");</script>';
+        header('Location: ../../signup.php');
+        echo"$msg";
+        
+        
     }else{
-        
-        $usuari = new Usuari($name, $surname, $dni, $direccio, $poblacio, $provincia, $nacionalitat, $email, $telefon, $data_naixement);
-        var_dump($usuari);
-        $usuari->add();
-        header('Location: /usuaris.php');
+        $newUsuari = new Usuari($newUser, $newPass, $newEmail, $newTelefon);
+        //var_dump($usuari);
+        $newUsuari->add();
+        echo 'Usuari afegit Correctament!!';
+        header('Location: ../../login.php'); 
     }
-    
 ?>

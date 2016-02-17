@@ -27,7 +27,7 @@
             $query = $db->query($sql);
             $rtn = array();
             while($obj = $query->fetch_assoc()){
-                $Usuari = new Usuari($obj["id"],$obj["user"],$obj["password"],$obj["email"], $obj["telefon"]);
+                $Usuari = new Usuari($obj["id_usuari"],$obj["user"],$obj["password"],$obj["email"], $obj["telefon"]);
                 //var_dump($Usuari);
                 array_push($rtn, $Usuari);
             }
@@ -100,12 +100,15 @@
             return $this->id_usuari;
         }
         public function getUser(){
-            return $this->nom;
+            return $this->user;
         }
         public function getPassword(){
-            return $this->cognoms;
+            return $this->password;
         }
         public function getEmail(){
-            return $this->dni;
+            return $this->email;
+        }
+        public function getTelefon(){
+            return $this->telefon;
         }
     }

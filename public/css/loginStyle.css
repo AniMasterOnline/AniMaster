@@ -79,6 +79,17 @@
             border: 1px solid #56b4ef;
             border-radius: 3px;
         }
+    #pass2{
+        margin-top: 6px;
+        padding: 4px;
+        border: 1px solid #e1e8ed;
+        border-radius: 3px;
+    }
+        #pass2:focus{
+            padding: 4px;
+            border: 1px solid #56b4ef;
+            border-radius: 3px;
+        }
     #email{
         margin-top: 6px;
         padding: 4px;
