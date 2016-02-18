@@ -1,5 +1,5 @@
 <?php
-    require_once "config.php";
+    require_once "../config.php";
 
     class Usuari{
         /*Atributs*/
@@ -18,8 +18,50 @@
         }
         public function mod(){
             $db = new connexio();
-            $db->query("UPDATE Usuari SET password='".$this->password."', email='".$this->email."', telefon='".$this->telefon." WHERE id= '".$this->id_usuari."'");
+            $db->query("UPDATE Usuari SET password='".$this->password."', email='".$this->email."', telefon='".$this->telefon." WHERE id_usuari= '".$this->id_usuari."'");
             $db->close();
+        }
+        public function test1($var){
+            $db = new connexio();
+            $sql = "SELECT * FROM Usuari WHERE user= '$var';";
+            $query = $db->query($sql);
+            if ($query->num_rows > 0) {
+                while($row = $query->fetch_assoc()) {
+                    $res = true;
+                }
+            } else {
+                $res = false;
+            }
+            $db->close();
+            return $res;
+        }
+        public function test2($var){
+            $db = new connexio();
+            $sql = "SELECT * FROM Usuari WHERE email= '$var';";
+            $query = $db->query($sql);
+            if ($query->num_rows > 0) {
+                while($row = $query->fetch_assoc()) {
+                    $res = true;
+                }
+            } else {
+                $res = false;
+            }
+            $db->close();
+            return $res;
+        }
+        public function test3($var){
+            $db = new connexio();
+            $sql = "SELECT * FROM Usuari WHERE telefon= '$var';";
+            $query = $db->query($sql);
+            if ($query->num_rows > 0) {
+                while($row = $query->fetch_assoc()) {
+                    $res = true;
+                }
+            } else {
+                $res = false;
+            }
+            $db->close();
+            return $res;
         }
         public function view_all(){
             $db = new connexio();

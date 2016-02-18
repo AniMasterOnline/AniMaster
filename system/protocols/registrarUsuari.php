@@ -4,38 +4,28 @@
     require_once('../Classes/usuari.php');
     
     $newUser = $_POST['TempUser'];
-    $testUser = strtolower($newUser);
     $newPass = $_POST['TempPassword'];
+    $newPass2 = $_POST['TempRepeatPassword'];
     $newEmail = $_POST['TempEmail'];
     $newTelefon = $_POST['TempTelefon'];
     
     $usuari = new Usuari();
-    $usuari = $usuari->view_all();
-    $msg = "";
-    $fail = false;
-    foreach($usuari as $obj):
-        $user = strtolower($obj->getUser());
-        $email = $obj->getEmail();
-        $telefon = $obj->getTelefon();
-        
-        if ($user == $testUser){
-            $fail = true;
-            $msg = $msg + "L'usuari ja existeix! \n";
-        }else if($email == $newEmail){
-            $fail = true;
-            $msg = $msg + "Aquest email ja esta en us! \n";
-        }else if($email == $newEmail){
-            $fail = true;
-            $msg = $msg + "El telefon introduit ja esta registrat! \n";
-        }
-    endforeach;
+    $flag1 = $usuari->test1($newUser);
+    $flag2 = $usuari->test2($newEmail);
+    $flag3 = $usuari->test3($newTelefon);
     
-    if($fail){
-        //echo '<script language="javascript">alert("'.$msg.'");</script>';
+    if($flag1 || $flag2 || $flag3){
+        
+        if($flag1){
+            echo 'Aquest Usuari no esta disponible <br>';
+        }
+        if($flag2){
+            echo 'Aquest Email ja esta registrat <br>';
+        }
+        if($flag3){
+            echo 'Aquest Telefon ja esta en us <br>';
+        }
         header('Location: ../../signup.php');
-        echo"$msg";
-        
-        
     }else{
         $newUsuari = new Usuari($newUser, $newPass, $newEmail, $newTelefon);
         //var_dump($usuari);
