@@ -78,7 +78,7 @@
         }
         public function delete($var){
             $db = new connexio();
-            $sql = "delete from Usuari where id = $var";
+            $sql = "delete from Usuari where id_usuari = $var";
             $db->query($sql);
         }
         
