@@ -1,6 +1,5 @@
 <?php
     require_once "../config.php";
-
     class Usuari{
         /*Atributs*/
         private $id_usuari;
@@ -20,6 +19,22 @@
             $db = new connexio();
             $db->query("UPDATE Usuari SET password='".$this->password."', email='".$this->email."', telefon='".$this->telefon." WHERE id_usuari= '".$this->id_usuari."'");
             $db->close();
+        }
+        function verificar_login($user,$password,&$result){ 
+            $db = new connexio();
+            $sql = "SELECT * FROM usuari WHERE user = ‘$user’ and password = ‘$password’";
+            $query = $db->query($sql);
+            $count = 0; 
+            if ($query->num_rows > 0) {
+                while($row = $query->fetch_assoc()) {
+                    $count++;
+                    $result = $row;
+                }
+            } else {
+                $count = 0;
+            }
+            $db->close();
+            return $count;
         }
         public function test1($var){
             $db = new connexio();

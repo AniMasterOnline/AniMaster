@@ -1,6 +1,5 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', '1');
+    include "../Errors.php";
     require_once('../Classes/usuari.php');
     
     $newUser = $_POST['TempUser'];

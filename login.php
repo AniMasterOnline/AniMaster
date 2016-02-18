@@ -23,21 +23,21 @@
             </div>
             <div class="login-body">
                 <div class="login-box">
-                    <form METHOD="POST" ACTION="">
+                    <form METHOD="POST" ACTION="/system/protocols/loginUsuari.php">
                         <table align="center" BORDER=0>
                             <TR>
                                 <TD>
-                                    <input class="input" id="user" placeholder="Teléfono, correo o usuario" value="" type="text" name="user" maxlength="16"  autofocus required>
+                                    <input class="input" id="user" placeholder="Usuari" value="" type="text" name="user" maxlength="16"  autofocus required>
                                 </TD>
                             </TR>
                             <TR>
                                 <TD>
-                                    <input class="input" id="pass" placeholder="Contraseña" value="" type="password" name="pass" maxlength="16" required>
+                                    <input class="input" id="pass" placeholder="Contrasenya" value="" type="password" name="pass" maxlength="16" required>
                                 </TD>
                             </TR>
                             <TR>
                                 <TD>
-                                    <input class="input" id="logbutton" type="submit" value="Login">
+                                    <input class="input" id="logbutton" type="submit" value="Login" name="login">
                                 </TD>
                             </TR>
                             <TR>
