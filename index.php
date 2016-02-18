@@ -48,7 +48,6 @@
                 <div class="content-zone">
                     content 
                     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-                    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
                 </div>
             </div>
         </div>

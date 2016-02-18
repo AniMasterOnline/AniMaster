@@ -20,21 +20,26 @@
             $db->query("UPDATE Usuari SET password='".$this->password."', email='".$this->email."', telefon='".$this->telefon." WHERE id_usuari= '".$this->id_usuari."'");
             $db->close();
         }
-        function verificar_login($user,$password,&$result){ 
+        function verificar_login($user,$password){ 
             $db = new connexio();
-            $sql = "SELECT * FROM usuari WHERE user = ‘$user’ and password = ‘$password’";
+            $sql = "SELECT * FROM usuari WHERE user = '$user' and password = '$password'";
             $query = $db->query($sql);
-            $count = 0; 
+            $count = 0;
+            $datos = "";
             if ($query->num_rows > 0) {
                 while($row = $query->fetch_assoc()) {
                     $count++;
-                    $result = $row;
+                    $datos = $row;
                 }
             } else {
                 $count = 0;
             }
             $db->close();
-            return $count;
+            if($count == 1){
+                return $datos;
+            }else{
+                return null;
+            }
         }
         public function test1($var){
             $db = new connexio();

@@ -57,9 +57,6 @@
         <div class="footer-box">
             ¿Eres nuevo en <span>AniMaster Online</span>? <a class="link" href="signup.php">Regístrate ahora »</a><br>
             ¿Necesitas ayuda? <a class="link" href="mailto:adminmaster@Animaster.com">Por favor contacta al Soporte de AniMasterOnline</a><br>
-            <br>
-            <hr>
-            <?php include "Public/layouts/footer.php";?>
         </div>
         
     </body>
