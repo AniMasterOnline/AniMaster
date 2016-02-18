@@ -42,6 +42,8 @@
         //var_dump($usuari);
         $newUsuari->add();
         echo 'Usuari afegit Correctament!!';
+        
+        //Reenviar con usuario registrado [Proximamente].
         header('Location: ../../login.php'); 
     }
 ?>
