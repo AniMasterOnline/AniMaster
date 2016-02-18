@@ -3,17 +3,17 @@
         <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <LINK REL=StyleSheet HREF="public/css/bodyStyle.css" TYPE="text/css" MEDIA=screen>
-        <LINK REL=StyleSheet HREF="public/css/headerStyle.css" TYPE="text/css" MEDIA=screen>
-        <LINK REL=StyleSheet HREF="public/css/loginStyle.css" TYPE="text/css" MEDIA=screen>
-        <LINK REL=StyleSheet HREF="public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
+        <LINK REL=StyleSheet HREF="Public/css/bodyStyle.css" TYPE="text/css" MEDIA=screen>
+        <LINK REL=StyleSheet HREF="Public/css/headerStyle.css" TYPE="text/css" MEDIA=screen>
+        <LINK REL=StyleSheet HREF="Public/css/loginStyle.css" TYPE="text/css" MEDIA=screen>
+        <LINK REL=StyleSheet HREF="Public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
         <!-- Debug Mode -->
-        <?php include "system/Errors.php"; ?>
+        <?php include "System/Errors.php"; ?>
         
         <!-- Header content box -->
-        <?php include "public/layouts/menu.php";?>
+        <?php include "Public/layouts/menu.php";?>
         
         <!-- Body box -->
         <div class="body-box">
@@ -23,21 +23,21 @@
             </div>
             <div class="login-body">
                 <div class="login-box">
-                    <form METHOD="POST" ACTION="">
+                    <form METHOD="POST" ACTION="/system/protocols/loginUsuari.php">
                         <table align="center" BORDER=0>
                             <TR>
                                 <TD>
-                                    <input class="input" id="user" placeholder="Teléfono, correo o usuario" value="" type="text" name="user" maxlength="16"  autofocus required>
+                                    <input class="input" id="user" placeholder="Usuari" value="" type="text" name="user" maxlength="16"  autofocus required>
                                 </TD>
                             </TR>
                             <TR>
                                 <TD>
-                                    <input class="input" id="pass" placeholder="Contraseña" value="" type="password" name="pass" maxlength="16" required>
+                                    <input class="input" id="pass" placeholder="Contrasenya" value="" type="password" name="pass" maxlength="16" required>
                                 </TD>
                             </TR>
                             <TR>
                                 <TD>
-                                    <input class="input" id="logbutton" type="submit" value="Login">
+                                    <input class="input" id="logbutton" type="submit" value="Login" name="login">
                                 </TD>
                             </TR>
                             <TR>
@@ -59,7 +59,7 @@
             ¿Necesitas ayuda? <a class="link" href="mailto:adminmaster@Animaster.com">Por favor contacta al Soporte de AniMasterOnline</a><br>
             <br>
             <hr>
-            <?php include "public/layouts/footer.php";?>
+            <?php include "Public/layouts/footer.php";?>
         </div>
         
     </body>
