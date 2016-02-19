@@ -1,6 +1,4 @@
- 
-
-<div class="header-box">
+ <div class="header-box">
     <?php
     $self = $_SERVER['PHP_SELF'];
     echo '<div class="header-nav">';
@@ -11,24 +9,10 @@
                 echo'<li><a href="index.php">Inicio</a> <span class="flecha">&#9660</span></li>';
             }
             if (strpos($self,"media")) { 
-                echo'<li><a id="active" href="#Media">Media <span class="flecha">&#9660</span></a>';
+                echo'<li><a id="active" href="#Media">Media <span class="flecha">&#9660</span></a></li>';
             }else{
-                echo'<li><a href="#Media">Media <span class="flecha">&#9660</span></a>';
+                echo'<li><a href="#Media">Media <span class="flecha">&#9660</span></a> </li>';
             }
-                echo'<ul>';
-                    echo'<li><a href="">Submenu1 <span class="flecha">&#9660</span></a></li>';
-                    echo'<li><a href="">Submenu2 <span class="flecha">&#9660</span></a></li>';
-                    echo'<li><a href="">Submenu3 <span class="flecha">&#9660</span></a></li>';
-                    echo'<li><a href="">Submenu4 <span class="flecha">&#9660</span></a>';
-                        echo'<ul>';
-                            echo'<li><a href="">Submenu1 <span class="flecha">&#9660</span></a></li>';
-                            echo'<li><a href="">Submenu2 <span class="flecha">&#9660</span></a></li>';
-                            echo'<li><a href="">Submenu3 <span class="flecha">&#9660</span></a></li>';
-                            echo'<li><a href="">Submenu4 <span class="flecha">&#9660</span></a></li>';
-                        echo'</ul>';
-                    echo'</li>';
-                echo'</ul>';
-            echo'</li>';
             if (strpos($self,"novedades")) { 
                 echo'<li><a id="active" href="#Novedades">Novedades <span class="flecha">&#9660</span></a></li>';
             }else{
@@ -40,7 +24,7 @@
                 echo'<li><a href="#Mi Mesa">Mi Mesa <span class="flecha">&#9660</span></a></li>';
             }
             session_start();
-            if(!isset($_SESSION['user_id'])){
+            if(!isset($_SESSION['usuari'])){
                 if (strpos($self,"signup")) {
                     echo'<li style="float:right;"><a  id="active" href="signup.php">Signup <span class="flecha">&#9660</span></a></li>';
                 }else{
@@ -51,7 +35,7 @@
                     }
                 }
             }else{
-                $value=$_SESSION["user_id"];
+                $value=$_SESSION["usuari"];
                     if (strpos($self,"panel")) { 
                         echo'<li style="float:right;"><a  id="active" href="panel.php">';
                         echo $value['user'];

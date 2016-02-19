@@ -37,12 +37,20 @@
         echo '<br><form><input type="button" value="Torna atras" name="Torna atras" onclick="history.back()" /></form>';
         echo'</center></div>';
     }else{
+        //Afegir Usuari a la BD.
         $newUsuari = new Usuari($newUser, $newPass, $newEmail, $newTelefon);
-        //var_dump($usuari);
         $newUsuari->add();
         echo 'Usuari afegit Correctament!!';
         
-        //Reenviar con usuario registrado [Proximamente].
-        header('Location: ../../login.php'); 
+        //Iniciar sessió amb el nou usuari. 
+        $usuari = $usuari->verificar_login($newUser,$newPass);
+        if(!isset($_SESSION['usuari'])){
+            if( $usuari != null){ 
+                session_start();
+                $_SESSION['usuari'] = $usuari;
+                header('Location: ../../panel.php');
+
+            } 
+        }
     }
 ?>
