@@ -4,6 +4,13 @@
     padding:0px 4px 4px 4px;
     float: right;
 }
+.aside-box-hidden {
+    display: none;
+    border-radius: 0px 0px 0px 0px;
+    width:25%;
+    padding:0px 4px 4px 4px;
+    float: right;
+}
     .aside-title{
         background-color: rgb(0,40,68);
         border-radius: 6px 6px 0px 0px;

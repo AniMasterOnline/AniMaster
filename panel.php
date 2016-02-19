@@ -21,8 +21,8 @@ and open the template in the editor.
         <?php include "system/Errors.php"; ?>
         
         <!-- Header content box -->
-        <?php 
-            include "public/layouts/menu.php";
+        <?php include "public/layouts/menu.php"; ?>
+        <?php
             if(!isset($_SESSION['usuari'])){
                     header('Location: login.php'); 
             }
@@ -30,7 +30,7 @@ and open the template in the editor.
         <!-- Aside content box -->
         <div class="body-box">
             <!-- Aside content box -->
-            <div class="aside-box">
+            <div class="aside-box-hidden">
                 <div class="aside-title">
                     Settings
                 </div>
@@ -39,18 +39,32 @@ and open the template in the editor.
                 </div>
             </div>
             <!-- Body content box -->
-            <div class="content-box">
+            <div class="content-box-100">
                 <div class="content-title">
                     <?php
                         echo "Panel de ".$value['user'];
                     ?>
                 </div>
-                <div class="content-slider">
-                    
+                <div class="content-panel">
+                    <div class="user-box">
+                        <div class="user-img">&nbsp;</div>
+                        <div class="user-set">&nbsp;</div>
+                    </div>
                 </div>
-                <div class="content-zone">
-                    content 
-                    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                <div id=panel-buttons" class="content-buttons">
+                    <button id="btp0">toggle 0</button><button id="btp1">toggle 1</button><button id="btp2">toggle 2</button>
+                </div>
+                <div id="panel0" class="content-zone">
+                    panel 0
+                    <br> <br> <br> <br> 
+                </div>
+                <div id="panel1" class="content-zone">
+                    panel 1
+                    <br> <br> <br> <br>  
+                </div>
+                <div id="panel2" class="content-zone">
+                    panel 2
+                    <br> <br> <br> <br>  
                 </div>
             </div>
         </div>
