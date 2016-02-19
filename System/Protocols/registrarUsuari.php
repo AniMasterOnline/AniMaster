@@ -3,8 +3,8 @@
     require_once('../Classes/usuari.php');
     
     $newUser = $_POST['TempUser'];
-    $newPass = $_POST['TempPassword'];
-    $newPass2 = $_POST['TempRepeatPassword'];
+    $newPass = md5($_POST['TempPassword']);
+    $newPass2 = md5($_POST['TempRepeatPassword']);
     $newEmail = $_POST['TempEmail'];
     $newTelefon = $_POST['TempTelefon'];
     

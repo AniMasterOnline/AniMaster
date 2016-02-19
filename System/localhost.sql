@@ -32,7 +32,7 @@ DROP TABLE IF EXISTS `Usuari`;
 CREATE TABLE IF NOT EXISTS `Usuari` (
   `id_usuari` int(10) NOT NULL AUTO_INCREMENT,
   `user` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `password` varchar(32) NOT NULL,
   `email` varchar(40) NOT NULL,
   `telefon` varchar(16) DEFAULT NULL,
   PRIMARY KEY (`id_usuari`),

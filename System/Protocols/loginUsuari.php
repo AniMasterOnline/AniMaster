@@ -3,7 +3,7 @@
     require_once('../Classes/usuari.php');
     
     $user = $_POST['user'];
-    $pass = $_POST['pass'];
+    $pass = md5($_POST['pass']);
     $logn = $_POST['login'];
     $usuari = new Usuari();
     $usuari = $usuari->verificar_login($user,$pass);
