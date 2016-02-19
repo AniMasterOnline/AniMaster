@@ -22,7 +22,7 @@
         }
         function verificar_login($user,$password){ 
             $db = new connexio();
-            $sql = "SELECT * FROM usuari WHERE user = '$user' and password = '$password'";
+            $sql = "SELECT * FROM Usuari WHERE user = '$user' and password = '$password'";
             $query = $db->query($sql);
             $count = 0;
             $datos = "";

@@ -18,10 +18,10 @@ and open the template in the editor.
     </head>
     <body>
         <!-- Debug Mode -->
-        <?php include "system/Errors.php"; ?>
+        <?php include "System/Errors.php"; ?>
         
         <!-- Header content box -->
-        <?php include "public/layouts/menu.php"; ?>
+        <?php include "Public/layouts/menu.php"; ?>
         <?php
             if(!isset($_SESSION['usuari'])){
                     header('Location: login.php'); 

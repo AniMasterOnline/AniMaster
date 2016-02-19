@@ -1,4 +1,4 @@
-<form id="registre" method="post" action="/system/protocols/registrarUsuari.php"> 
+<form id="registre" method="post" action="/System/Protocols/registrarUsuari.php"> 
     <table align="center" BORDER=0>
         <TR>
             <TD>
@@ -39,5 +39,5 @@
         </TR>
     </table>
 </form>
-<LINK REL=StyleSheet HREF="public/css/loginStyle.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="Public/css/loginStyle.css" TYPE="text/css" MEDIA=screen>
 

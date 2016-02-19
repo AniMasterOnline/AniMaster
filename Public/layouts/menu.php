@@ -35,7 +35,7 @@
                     }
                 }
             }else{
-                $value=$_SESSION["usuari"];
+                $value=$_SESSION['usuari'];
                     if (strpos($self,"panel")) { 
                         echo'<li style="float:right;"><a  id="active" href="panel.php">';
                         echo $value['user'];
@@ -62,7 +62,7 @@
     <div class="header-logo">
         <?php
             //Descomentar para ver la info del user
-            //var_dump($value); 
+            //var_dump($_SESSION['usuari']); 
         ?>
     </div>
 </div>

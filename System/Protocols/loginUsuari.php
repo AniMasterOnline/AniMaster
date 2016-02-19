@@ -13,7 +13,6 @@
                 /*Si el login fue correcto, registramos la variable de sesión*/
                 session_start();
                 $_SESSION['usuari'] = $usuari;
-                //var_dump($usuari);
                 //echo '<br><br>';
                 //echo '<br><form><input type="button" value="Torna atras" name="Torna atras" onclick="history.back()" /></form>';
                 header('Location: ../../panel.php');
