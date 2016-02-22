@@ -1,4 +1,4 @@
-<form id="registre" method="post" action="/System/Protocols/registrarUsuari.php"> 
+<form id="registre" method="post" action="System/Protocols/registrarUsuari.php"> 
     <table align="center" BORDER=0>
         <TR>
             <TD>

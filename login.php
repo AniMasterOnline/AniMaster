@@ -20,7 +20,7 @@
             </div>
             <div class="login-body">
                 <div class="login-box">
-                    <form METHOD="POST" ACTION="/System/Protocols/loginUsuari.php">
+                    <form METHOD="POST" ACTION="System/Protocols/loginUsuari.php">
                         <table align="center" BORDER=0>
                             <TR>
                                 <TD>
