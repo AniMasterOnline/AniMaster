@@ -9,9 +9,6 @@
         <LINK REL=StyleSheet HREF="Public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
-        <!-- Debug Mode -->
-        <?php include "System/Errors.php"; ?>
-        
         <!-- Header content box -->
         <?php include "Public/layouts/menu.php";?>
         

@@ -13,11 +13,6 @@
         <script src="Public/jquery/slyder.js"></script>
     </head>
     <body>
-        <!-- Debug Mode --> 
-        <?php include "System/Errors.php"; ?>
-        
-        
-        
         <!-- Header content box -->
         <?php include "Public/layouts/menu.php";?>
         

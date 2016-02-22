@@ -17,11 +17,9 @@ and open the template in the editor.
         <LINK REL=StyleSheet HREF="Public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
-        <!-- Debug Mode -->
-        <?php include "System/Errors.php"; ?>
-        
         <!-- Header content box -->
         <?php include "Public/layouts/menu.php"; ?>
+        
         <?php
             if(!isset($_SESSION['usuari'])){
                     header('Location: login.php'); 

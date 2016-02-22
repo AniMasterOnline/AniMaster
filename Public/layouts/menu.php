@@ -1,4 +1,8 @@
- <div class="header-box">
+<!-- Debug Mode --> 
+<?php include "System/Errors.php"; ?>
+
+<!-- Menu --> 
+<div class="header-box">
     <?php
     $self = $_SERVER['PHP_SELF'];
     echo '<div class="header-nav">';
@@ -62,7 +66,7 @@
                             echo'<ul class="panel-ul">';
                                 echo'<div class="panel-zone">';
                                     echo'<div class="panel-img">';
-                                    
+                                        echo'<img src="Public/img/slide1.jpg">';
                                     echo'</div>';
                                     echo'<div class="panel-links">';
                                         echo'<a href="panel.php"> Panel de ';
@@ -75,9 +79,7 @@
                             echo'</ul>';
                         echo'</li>';
                     }
-                 
             }
-            
         echo'</ul>';
     echo'</div>';
     ?>
