@@ -37,19 +37,41 @@
             }else{
                 $value=$_SESSION['usuari'];
                     if (strpos($self,"panel")) { 
-                        echo'<li style="float:right;"><a  id="active" href="panel.php">';
+                        echo'<li style="float:right;"><a  id="active" href="panel.php">Hola, ';
                         echo $value['user'];
                         echo'<span class="flecha">&#9660</span></a>';
-                            echo'<ul>';
-                                echo'<li><a href="logout.php">LogOut <span class="flecha">&#9660</span></a></li>';
+                            echo'<ul class="panel-ul">';
+                                echo'<div class="panel-zone">';
+                                    echo'<div class="panel-img">';
+                                        echo'<img src="Public/img/slide1.jpg">';
+                                    echo'</div>';
+                                    echo'<div class="panel-links">';
+                                        echo'<a href="panel.php"> Panel de ';
+                                        echo $value['user'];
+                                        echo'</a>';
+                                        echo'<a href="#">Configuració</a>';
+                                        echo'<a href="logout.php">Sortir</a>';
+                                    echo'</div>';
+                                echo'</div>';
                             echo'</ul>';
                         echo'</li>';
                     }else{
-                        echo'<li style="float:right;"><a href="panel.php">';
+                        echo'<li style="float:right;"><a href="panel.php">Hola, ';
                         echo $value['user'];
                         echo'<span class="flecha">&#9660</span></a>';
-                            echo'<ul>';
-                                echo'<li><a href="logout.php">LogOut <span class="flecha">&#9660</span></a></li>';
+                            echo'<ul class="panel-ul">';
+                                echo'<div class="panel-zone">';
+                                    echo'<div class="panel-img">';
+                                    
+                                    echo'</div>';
+                                    echo'<div class="panel-links">';
+                                        echo'<a href="panel.php"> Panel de ';
+                                        echo $value['user'];
+                                        echo'</a>';
+                                        echo'<a href="#">Configuració</a>';
+                                        echo'<a href="logout.php">Sortir</a>';
+                                    echo'</div>';
+                                echo'</div>';
                             echo'</ul>';
                         echo'</li>';
                     }
@@ -66,7 +88,3 @@
         ?>
     </div>
 </div>
-
-
-
-
