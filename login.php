@@ -52,8 +52,8 @@
         
         <!-- Footer content box -->
         <div class="footer-box">
-            ¿Eres nuevo en <span>AniMaster Online</span>? <a class="link" href="signup.php">Regístrate ahora »</a><br>
-            ¿Necesitas ayuda? <a class="link" href="mailto:adminmaster@Animaster.com">Por favor contacta al Soporte de AniMasterOnline</a><br>
+            ¿Ets nou a <span>AniMaster Online</span>? <a class="link" href="signup.php">Registrat ara »</a><br>
+            ¿Necesites ajuda? <a class="link" href="mailto:adminmaster@Animaster.com">Per favor contacta amb el Soport de AniMasterOnline</a><br>
         </div>
         
     </body>

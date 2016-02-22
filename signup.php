@@ -21,7 +21,7 @@
         <div class="body-box">
             <!-- Login content box -->
             <div class="login-title">
-                Únete hoy a Animaster Online
+                Uneixte avui a Animaster Online
             </div>
             <div class="login-body">
                 <div class="login-box">
@@ -32,8 +32,8 @@
         
         <!-- Footer content box -->
         <div class="footer-box">
-            ¿Ya estas registrado en <span>AniMaster Online</span>? <a class="link" href="login.php">Logueate ahora »</a><br>
-            ¿Necesitas ayuda? <a class="link" href="mailto:adminmaster@Animaster.com">Por favor contacta al Soporte de AniMasterOnline</a><br>
+            ¿Ja estas registrat a <span>AniMaster Online</span>? <a class="link" href="login.php">Accedeix ara »</a><br>
+            ¿Necesites ajuda? <a class="link" href="mailto:adminmaster@Animaster.com">Per favor contacta amb el Soport de AniMasterOnline</a><br>
         </div>
     </body>
 </html> 

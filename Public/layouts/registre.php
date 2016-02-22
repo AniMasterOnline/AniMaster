@@ -32,9 +32,9 @@
         </TR>
         <TR>
             <TD>
-            <p>Al registrarte, aceptas las <a class="link" href="#">Condiciones de Servicio</a> y la <a class="link" href="#">Política de Privacidad</a>, 
-            incluyendo el <a class="link" href="#">Uso de Cookies</a>. Otros podrán encontrarte por correo electrónico 
-            o por número de teléfono cuando sea proporcionado.</p>
+            <p>Al registrarte, aceptes les <a class="link" href="#">Condicions del Servei</a> i la <a class="link" href="#">Politica de Privacitat</a>, 
+            incluint el <a class="link" href="#">Us de Cookies</a>. Altres podran trobarte per correu electronic 
+            o per numero de telefon quan sigui proporcionat.</p>
             </TD>
         </TR>
     </table>
