@@ -12,6 +12,7 @@
     <body>
         <!-- Header content box -->
         <?php include "Public/layouts/menu.php";?>
+        
         <!-- Body content box -->
         <div id="contingut">
             <div id="cos">
