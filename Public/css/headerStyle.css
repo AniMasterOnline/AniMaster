@@ -1,5 +1,5 @@
 .header-box {
-    max-width:100%;
+    width:100%;
     margin: 0 auto;
     float: top;
     background-color:rgba(0,173,237,0.8);
@@ -30,6 +30,7 @@
             background-color: rgba(10,72,110,1);
         }
         .header-nav {
+            
             overflow: hidden;
             margin:auto;
             font-family:Arial, Helvetica, sans-serif;

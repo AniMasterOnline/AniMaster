@@ -23,9 +23,9 @@
                 echo'<li><a href="#Novedades">Novedades <span class="flecha">&#9660</span></a></li>';
             }
             if (strpos($self,"mesa")) { 
-                echo'<li><a id="active" href="#Mi Mesa">Mi Mesa <span class="flecha">&#9660</span></a></li>';
+                echo'<li><a id="active" href="mesa.php">Mi Mesa <span class="flecha">&#9660</span></a></li>';
             }else{
-                echo'<li><a href="#Mi Mesa">Mi Mesa <span class="flecha">&#9660</span></a></li>';
+                echo'<li><a href="mesa.php">Mi Mesa <span class="flecha">&#9660</span></a></li>';
             }
             session_start();
             if(!isset($_SESSION['usuari'])){
