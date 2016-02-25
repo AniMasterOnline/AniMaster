@@ -14,9 +14,6 @@
                 <?php include "Public/layouts/menu.php";?>
         <!-- Body content box -->
         <div id="contingut">
-            <div id="header">
-                
-            </div>
             <div id="cos">
                 <div id="fitxes">
                     <table id="botmonst" class="botoesq">
