@@ -5,13 +5,13 @@
         <LINK REL=StyleSheet HREF="Public/css/css-mesa.css" TYPE="text/css" MEDIA=screen />
         <LINK REL=StyleSheet HREF="Public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/headerStyle.css" TYPE="text/css" MEDIA=screen>
-        <!--<script src="fondo.js"></script>-->
+        <!-- <script src="fondo.js"></script> -->
         <script src="Public/jquery/jquery-1.12.0.min.js"></script>
         <script src="Public/jquery/mesa.js"></script>
     </head>
     <body>
         <!-- Header content box -->
-                <?php include "Public/layouts/menu.php";?>
+        <?php include "Public/layouts/menu.php";?>
         <!-- Body content box -->
         <div id="contingut">
             <div id="cos">
@@ -50,6 +50,22 @@
                     <table id="dados" class="botodret"><tr><td><img src="Public/img/mesa/daus.png" class="accio"/></td></tr></table>
                     <table id="lucha" class="botodret"><tr><td><img src="Public/img/mesa/batalla2.png" class="accio"/></td></tr></table>
                 </div>
+                <div id="multimedia">
+                        <div class="hang"><p>HANGOUT</p></div>
+                        <div class="chat"><p>CHAT</p></div>
+                        <div class="musica">
+                            <div class="clip1">
+                                <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
+                            </div>
+                            <div class="clip1">
+                                <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
+                            </div>
+                            <div class="clip1">
+                                <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="subcos">
                     <div id="taula">
                         <div id="taulmonst" class="fitxam">
@@ -76,23 +92,9 @@
                         <div id="taulpj" class="fitxap"></div>
                         <div id="taulobj" class="fitxao"></div>
                     </div>
-                    <div id="multimedia">
-                        <div class="hang"><p>HANGOUT</p></div>
-                        <div class="chat"><p>CHAT</p></div>
-                        <div class="musica">
-                            <div class="clip1">
-                                <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
-                            </div>
-                            <div class="clip1">
-                                <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
-                            </div>
-                            <div class="clip1">
-                                <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-            </div>
+                
             <div id="footer"><p><a href="copyright.html">@Copyright by AniMasterOnline</a></p></div>
         </div>
         
