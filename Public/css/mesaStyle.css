@@ -1,0 +1,255 @@
+#contingut{
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    left: 0px;
+}
+/*
+#header{
+    
+    position: fixed;
+    width: 100%;
+    height: 8%;
+    background: #18184e;                                    
+    background: -webkit-linear-gradient(#18184e,#330031);
+    background: -o-linear-gradient(#18184e,#330031);
+    background: -moz-linear-gradient(#18184e,#330031);
+    background: linear-gradient(#18184e,#330031);
+    z-index: 1;
+    
+}
+#logo{
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    left: 32.5%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: aqua;
+}
+#perfil{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    left: 80%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: blue;
+}
+*/
+.header-box {
+    position:fixed;
+    z-index: 1;
+}
+
+#footer{
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    background: #000000;
+    top: 102%;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+}
+#cos{
+    width:100%;
+    height: 85%;
+    background: #ff6699;
+}
+#subcos{
+    width: 100%;
+    height: 90%;
+}
+/***Aquest contingut és el treballable***/
+/*FITXES*/
+#fitxes{
+    position: fixed;
+    width: 80%;
+    height: 12%;
+    background: #993300;
+    top:3%;
+    z-index: 1;
+}
+.botoesq{
+    position: relative;
+    width: 15%;
+    height: 80%;
+    float: left;
+    margin: 0.7%;
+    background-color: mediumseagreen;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    color: azure;
+    vertical-align: middle;
+    border: 2px solid grey;
+    border-radius: 10px;
+    
+}
+.botodret{
+    position: relative;
+    width: 6%;
+    height: 80%;
+    float: right;
+    margin: 0.4%;
+    background-color: navajowhite;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+.accio{
+    width: 50px;
+    height: 50px;
+}
+.eye{
+    width: 30px;
+    height: 30px;
+}
+/***********************************************************/
+/*MULTIMEDIA*/
+#multimedia{
+    position: fixed;
+    width: 20%;
+    height: 92%;
+    background: #33cc33;
+    top: 3%;
+    left: 80%
+}
+.musica{
+    position: absolute;
+    width: 90%;
+    height: 25%;
+    left: 5%;
+    top:78%;
+}
+.clip1{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 5%;
+    text-align: center;
+    vertical-align: middle;
+}
+audio{
+        width: 100%;
+}
+.chat{
+    position: absolute;
+    width: 90%;
+    height: 55%;
+    left: 5%;
+    top: 15%;
+    background-color: burlywood;
+    text-align: center;
+    vertical-align: middle;
+}
+.hang{
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    left: 5%;
+    top: 2%;
+    background-color: crimson;
+    text-align: center;
+    vertical-align: middle;
+}
+/**********************************************************/
+/*TAULA*/
+#taula{
+    position: absolute;
+    width: 80%;
+    height: 89%;
+    background-image: url(../img/mesa/marble.png);
+    top: 10%;
+    z-index: 0;
+}
+.fitxam{
+    position: absolute;
+    width: 35%;
+    height: 98%;
+    top: 1%;
+    left: 1%;
+    border-radius: 3px;
+    background-image: url(../img/mesa/fondofit.png);
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+}
+.fitxap{
+    position: absolute;
+    width: 35%;
+    height: 98%;
+    top: 1%;
+    left: 37%;
+    border-radius: 3px;
+    background-image: url(../img/mesa/fondofit.png);
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+}
+.fitxao{
+    position: absolute;
+    width: 26%;
+    height: 98%;
+    top: 1%;
+    left: 73%;
+    border-radius: 3px;
+    background-image: url(../img/mesa/fondofit.png);
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+}
+/*Interior de les fitxes*/
+.llista{
+    position: absolute;
+    top: 0%;
+    height: 4.5%;
+    width: 100%;
+    padding-bottom: 1%;
+    background-color: rgba(0,0,0,0.3);
+}
+.selfit{
+    width: 25%;
+    height: 90%;
+    margin-top: 1%;
+    background-color: rgba(0,0,0,0.3);
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+.todofitxa{
+    background-color: rgba(244,244,240,0.8);
+    position: absolute;
+    top: 6%;
+    height: 93%;
+    width: 96%; 
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.dalt{
+    position: absolute;
+    top: 0%;
+    height: 33%;
+    width: 100%;
+    margin-bottom: 1%;
+    background-color: black;
+}
+.centre{
+    position: absolute;
+    top: 34%;
+    height: 32%;
+    width: 100%;
+    margin-bottom: 1%;
+    background-color: black;
+}
+.baix{
+    position: absolute;
+    top: 68%;
+    height: 31%;
+    width: 100%;
+    margin-bottom: 1%;
+    background-color: black;
+}
+
