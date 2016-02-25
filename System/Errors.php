@@ -9,6 +9,7 @@
         border: 1px;
         border-color: black;
         border-style: solid;
+        z-index: 1;
     }
 </style>
 <?php

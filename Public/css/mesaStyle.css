@@ -1,176 +1,229 @@
-#contingut{
-    width: 100%;
-    height: 150%;
-    position: absolute;
-    left: 0px;
-}
-/*
-#header{
-    
-    position: fixed;
-    width: 100%;
-    height: 8%;
-    background: #18184e;                                    
-    background: -webkit-linear-gradient(#18184e,#330031);
-    background: -o-linear-gradient(#18184e,#330031);
-    background: -moz-linear-gradient(#18184e,#330031);
-    background: linear-gradient(#18184e,#330031);
-    z-index: 1;
-    
-}
-#logo{
-    position: absolute;
-    width: 15%;
-    height: 100%;
-    left: 32.5%;
-    text-align: center;
-    vertical-align: middle;
-    background-color: aqua;
-}
-#perfil{
-    position: absolute;
-    width: 20%;
-    height: 100%;
-    left: 80%;
-    text-align: center;
-    vertical-align: middle;
-    background-color: blue;
-}
-*/
+/***********************************************************/
+/*Header Menu !!*/
 .header-box {
-    position:fixed;
     z-index: 1;
+    position: fixed;
+    width:100%;
+    margin: 0 auto;
+    background-color:rgba(0,173,237,0.8);
 }
+    .not-active {
+        pointer-events: none;
+        cursor: default;
+     }
+    .header-logo{
+        display: none;
+    }
+    
+    .header-nav {
+        overflow: hidden;
+        margin:auto;
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: #333;
+    }
+        * {
+            font-family:Arial, Helvetica, sans-serif;
+            list-style:none;
+            text-decoration: none;
+            margin:0;
+            padding:0;  
+        }
+        #active {
+            background-color: rgba(10,72,110,1);
+        }
+        
+        ul, ol {
+            list-style:none;
+        }
+        .nav > li {
+            float:left;
+        }
+        .nav li a {
+            font-size: 12px;
+            background-color:#000;
+            color:#fff;
+            text-decoration:none;
+            padding:4px 12px;
+            display:block;
+            background-color: #333;
+        }
+        .nav li a:hover {
+            background-color: #111;
+        }
+        .nav li ul {
+            display:none;
+            position:absolute;
+            min-width:100px;
+        }
+        .nav li .panel-ul {
+            display:none;
+            position:absolute;
+            min-width:250px;
+        }
+        .nav li .panel-ul{
+            right: 0px;
+        }
+        .nav li .panel-ul .panel-zone{
+            position:relative;
+            
+        }
+            .panel-zone{
+                width: 100%;
+                height: 80px;
+                background-color: #333; 
+                overflow: auto;
+                border: 1px solid black;
+                overflow: hidden;
+            }
+            .panel-img{
+                overflow: hidden;
+                height:80px;
+                width:80px;
+                background: whitesmoke;
+                float:left;
+                
+            }
+            .panel-img img{
+                margin: 4px;
+                width: 71px;
+                height: 70px;
+            }
+            .panel-links{
+                width:auto;
+                height:100px;
+                overflow:hidden;
+                
+            }
+        
+        .nav li:hover > ul {
+            display:block;
+        }
+        .nav li ul li {
+            position:relative;
+        }
+        .nav li ul li ul {
+            right:-100px;
+            top:0px;
+        }
+        .nav li .flecha{
+            font-size: 9px;
+            padding-left: 6px;
+            display: none;
+        }
+        .nav li a:not(:last-child) .flecha{
+            display: inline;
+        }
 
+/***********************************************************/
+/*Panel Menu !!*/
+.mpanel-box {
+    position: fixed;
+    left: 0;
+    top:21px;
+    width:75%;
+    margin: 0 auto;
+}
+    .mpanel-nav { 
+        overflow: hidden;
+        margin:auto;
+        font-family:Arial, Helvetica, sans-serif;
+        background-color: #666;
+    }
+        .mnav > li {
+            float:left;
+        }
+        .mnav li a {
+            font-size: 12px;
+            background-color:#000;
+            color:#fff;
+            text-decoration:none;
+            padding:8px 12px;
+            display:block;
+            background-color: #666;
+            height: 30px;
+            line-height: 2.6;
+            cursor: hand;
+        }
+        .mnav li a:hover {
+            background-color: rgba(250,60,30,0.8);
+        }
+        .eye{
+            width: 12px;
+        }
+        .accio{
+            width: 30px;
+        }  
+    
+/***********************************************************/
+/*MULTIMEDIA*/
+.mesa-multimedia{
+    position: fixed;
+    top:21px;
+    right: 0;
+    width: 23%;
+    min-height: 100%;
+    height: auto !important;
+    background: #33cc33;
+    padding: 1%;
+}
+    .hang{
+        width: 100%;
+        height: 50px;
+        background-color: crimson;
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 6px;
+    }
+    .chat{
+        width: 100%;
+        height: 400px;
+        background-color: burlywood;
+        text-align: center;
+        vertical-align: middle;
+        margin-bottom: 6px;
+    }
+    .musica{
+        width: 100%;
+    }
+    audio{
+            width: 100%;
+    }
+    .clip{
+        width: 100%;
+        height: 20%;
+        margin-bottom: 5%;
+        text-align: center;
+        vertical-align: middle;
+    }
+body{
+    background-image: url(../img/mesa/marble.png);
+}
 #footer{
-    position: absolute;
-    width: 100%;
+    position: relative;
+    top: 1000px;
+    width: 75%;
     height: 5%;
     background: #000000;
-    top: 102%;
     color: white;
     text-align: center;
     vertical-align: middle;
 }
-#cos{
-    width:100%;
-    height: 85%;
-    background: #ff6699;
-}
-#subcos{
-    width: 100%;
-    height: 90%;
-}
 /***Aquest contingut és el treballable***/
-/*FITXES*/
-#fitxes{
-    position: fixed;
-    width: 80%;
-    height: 12%;
-    background: #993300;
-    top:3%;
-    z-index: 1;
-}
-.botoesq{
-    position: relative;
-    width: 15%;
-    height: 80%;
-    float: left;
-    margin: 0.7%;
-    background-color: mediumseagreen;
-    text-align: center;
-    font-weight: bold;
-    font-size: 150%;
-    color: azure;
-    vertical-align: middle;
-    border: 2px solid grey;
-    border-radius: 10px;
-    
-}
-.botodret{
-    position: relative;
-    width: 6%;
-    height: 80%;
-    float: right;
-    margin: 0.4%;
-    background-color: navajowhite;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid grey;
-    border-radius: 10px;
-}
-.accio{
-    width: 50px;
-    height: 50px;
-}
-.eye{
-    width: 30px;
-    height: 30px;
-}
-/***********************************************************/
-/*MULTIMEDIA*/
-#multimedia{
-    position: fixed;
-    width: 20%;
-    height: 92%;
-    background: #33cc33;
-    top: 3%;
-    left: 80%
-}
-.musica{
-    position: absolute;
-    width: 90%;
-    height: 25%;
-    left: 5%;
-    top:78%;
-}
-.clip1{
-    position: relative;
-    width: 100%;
-    height: 20%;
-    margin-bottom: 5%;
-    text-align: center;
-    vertical-align: middle;
-}
-audio{
-        width: 100%;
-}
-.chat{
-    position: absolute;
-    width: 90%;
-    height: 55%;
-    left: 5%;
-    top: 15%;
-    background-color: burlywood;
-    text-align: center;
-    vertical-align: middle;
-}
-.hang{
-    position: absolute;
-    width: 90%;
-    height: 10%;
-    left: 5%;
-    top: 2%;
-    background-color: crimson;
-    text-align: center;
-    vertical-align: middle;
-}
-/**********************************************************/
+
 /*TAULA*/
-#taula{
-    position: absolute;
-    width: 80%;
-    height: 89%;
+.mesa-content{
+    z-index: -1;
+    position: relative;
+    top:69px;
+    width: 75%;
     background-image: url(../img/mesa/marble.png);
-    top: 10%;
-    z-index: 0;
 }
 .fitxam{
-    position: absolute;
+    overflow: hidden;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: left;
     width: 35%;
-    height: 98%;
-    top: 1%;
-    left: 1%;
     border-radius: 3px;
     background-image: url(../img/mesa/fondofit.png);
     -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
@@ -178,11 +231,10 @@ audio{
     box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
 }
 .fitxap{
-    position: absolute;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: left;
     width: 35%;
-    height: 98%;
-    top: 1%;
-    left: 37%;
     border-radius: 3px;
     background-image: url(../img/mesa/fondofit.png);
     -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
@@ -190,11 +242,10 @@ audio{
     box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
 }
 .fitxao{
-    position: absolute;
-    width: 26%;
-    height: 98%;
-    top: 1%;
-    left: 73%;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: left;
+    width: 28%;
     border-radius: 3px;
     background-image: url(../img/mesa/fondofit.png);
     -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
@@ -203,10 +254,9 @@ audio{
 }
 /*Interior de les fitxes*/
 .llista{
-    position: absolute;
-    top: 0%;
-    height: 4.5%;
-    width: 100%;
+    margin-top: 1%;
+    width: 96%;
+    margin-left: 2%;  
     padding-bottom: 1%;
     background-color: rgba(0,0,0,0.3);
 }
@@ -220,36 +270,67 @@ audio{
     vertical-align: middle;
 }
 .todofitxa{
-    background-color: rgba(244,244,240,0.8);
-    position: absolute;
-    top: 6%;
     height: 93%;
     width: 96%; 
     margin-left: 2%;
     margin-right: 2%;
 }
 .dalt{
-    position: absolute;
-    top: 0%;
     height: 33%;
     width: 100%;
     margin-bottom: 1%;
-    background-color: black;
+    background-color: rgba(0,0,0,0.3);
 }
 .centre{
-    position: absolute;
-    top: 34%;
-    height: 32%;
-    width: 100%;
+    height: 42%;
+    width: 98%;
     margin-bottom: 1%;
-    background-color: black;
+    background-color: rgba(0,0,0,0.3);
+    padding: 1%;
+    overflow: auto;
 }
 .baix{
-    position: absolute;
-    top: 68%;
-    height: 31%;
-    width: 100%;
+    height: 21%;
+    width: 98%;
     margin-bottom: 1%;
-    background-color: black;
+    background-color: rgba(0,0,0,0.3);
+    padding: 1%;
+    overflow: auto;
 }
-
+/*part de dalt de les fitxes*/
+.imatgefit{
+    float: left;
+    margin: 1%;
+    width: 73%;
+    height: 76%;
+    background-color: red;
+}
+/*dades de les fitxes*/
+.dadaatk{
+    float: right;
+    margin: 1%;
+    width: 23%;
+    height: 15%;
+    background-color: red;
+}
+.dadadany{
+    float: right;
+    margin: 1%;
+    width: 23%;
+    height: 15%;
+    background-color: red;
+}
+.dadadef{
+    float: right;
+    margin: 1%;
+    width: 23%;
+    height: 15%;
+    background-color: red;
+}
+.dadata{
+    float: right;
+    margin: 1%;
+    width: 23%;
+    height: 15%;
+    background-color: red;
+}
