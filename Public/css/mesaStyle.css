@@ -116,12 +116,22 @@
 
 /***********************************************************/
 /*Panel Menu !!*/
-.mpanel-box {
+.mpanel-box-open{
     position: fixed;
     left: 0;
     top:21px;
-    width:78%;
-    margin: 0 auto;
+    min-width: 78%;
+    width: auto;
+    margin: 0 auto; 
+}
+.mpanel-box-closed{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:21px;
+    min-width: 78%;
+    width: auto;
+    margin: 0 auto; 
 }
     .mpanel-nav { 
         overflow: hidden;
@@ -134,7 +144,6 @@
         }
         .mnav li a {
             font-size: 12px;
-            background-color:#000;
             color:#fff;
             text-decoration:none;
             padding:8px 12px;
@@ -152,16 +161,49 @@
         }
         .accio{
             width: 30px;
-        }  
+        }
+li #sidebar-toggle{
+    background-color: #666;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+    padding: 8px 7px;
+    float: left;
+}
+li #sidebar-toggle:hover{
+    background-color: #2290c9;
+}
+li #sidebar-toggle .bar{
+    margin-top: 5px;
+    display: block;
+    width: 18px;
+    margin-bottom: 3px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 1px;   
+}
+li #sidebar-toggle .bar:last-child{
+     margin-bottom: 0;   
+}
     
 /***********************************************************/
 /*MULTIMEDIA*/
-.mesa-multimedia{
+.mesa-multimedia-open{
     overflow: auto;
     position: fixed;
     top:21px;
-    right: 0;
     width: 20%;
+    right: 0;
+    bottom: 0;
+    background: #33cc33;
+    padding: 1%;
+}
+.mesa-multimedia-closed{
+    overflow: auto;
+    position: fixed;
+    top:21px;
+    width: 20%;
+    right: -25%;
     bottom: 0;
     background: #33cc33;
     padding: 1%;
@@ -198,62 +240,67 @@
         text-align: center;
         vertical-align: middle;
     }
+
+/***Aquest contingut és el treballable***/
 body{
     background-image: url(../img/mesa/marble.png);
 }
+/*TAULA*/
+.mesa-content-open{
+    float: left;
+    z-index: -1;
+    position: relative;
+    top:67px;
+    width:78%;
+    padding-top: 6px;
+    background-color: rgba(33,33,33,0.7);
+    overflow: auto;
+}
+.mesa-content-closed{
+    float: left;
+    z-index: -1;
+    position: relative;
+    top:67px;
+    width:100%;
+    padding-top: 6px;
+    background-color: rgba(33,33,33,0.7);
+    overflow: auto;
+}
+.fitxa-open{
+    overflow: auto;
+    margin-left: 0.5%;
+    float: left;
+    width: 32%;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    background-image: url(../img/mesa/fondofit.png);
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+}
+.fitxa-closed{
+    overflow: auto;
+    margin-left: 0.5%;
+    float: left;
+    width: 32%;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    background-image: url(../img/mesa/fondofit.png);
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+}
 #footer{
     position: relative;
-    top: 1000px;
-    width: 75%;
+    overflow: auto;
+    width:100%;
     height: 5%;
     background: #000000;
     color: white;
+    list-style:none;
+    text-decoration: none;
     text-align: center;
     vertical-align: middle;
-}
-/***Aquest contingut és el treballable***/
-
-/*TAULA*/
-.mesa-content{
-    z-index: -1;
-    position: relative;
-    top:69px;
-    width: 75%;
-    background-image: url(../img/mesa/marble.png);
-}
-.fitxam{
-    overflow: hidden;
-    margin-left: 2px;
-    margin-right: 2px;
-    float: left;
-    width: 35%;
-    border-radius: 3px;
-    background-image: url(../img/mesa/fondofit.png);
-    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-}
-.fitxap{
-    margin-left: 2px;
-    margin-right: 2px;
-    float: left;
-    width: 35%;
-    border-radius: 3px;
-    background-image: url(../img/mesa/fondofit.png);
-    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-}
-.fitxao{
-    margin-left: 2px;
-    margin-right: 2px;
-    float: left;
-    width: 28%;
-    border-radius: 3px;
-    background-image: url(../img/mesa/fondofit.png);
-    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
 }
 /*Interior de les fitxes*/
 .llista{
