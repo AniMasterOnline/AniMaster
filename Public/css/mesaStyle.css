@@ -120,7 +120,7 @@
     position: fixed;
     left: 0;
     top:21px;
-    width:75%;
+    width:78%;
     margin: 0 auto;
 }
     .mpanel-nav { 
@@ -157,16 +157,17 @@
 /***********************************************************/
 /*MULTIMEDIA*/
 .mesa-multimedia{
+    overflow: auto;
     position: fixed;
     top:21px;
     right: 0;
-    width: 23%;
-    min-height: 100%;
-    height: auto !important;
+    width: 20%;
+    bottom: 0;
     background: #33cc33;
     padding: 1%;
 }
     .hang{
+        padding: 3px;
         width: 100%;
         height: 50px;
         background-color: crimson;
@@ -175,8 +176,9 @@
         margin-bottom: 6px;
     }
     .chat{
+        padding: 3px;
         width: 100%;
-        height: 400px;
+        height: 200px;
         background-color: burlywood;
         text-align: center;
         vertical-align: middle;
@@ -184,13 +186,14 @@
     }
     .musica{
         width: 100%;
+        background-color: orange;
+        padding: 3px;
     }
     audio{
             width: 100%;
     }
     .clip{
         width: 100%;
-        height: 20%;
         margin-bottom: 5%;
         text-align: center;
         vertical-align: middle;
