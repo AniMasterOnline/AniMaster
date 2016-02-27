@@ -7,9 +7,7 @@
     $self = $_SERVER['PHP_SELF'];
     echo '<div class="header-nav">';
         echo'<ul class="nav">';
-            if (strpos($self,"mesa")) { 
-                
-            }else{
+            if (!strpos($self,"mesa")) { 
                 if (strpos($self,"index")) { 
                     echo'<li><a id="active" href="index.php">Inicio</a> <span class="flecha">&#9660</span></li>';
                 }else{
@@ -25,11 +23,6 @@
                 }else{
                     echo'<li><a href="#Novedades">Novedades <span class="flecha">&#9660</span></a></li>';
                 }
-            }
-            if (strpos($self,"mesa")) { 
-                echo'<li><a id="active" href="mesav2.php">Mi Mesa <span class="flecha">&#9660</span></a></li>';
-            }else{
-                echo'<li><a href="mesav2.php">Mi Mesa <span class="flecha">&#9660</span></a></li>';
             }
             session_start();
             if(!isset($_SESSION['usuari'])){
@@ -82,6 +75,11 @@
                                 echo'</div>';
                             echo'</ul>';
                         echo'</li>';
+                    }
+                    if (strpos($self,"mesa")) { 
+                        echo'<li><a id="active" href="mesav2.php">Mi Mesa <span class="flecha">&#9660</span></a></li>';
+                    }else{
+                        echo'<li><a href="mesav2.php">Mi Mesa <span class="flecha">&#9660</span></a></li>';
                     }
             }
         echo'</ul>';

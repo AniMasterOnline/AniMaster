@@ -9,6 +9,8 @@ $(document).ready(function(){
     $("#eyeobj").click(function(){
         $("#taulobj").toggle(500);
     });
+    
+    
     $("#sidebar-toggle").click(function(){
         var mpanelbox = $('#mpanel-box').attr('class');
         var mesamultimedia = $('#mesa-multimedia').attr('class');
@@ -35,8 +37,6 @@ $(document).ready(function(){
             $("#mesa-content").removeClass("mesa-content-closed");
             $("#mesa-content").addClass("mesa-content-open");
         }
-        
-        
     });
     
 });

@@ -10,6 +10,13 @@
     <body>
         <!-- Header content box -->
         <?php include "Public/layouts/menu.php";?>
+        
+        <?php
+            if(!isset($_SESSION['usuari'])){
+                    header('Location: login.php'); 
+            }
+        ?>
+        
         <!-- Panel content box -->
         <div id="mpanel-box" class="mpanel-box-open">
             <div class="mpanel-nav">
@@ -50,52 +57,179 @@
         </div>
         <!-- Body content box -->
         <div id="mesa-content" class="mesa-content-open">
-            <div id="taulmonst" class="fitxa-closed">
-                <div>
-                    <table class="llista">
-                        <tr>
-                            <td class="selfit">1º Enemic</td>
-                            <td class="selfit">2º Enemic</td>
-                            <td class="selfit">3º Enemic</td>
-                            <td class="selfit">4º Enemic</td>
-                        </tr>
+            <div id="taulmonst" class="fitxa-open">
+                <h2 class="fitxa-title"><center>Enemics</center></h2>
+                <div class="llista">
+                    <table>
+                        <select name="npc" class="selfit">
+                            <option value="1">Soldado</option>
+                            <option value="2">Lobo</option>
+                            <option value="3">Araña gigante</option>
+                            <option value="4">Chutlu</option>
+                        </select>
                     </table>
                 </div>
                 <div class="todofitxa">
                     <div class="dalt">
-                        <div class="imatgefit"></div>
-                            <div class="dadaph"></div>
-                            <div class="dadatrn"></div>
-                            <div class="dadaatk"></div>
-                            <div class="dadadany"></div>
-                            <div class="dadadef"></div>
-                            <div class="dadata"></div>
+                        <div class="imgfitxa"></div>
+                        <div class="txtfitxa">
+                            <div class="row-top">
+                                <div class="column1">Vida</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">TA</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">Turno</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">Daño</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">Ataque</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">Defensa</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-bottom">
+                                <div class="column1">Poderes</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="centre">
-                        <table>
-                            <tr>
-                                <td>poderes</td>
-                            </tr>
-                        </table>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
                     </div>
                     <div class="baix">
-                        <div class="modus"></div>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
                     </div>
                 </div>
             </div>
-            <div id="taulpj" class="fitxa-closed">
-                player
+            <div id="taulpj" class="fitxa-open">
+                <h2 class="fitxa-title"><center>Jugadors</center></h2>
+                <div class="llista">
+                    <table>
+                        <select name="pj" class="selfit">
+                            <option value="1">Marc</option>
+                            <option value="2">Eduard</option>
+                            <option value="3">Pau</option>
+                            <option value="4">David</option>
+                        </select>
+                    </table>
+                </div>
+                <div class="todofitxa">
+                    <div class="dalt">
+                        <div class="imgfitxa"></div>
+                        <div class="txtfitxa">
+                            <div class="row-top">
+                                <div class="column1">Vida</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">TA</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">Turno</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">Daño</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">Ataque</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-middle">
+                                <div class="column1">Defensa</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                            <div class="row-bottom">
+                                <div class="column1">Poderes</div>
+                                <div class="column2">= &nbsp;</div>
+                                <div class="column3">000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="centre">
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                    </div>
+                    <div class="baix">
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                    </div>
+                </div>
             </div>
-            <div id="taulobj" class="fitxa-closed">
-                objectes
+            <div id="taulobj" class="fitxa-open">
+                <h2 class="fitxa-title"><center>Objectes</center></h2>
+                <div class="llista">
+                    <table>
+                        <select name="obj" class="selfit">
+                            <option value="1">obj - 1</option>
+                            <option value="2">obj - 2</option>
+                            <option value="3">obj - 3</option>
+                            <option value="4">obj - 4</option>
+                        </select>
+                    </table>
+                </div>
+                <div class="todofitxa">
+                    <div class="dalt">
+                        <div class="imgfitxa"></div>
+                        <div class="txtfitxa">
+                            <div class="row-top">
+                                <div class="column1">Descripció</div>
+                            </div>
+                            <div class="row-bottom">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="centre">
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                    </div>
+                    <div class="baix">
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                    </div>
+                </div>
             </div>
+            <!-- Footer content box --> 
             <div id="footer">
                 <a href="copyright.html">@Copyright by AniMasterOnline</a>
             
             </div>
-        </div>
-        
-        <!-- Footer content box --> 
-        
     </body>
 </html>

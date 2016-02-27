@@ -1,7 +1,7 @@
 /***********************************************************/
 /*Header Menu !!*/
 .header-box {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     width:100%;
     margin: 0 auto;
@@ -74,6 +74,7 @@
                 overflow: auto;
                 border: 1px solid black;
                 overflow: hidden;
+                
             }
             .panel-img{
                 overflow: hidden;
@@ -97,9 +98,11 @@
         
         .nav li:hover > ul {
             display:block;
+            
         }
         .nav li ul li {
             position:relative;
+            
         }
         .nav li ul li ul {
             right:-100px;
@@ -117,21 +120,28 @@
 /***********************************************************/
 /*Panel Menu !!*/
 .mpanel-box-open{
+    z-index: 2;
     position: fixed;
     left: 0;
     top:21px;
-    min-width: 78%;
-    width: auto;
-    margin: 0 auto; 
+    width:78%;
+    margin: 0 auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 .mpanel-box-closed{
+    z-index: 2;
     position: fixed;
     left: 0;
-    right: 0;
+    width:100%;
     top:21px;
-    min-width: 78%;
-    width: auto;
-    margin: 0 auto; 
+    margin: 0 auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
     .mpanel-nav { 
         overflow: hidden;
@@ -152,6 +162,10 @@
             height: 30px;
             line-height: 2.6;
             cursor: hand;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
         }
         .mnav li a:hover {
             background-color: rgba(250,60,30,0.8);
@@ -179,7 +193,7 @@ li #sidebar-toggle .bar{
     width: 18px;
     margin-bottom: 3px;
     height: 2px;
-    background-color: #fff;
+    background-color: #333;
     border-radius: 1px;   
 }
 li #sidebar-toggle .bar:last-child{
@@ -197,16 +211,24 @@ li #sidebar-toggle .bar:last-child{
     bottom: 0;
     background: #33cc33;
     padding: 1%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 .mesa-multimedia-closed{
     overflow: auto;
     position: fixed;
     top:21px;
     width: 20%;
-    right: -25%;
+    right: -22%;
     bottom: 0;
     background: #33cc33;
     padding: 1%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
     .hang{
         padding: 3px;
@@ -241,54 +263,10 @@ li #sidebar-toggle .bar:last-child{
         vertical-align: middle;
     }
 
-/***Aquest contingut és el treballable***/
+/***********************************************************/
+/*Body & Footer*/
 body{
-    background-image: url(../img/mesa/marble.png);
-}
-/*TAULA*/
-.mesa-content-open{
-    float: left;
-    z-index: -1;
-    position: relative;
-    top:67px;
-    width:78%;
-    padding-top: 6px;
-    background-color: rgba(33,33,33,0.7);
-    overflow: auto;
-}
-.mesa-content-closed{
-    float: left;
-    z-index: -1;
-    position: relative;
-    top:67px;
-    width:100%;
-    padding-top: 6px;
-    background-color: rgba(33,33,33,0.7);
-    overflow: auto;
-}
-.fitxa-open{
-    overflow: auto;
-    margin-left: 0.5%;
-    float: left;
-    width: 32%;
-    border-radius: 6px;
-    margin-bottom: 6px;
-    background-image: url(../img/mesa/fondofit.png);
-    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-}
-.fitxa-closed{
-    overflow: auto;
-    margin-left: 0.5%;
-    float: left;
-    width: 32%;
-    border-radius: 6px;
-    margin-bottom: 6px;
-    background-image: url(../img/mesa/fondofit.png);
-    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    background-image: url(../img/background.png);
 }
 #footer{
     position: relative;
@@ -302,85 +280,158 @@ body{
     text-align: center;
     vertical-align: middle;
 }
-/*Interior de les fitxes*/
+
+/***********************************************************/
+/*Mesa Open - Closed*/
+.mesa-content-open{
+    float: left;
+    z-index: 1;
+    position: relative;
+    top:67px;
+    width:78%;
+    padding-top: 6px;
+    overflow: hidden;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.mesa-content-closed{
+    float: left;
+    z-index: 1;
+    position: relative;
+    top:67px;
+    width:100%;
+    padding-top: 6px;
+    overflow: auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/***********************************************************/
+/*Fitxes*/
+.fitxa-open{
+    overflow: hidden;
+    margin-left: 0.5%;
+    float: left;
+    width: 32%;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    background-image: url(../img/mesa/acff0dbc.png);
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+}
+/***********************************************************/
+/*Top Llista Monsters-Players-Objectes*/
+.fitxa-title{
+    border-radius: 6px 6px 0px 0px;
+    border: 1px solid whitesmoke;
+    background-color: rgba(0,0,0,0.8);
+    color: whitesmoke;
+    padding: 3px;
+}
 .llista{
     margin-top: 1%;
-    width: 96%;
-    margin-left: 2%;  
+    margin-left: 1%;
+    margin-right: 1%;
+    width: auto; 
     padding-bottom: 1%;
     background-color: rgba(0,0,0,0.3);
 }
-.selfit{
-    width: 25%;
-    height: 90%;
-    margin-top: 1%;
-    background-color: rgba(0,0,0,0.3);
-    font-weight: bold;
-    text-align: center;
-    vertical-align: middle;
-}
+    .selfit{
+        width: 100%;
+        height: 30px;
+        background-color: rgba(0,0,0,0.3);
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+/***********************************************************/
+/*Contingut Llista Monsters-Players-Objectes*/
 .todofitxa{
-    height: 93%;
-    width: 96%; 
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: auto;
 }
-.dalt{
-    height: 33%;
-    width: 100%;
-    margin-bottom: 1%;
-    background-color: rgba(0,0,0,0.3);
-}
-.centre{
-    height: 42%;
-    width: 98%;
-    margin-bottom: 1%;
-    background-color: rgba(0,0,0,0.3);
-    padding: 1%;
-    overflow: auto;
-}
-.baix{
-    height: 21%;
-    width: 98%;
-    margin-bottom: 1%;
-    background-color: rgba(0,0,0,0.3);
-    padding: 1%;
-    overflow: auto;
-}
-/*part de dalt de les fitxes*/
-.imatgefit{
-    float: left;
-    margin: 1%;
-    width: 73%;
-    height: 76%;
-    background-color: red;
-}
-/*dades de les fitxes*/
-.dadaatk{
-    float: right;
-    margin: 1%;
-    width: 23%;
-    height: 15%;
-    background-color: red;
-}
-.dadadany{
-    float: right;
-    margin: 1%;
-    width: 23%;
-    height: 15%;
-    background-color: red;
-}
-.dadadef{
-    float: right;
-    margin: 1%;
-    width: 23%;
-    height: 15%;
-    background-color: red;
-}
-.dadata{
-    float: right;
-    margin: 1%;
-    width: 23%;
-    height: 15%;
-    background-color: red;
-}
+    .dalt{
+        background-color: rgba(0,0,0,0.3);
+        padding-top: 1%;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        padding-right: 1%;
+        width: auto;
+        overflow: auto;
+        margin-bottom: 1%;
+    }
+        .imgfitxa{
+            height:98px;
+            width:100px;
+            background:blue;
+            float:left;
+            border: 1px solid black;
+        }
+        .txtfitxa{
+            width:auto;
+            height:100px;
+            overflow:auto;
+            border-left: 1px solid black;
+            background-color: rgba(0,0,0,0.3);
+        }
+            .row-top{
+                width: auto;
+                width:auto;
+                overflow:hidden;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                padding: 2px;
+            }
+            .row-middle{
+                width: auto;
+                width:auto;
+                overflow:hidden;
+                border-bottom: 1px solid black;
+                padding: 2px;
+            }
+            .row-bottom{
+                width: auto;
+                width:auto;
+                overflow:hidden;
+                border-bottom: 1px solid black;
+                padding: 2px;
+            }
+                .column1{
+                    float: left;
+                    width: 65px;
+                    margin-left: 2px;
+                }
+                .column2{
+                    float: left;
+                }
+                .column3{
+                    float: left;
+                }
+            
+    .centre{
+        background-color: rgba(0,0,0,0.3);
+        padding-top: 1%;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        padding-right: 1%;
+        width: auto;
+        overflow: auto;
+        margin-bottom: 1%;
+    }
+    .baix{
+        background-color: rgba(0,0,0,0.3);
+        padding-top: 1%;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        padding-right: 1%;
+        width: auto;
+        overflow: auto;
+        margin-bottom: 1%;
+    }
+
