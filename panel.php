@@ -9,13 +9,13 @@ and open the template in the editor.
         <title>Panel</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <LINK REL=StyleSheet HREF="Public/css/bodyStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/asideStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/contentStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/headerStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
         <script src="Public/jquery/jquery-1.12.0.min.js"></script>
+        <script src="Public/jquery/jquery-ui.min.js"></script>
         <script src="Public/jquery/panel.js"></script>
     </head>
     <body>

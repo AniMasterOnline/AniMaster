@@ -1,20 +1,41 @@
 $(document).ready(function(){
     /*Toggles dels ulls i de les fitxes*/
-    $("#taulamonstres").toggle(500);
+    var selectedEffect = "fade";
+    
+    $("#taulamonstres").show(selectedEffect, 500);
+    $("#monstres").addClass("button-active");
+    
     $("#monstres").click(function(){
-        $("#taulamonstres").toggle(500);
+        $("#taulamonstres").show(selectedEffect, 500);
+        $("#monstres").removeClass("button-active");
+        $("#monstres").addClass("button-active");
+        
         $("#taulaobjectes").hide();
+        $("#objectes").removeClass("button-active");
         $("#taulaplayers").hide();
+        $("#players").removeClass("button-active");
     });
+    
     $("#objectes").click(function(){
-        $("#taulaobjectes").toggle(500);
+        $("#taulaobjectes").show(selectedEffect, 500);
+        $("#objectes").removeClass("button-active");
+        $("#objectes").addClass("button-active");
+        
         $("#taulamonstres").hide();
+        $("#monstres").removeClass("button-active");
         $("#taulaplayers").hide();
+        $("#players").removeClass("button-active");
     });
+    
     $("#players").click(function(){
-        $("#taulaplayers").toggle(500);
+        $("#taulaplayers").show(selectedEffect, 500);
+        $("#players").removeClass("button-active");
+        $("#players").addClass("button-active");
+        
         $("#taulamonstres").hide();
+        $("#monstres").removeClass("button-active");
         $("#taulaobjectes").hide();
+        $("#objectes").removeClass("button-active");
     });
     
 });
