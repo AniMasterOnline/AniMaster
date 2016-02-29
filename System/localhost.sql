@@ -33,7 +33,9 @@ CREATE TABLE IF NOT EXISTS `Usuari` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 INSERT INTO `Usuari` (`id_usuari`, `user`, `password`, `email`, `telefon`) VALUES
-(1, 'NeoDaark', '256c7f6aa9aeb56d4d08865c163635d0', 'DaarkAssassin@gmail.com', '681254694');
+(1, 'NeoDaark', '256c7f6aa9aeb56d4d08865c163635d0', 'DaarkAssassin@gmail.com', '681254694'),
+(2, 'smusaran', '81dc9bdb52d04dc20036dbd8313ed055', 'marc@mail.com', '111222333'),
+(3, 'Jacob', '827ccb0eea8a706c4c34a16891f84e7b', 'jacob@mail.com', '333222111');
 
 --
 -- TABLE: `Usuari_Partida`
