@@ -15,6 +15,8 @@ and open the template in the editor.
         <LINK REL=StyleSheet HREF="Public/css/contentStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/headerStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
+        <script src="Public/jquery/jquery-1.12.0.min.js"></script>
+        <script src="Public/jquery/panel.js"></script>
     </head>
     <body>
         <!-- Header content box -->
@@ -50,17 +52,17 @@ and open the template in the editor.
                     </div>
                 </div>
                 <div id=panel-buttons" class="content-buttons">
-                    <button id="btp0">toggle 0</button><button id="btp1">toggle 1</button><button id="btp2">toggle 2</button>
+                    <button id="monstres">Monstres</button><button id="objectes">Objectes</button><button id="players">Players</button>
                 </div>
-                <div id="panel0" class="content-zone">
+                <div id="taulamonstres" class="content-panel-zone">
                     panel 0
                     <br> <br> <br> <br> 
                 </div>
-                <div id="panel1" class="content-zone">
+                <div id="taulaobjectes" class="content-panel-zone">
                     panel 1
                     <br> <br> <br> <br>  
                 </div>
-                <div id="panel2" class="content-zone">
+                <div id="taulaplayers" class="content-panel-zone">
                     panel 2
                     <br> <br> <br> <br>  
                 </div>
