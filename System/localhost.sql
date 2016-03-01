@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `Usuari` (
   `user` varchar(30) NOT NULL,
   `password` varchar(32) NOT NULL,
   `email` varchar(40) NOT NULL,
-  `telefon` varchar(16) DEFAULT NULL,
+  `telefon` varchar(16),
   PRIMARY KEY (`id_usuari`),
   UNIQUE KEY `user` (`user`,`email`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -50,6 +50,18 @@ CREATE TABLE IF NOT EXISTS `Usuari_Partida` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- TABLE: `Equipo`
+--
+DROP TABLE IF EXISTS `Equipo`;
+CREATE TABLE IF NOT EXISTS `Equipo` (
+  `id_equipo` int(10) NOT NULL PRIMARY KEY,
+  `armadura1` int(2),
+  `armadura2` int(2),
+  `arma1` int(3),
+  `arma2` int(3)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
 -- TABLE: `Enemigo`
 --
 DROP TABLE IF EXISTS `Enemigo`;
@@ -57,10 +69,10 @@ CREATE TABLE IF NOT EXISTS `Enemigo` (
   `id_enemigo` int(10) NOT NULL PRIMARY KEY,
   `id_equipo` int(10) NOT NULL UNIQUE,
   `vida`  int(10) NOT NULL,
-  `ataque` int (3) NULL,
-  `defensa` int (3) NULL,
-  `turno` int (3) NULL,
-  `poderes` varchar(200) NULL,
+  `ataque` int (3),
+  `defensa` int (3),
+  `turno` int (3),
+  `poderes` varchar(200),
   FOREIGN KEY (`id_equipo`) REFERENCES `Equipo` (`id_equipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -76,31 +88,6 @@ CREATE TABLE IF NOT EXISTS `Partida_Enemigo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- TABLE: `Equipo`
---
-DROP TABLE IF EXISTS `Equipo`;
-CREATE TABLE IF NOT EXISTS `Equipo` (
-  `id_equipo` int(10) NOT NULL PRIMARY KEY,
-  `armadura1` number(2) NULL,
-  `armadura2` number(2) NULL,
-  `arma1` number(3) NULL,
-  `arma2` number(3) NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-INSERT INTO `Equipo` (`id_equipo`, `armadura1`, `armadura2`, `arma1`, `arma2`) VALUES
-(1, 2, NULL, 50, NULL);
-INSERT INTO `Equipo` (`id_equipo`, `armadura1`, `armadura2`, `arma1`, `arma2`) VALUES
-(2, 1, NULL, 40, NULL);
-INSERT INTO `Equipo` (`id_equipo`, `armadura1`, `armadura2`, `arma1`, `arma2`) VALUES
-(3, 4, NULL, 45, NULL);
-
---
--- INSERT INTO: `Enemigo`
---
-INSERT INTO `Enemigo` (`id_enemigo`, `armadura1`, `armadura2`, `arma1`, `arma2`) VALUES
-(1, 2, NULL, 50, NULL);
-
---
 -- TABLE: `Player`
 --
 DROP TABLE IF EXISTS `Player`;
@@ -108,10 +95,10 @@ CREATE TABLE IF NOT EXISTS `Player` (
   `id_player` int(10) NOT NULL PRIMARY KEY,
   `id_equipo` int(10) NOT NULL UNIQUE,
   `vida`  int(10) NOT NULL,
-  `ataque` int (3) NULL,
-  `defensa` int (3) NULL,
-  `turno` int (3) NULL,
-  `poderes` varchar(200) NULL,
+  `ataque` int (3),
+  `defensa` int (3),
+  `turno` int (3),
+  `poderes` varchar(200),
   FOREIGN KEY (`id_equipo`) REFERENCES `Equipo` (`id_equipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -126,5 +113,3 @@ CREATE TABLE IF NOT EXISTS `Partida_Player` (
   FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `Player` (`id_player`, `id_equipo`, `vida`, `ataque`, `defensa`, `turno`, `poderes`) VALUES
-(1, 2, NULL, 50, NULL);

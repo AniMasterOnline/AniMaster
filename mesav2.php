@@ -84,49 +84,7 @@
                     <button id="add-player" class="selfit-button">+</button>
                 </div>
                 <div id="todo-player" class="todofitxa">
-                    <div class="dalt">
-                        <div class="titlefitxa"> Marc</div>
-                        <div class="imgfitxa"></div>
-                        <div class="txtfitxa">
-                            <div class="row-top">
-                                <div class="column1">Vida</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">75</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">TA</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">2</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">Turno</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">50</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">Daño</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">20</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">Ataque</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">10</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">Defensa</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">10</div>
-                            </div>
-                            <div class="row-bottom">
-                                <div class="column1">Poderes</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">n/a</div>
-                            </div>
-                        </div>
-                        <button class="modfitxa">Modifica!</button>
-                        <button class="delfitxa">-</button>
-                    </div>
+                    
                 </div>
             </div>
             <div id="taulobj" class="fitxa-open">
@@ -141,22 +99,7 @@
                     <button id="add-item" class="selfit-button">+</button>
                 </div>
                 <div id="todo-item" class="todofitxa">
-                    <div class="dalt">
-                        <div class="titlefitxa"> Varita Magica :D</div>
-                        <div class="imgfitxa"></div>
-                        <div class="txtfitxa">
-                            <div class="row-top">
-                                <div class="column1">Descripció</div>
-                            </div>
-                            <div class="row-bottom">
-                                <div class="column3">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </div>
-                            </div>
-                        </div>
-                        <button class="modfitxa">Modifica!</button>
-                        <button class="delfitxa">-</button>
-                    </div>
+                    
                 </div>
             </div>
             <!-- Footer content box --> 
