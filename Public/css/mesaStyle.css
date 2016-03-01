@@ -328,50 +328,82 @@ body{
 /***********************************************************/
 /*Top Llista Monsters-Players-Objectes*/
 .fitxa-title{
+    text-align: center;
     border-radius: 6px 6px 0px 0px;
     background-color: #00AFED;
     color: black;
     padding: 3px;
+    margin-bottom: 2px;
 }
 .llista{
     width: auto; 
     background-color: rgba(0,0,0,0.3);
 }
     .selfit{
-        width: 100%;
+        float: left;
+        width: 90%;
         height: 30px;
         background-color: #333;
         font-weight: bold;
         text-align: center;
         vertical-align: middle;
         color: whitesmoke;
+        margin-bottom: 10px;
+    }
+    .selfit-button{
+        float: right;
+        width: 10%;
+        height: 30px;
+        background-color: rgba(0,0,0,0.6);
+        border: none;
+        color: whitesmoke;
+        font-weight: 600;
+        outline:0px;
+        margin-bottom: 10px;
+    }
+    .selfit-button:hover {
+        background-color:#00baff; 
+        color:#002000; 
+    }
+    .selfit-button:active {
+        background-color:#00baff; 
+        color:#002000; 
     }
 /***********************************************************/
 /*Contingut Llista Monsters-Players-Objectes*/
 .todofitxa{
-    width: auto;
+    width: 100%;
 }
     .dalt{
+        border-radius: 6px 6px 6px 6px;
         background-color: #333;
-        padding-top: 2%;
+        padding-top: 1%;
         padding-bottom: 2%;
-        padding-left: 2%;
-        padding-right: 2%;
+        padding-left: 1%;
+        padding-right: 1%;
         width: auto;
         overflow: auto;
         margin-bottom: 1%;
     }
+        .titlefitxa{
+            text-align: center;
+            border-radius: 6px 6px 0px 0px;
+            background-color: rgba(250,60,30,0.8);
+            color: black;
+            padding: 3px;
+            margin-bottom: 2px;
+        }
         .imgfitxa{
             height:100px;
             width:100px;
             background: whitesmoke;
             float:left;
+            margin-right: 3px;
         }
         .txtfitxa{
             width:auto;
-            height:100px;
+            height:200px;
             overflow:auto;
-            border-left: 1px solid black;
             background-color: rgba(0,0,0,0.3);
         }
             .row-top{
@@ -412,8 +444,9 @@ body{
                     color: white;
                 }
         .modfitxa{
+            float:left;
             margin-top: 2px;
-            width: 100%;
+            width: 90%;
             background-color: rgba(0,0,0,0.3);
             border: none;
             color: whitesmoke;
@@ -426,6 +459,24 @@ body{
             color:#002000; 
         }
         .modfitxa:active {
+            background-color:#00baff; 
+            color:#002000; 
+        }
+        .delfitxa{
+            margin-top: 2px;
+            width: 10%;
+            background-color: rgba(0,0,0,0.6);
+            border: none;
+            color: whitesmoke;
+            font-weight: 600;
+            padding: 3px;
+            outline:0px;
+        }
+        .delfitxa:hover {
+            background-color:#00baff; 
+            color:#002000; 
+        }
+        .delfitxa:active {
             background-color:#00baff; 
             color:#002000; 
         }

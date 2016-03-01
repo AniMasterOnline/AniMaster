@@ -58,7 +58,7 @@
         <!-- Body content box -->
         <div id="mesa-content" class="mesa-content-open">
             <div id="taulmonst" class="fitxa-open">
-                <h2 class="fitxa-title"><center>Enemics</center></h2>
+                <h2 class="fitxa-title">Enemics</h2>
                 <div class="llista">
                     <select name="npc" class="selfit">
                         <option value="1">Soldado</option>
@@ -66,64 +66,56 @@
                         <option value="3">Araña gigante</option>
                         <option value="4">Chutlu</option>
                     </select>
+                    <button class="selfit-button">+</button>
                 </div>
                 <div class="todofitxa">
                     <div class="dalt">
+                        <div class="titlefitxa"> Araña Monstruosa</div>
                         <div class="imgfitxa"></div>
                         <div class="txtfitxa">
                             <div class="row-top">
                                 <div class="column1">Vida</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">100</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">TA</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">3</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">Turno</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">50</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">Daño</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">60</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">Ataque</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">70</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">Defensa</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">50</div>
                             </div>
                             <div class="row-bottom">
                                 <div class="column1">Poderes</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">n/a</div>
                             </div>
                         </div>
                         <button class="modfitxa">Modifica!</button>
-                    </div>
-                    <div class="centre">
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                    </div>
-                    <div class="baix">
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
+                        <button class="delfitxa">-</button>
                     </div>
                 </div>
             </div>
             <div id="taulpj" class="fitxa-open">
-                <h2 class="fitxa-title"><center>Jugadors</center></h2>
+                <h2 class="fitxa-title">Jugadors</h2>
                 <div class="llista">
                     <select name="pj" class="selfit">
                         <option value="1">Marc</option>
@@ -131,64 +123,56 @@
                         <option value="3">Pau</option>
                         <option value="4">David</option>
                     </select>
+                    <button class="selfit-button">+</button>
                 </div>
                 <div class="todofitxa">
                     <div class="dalt">
+                        <div class="titlefitxa"> Marc</div>
                         <div class="imgfitxa"></div>
                         <div class="txtfitxa">
                             <div class="row-top">
                                 <div class="column1">Vida</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">75</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">TA</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">2</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">Turno</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">50</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">Daño</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">20</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">Ataque</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">10</div>
                             </div>
                             <div class="row-middle">
                                 <div class="column1">Defensa</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">10</div>
                             </div>
                             <div class="row-bottom">
                                 <div class="column1">Poderes</div>
                                 <div class="column2">= &nbsp;</div>
-                                <div class="column3">000</div>
+                                <div class="column3">n/a</div>
                             </div>
                         </div>
                         <button class="modfitxa">Modifica!</button>
-                    </div>
-                    <div class="centre">
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                    </div>
-                    <div class="baix">
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
+                        <button class="delfitxa">-</button>
                     </div>
                 </div>
             </div>
             <div id="taulobj" class="fitxa-open">
-                <h2 class="fitxa-title"><center>Objectes</center></h2>
+                <h2 class="fitxa-title">Objectes</h2>
                 <div class="llista">
                     <select name="obj" class="selfit">
                         <option value="1">obj - 1</option>
@@ -196,9 +180,11 @@
                         <option value="3">obj - 3</option>
                         <option value="4">obj - 4</option>
                     </select>
+                    <button class="selfit-button">+</button>
                 </div>
                 <div class="todofitxa">
                     <div class="dalt">
+                        <div class="titlefitxa"> Varita Magica :D</div>
                         <div class="imgfitxa"></div>
                         <div class="txtfitxa">
                             <div class="row-top">
@@ -211,17 +197,7 @@
                             </div>
                         </div>
                         <button class="modfitxa">Modifica!</button>
-                    </div>
-                    <div class="centre">
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
-                    </div>
-                    <div class="baix">
-                        <br><br><br><br><br>
-                        <br><br><br><br><br>
+                        <button class="delfitxa">-</button>
                     </div>
                 </div>
             </div>
