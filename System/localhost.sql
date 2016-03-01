@@ -56,6 +56,11 @@ DROP TABLE IF EXISTS `Enemigo`;
 CREATE TABLE IF NOT EXISTS `Enemigo` (
   `id_enemigo` int(10) NOT NULL PRIMARY KEY,
   `id_equipo` int(10) NOT NULL UNIQUE,
+  `vida`  int(10) NOT NULL,
+  `ataque` int (3) NULL,
+  `defensa` int (3) NULL,
+  `turno` int (3) NULL,
+  `poderes` varchar(200) NULL,
   FOREIGN KEY (`id_equipo`) REFERENCES `Equipo` (`id_equipo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -79,8 +84,7 @@ CREATE TABLE IF NOT EXISTS `Equipo` (
   `armadura1` number(2) NULL,
   `armadura2` number(2) NULL,
   `arma1` number(3) NULL,
-  `arma2` number(3) NULL,
-  FOREIGN KEY (`id_equipo`) REFERENCES `Equipo` (`id_equipo`)
+  `arma2` number(3) NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO `Equipo` (`id_equipo`, `armadura1`, `armadura2`, `arma1`, `arma2`) VALUES
@@ -89,3 +93,38 @@ INSERT INTO `Equipo` (`id_equipo`, `armadura1`, `armadura2`, `arma1`, `arma2`) V
 (2, 1, NULL, 40, NULL);
 INSERT INTO `Equipo` (`id_equipo`, `armadura1`, `armadura2`, `arma1`, `arma2`) VALUES
 (3, 4, NULL, 45, NULL);
+
+--
+-- INSERT INTO: `Enemigo`
+--
+INSERT INTO `Enemigo` (`id_enemigo`, `armadura1`, `armadura2`, `arma1`, `arma2`) VALUES
+(1, 2, NULL, 50, NULL);
+
+--
+-- TABLE: `Player`
+--
+DROP TABLE IF EXISTS `Player`;
+CREATE TABLE IF NOT EXISTS `Player` (
+  `id_player` int(10) NOT NULL PRIMARY KEY,
+  `id_equipo` int(10) NOT NULL UNIQUE,
+  `vida`  int(10) NOT NULL,
+  `ataque` int (3) NULL,
+  `defensa` int (3) NULL,
+  `turno` int (3) NULL,
+  `poderes` varchar(200) NULL,
+  FOREIGN KEY (`id_equipo`) REFERENCES `Equipo` (`id_equipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- TABLE: `Partida_Player`
+--
+DROP TABLE IF EXISTS `Partida_Player`;
+CREATE TABLE IF NOT EXISTS `Partida_Player` (
+  `id_partida` int(10) NOT NULL PRIMARY KEY,
+  `id_player` int(10) NOT NULL UNIQUE,
+  FOREIGN KEY (`id_player`) REFERENCES `Player` (`id_player`),
+  FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `Player` (`id_player`, `id_equipo`, `vida`, `ataque`, `defensa`, `turno`, `poderes`) VALUES
+(1, 2, NULL, 50, NULL);
