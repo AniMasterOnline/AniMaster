@@ -14,6 +14,7 @@ and open the template in the editor.
         <LINK REL=StyleSheet HREF="Public/css/contentStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/headerStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
+        <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="Public/jquery/jquery-1.12.0.min.js"></script>
         <script src="Public/jquery/jquery-ui.min.js"></script>
         <script src="Public/jquery/panel.js"></script>
@@ -65,6 +66,13 @@ and open the template in the editor.
                 <div id="taulaplayers" class="content-panel-zone">
                     panel 2
                     <br> <br> <br> <br>  
+                </div>
+                <div style="display:none;" id="dialog-confirm" title="Empty the recycle bin?">
+                    
+                    <p>
+                        <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+                        These items will be permanently deleted and cannot be recovered. Are you sure?
+                    </p>
                 </div>
             </div>
         </div>

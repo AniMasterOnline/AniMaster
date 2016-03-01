@@ -6,6 +6,19 @@ $(document).ready(function(){
     $("#monstres").addClass("button-active");
     
     $("#monstres").click(function(){
+            $( "#dialog-confirm" ).dialog({
+              resizable: false,
+              height:140,
+              modal: true,
+              buttons: {
+                "Delete all items": function() {
+                  $( this ).dialog( "close" );
+                },
+                Cancel: function() {
+                  $( this ).dialog( "close" );
+                }
+              }
+            });
         $("#taulamonstres").show(selectedEffect, 500);
         $("#monstres").removeClass("button-active");
         $("#monstres").addClass("button-active");
