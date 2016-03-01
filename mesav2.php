@@ -66,52 +66,10 @@
                         <option value="3">Araña gigante</option>
                         <option value="4">Chutlu</option>
                     </select>
-                    <button class="selfit-button">+</button>
+                    <button id="add-monster" class="selfit-button">+</button>
                 </div>
-                <div class="todofitxa">
-                    <div class="dalt">
-                        <div class="titlefitxa"> Araña Monstruosa</div>
-                        <div class="imgfitxa"></div>
-                        <div class="txtfitxa">
-                            <div class="row-top">
-                                <div class="column1">Vida</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">100</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">TA</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">3</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">Turno</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">50</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">Daño</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">60</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">Ataque</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">70</div>
-                            </div>
-                            <div class="row-middle">
-                                <div class="column1">Defensa</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">50</div>
-                            </div>
-                            <div class="row-bottom">
-                                <div class="column1">Poderes</div>
-                                <div class="column2">= &nbsp;</div>
-                                <div class="column3">n/a</div>
-                            </div>
-                        </div>
-                        <button class="modfitxa">Modifica!</button>
-                        <button class="delfitxa">-</button>
-                    </div>
+                <div id="todo-monster" class="todofitxa">
+                    
                 </div>
             </div>
             <div id="taulpj" class="fitxa-open">
@@ -123,9 +81,9 @@
                         <option value="3">Pau</option>
                         <option value="4">David</option>
                     </select>
-                    <button class="selfit-button">+</button>
+                    <button id="add-player" class="selfit-button">+</button>
                 </div>
-                <div class="todofitxa">
+                <div id="todo-player" class="todofitxa">
                     <div class="dalt">
                         <div class="titlefitxa"> Marc</div>
                         <div class="imgfitxa"></div>
@@ -180,9 +138,9 @@
                         <option value="3">obj - 3</option>
                         <option value="4">obj - 4</option>
                     </select>
-                    <button class="selfit-button">+</button>
+                    <button id="add-item" class="selfit-button">+</button>
                 </div>
-                <div class="todofitxa">
+                <div id="todo-item" class="todofitxa">
                     <div class="dalt">
                         <div class="titlefitxa"> Varita Magica :D</div>
                         <div class="imgfitxa"></div>

@@ -56,23 +56,16 @@ and open the template in the editor.
                     <button id="monstres">Monstres</button><button id="objectes">Objectes</button><button id="players">Players</button>
                 </div>
                 <div id="taulamonstres" class="content-panel-zone">
-                    panel 0
+                    Panel de Monstres
                     <br> <br> <br> <br> 
                 </div>
                 <div id="taulaobjectes" class="content-panel-zone">
-                    panel 1
+                    Panel d'objectes
                     <br> <br> <br> <br>  
                 </div>
                 <div id="taulaplayers" class="content-panel-zone">
-                    panel 2
+                    Panel de Jugadors
                     <br> <br> <br> <br>  
-                </div>
-                <div style="display:none;" id="dialog-confirm" title="Empty the recycle bin?">
-                    
-                    <p>
-                        <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
-                        These items will be permanently deleted and cannot be recovered. Are you sure?
-                    </p>
                 </div>
             </div>
         </div>
