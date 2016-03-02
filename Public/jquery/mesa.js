@@ -211,3 +211,63 @@ function deleete(del){
     var bye = del.value;
     $('#'+bye).remove();
 }
+/*Novetat per al cas de les tirades de daus*/
+$(document).ready(function(){
+    $("#windowdices").hide();
+    /*Toggles dels ulls i de les fitxes*/
+    $("#showdices").click(function(){
+        $("#windowdices").animate({height: 'toggle'},500,function(){
+            document.getElementById("resultdices").innerHTML = "";
+            document.getElementById("base").value = "";
+        });
+    });
+});
+
+function calculatedices(){
+    var getbase = document.getElementById("base").value;
+    if(getbase == ""){
+        document.getElementById("resultdices").innerHTML = "<br><p>No has ficat una base a la teva tirada!</p><p>Perfavor, fica-la</p>";
+    };
+    var throwdices;
+    var result;
+    var moreresults;
+    var high = 90;
+    throwdices = Math.floor((Math.random() * 100) + 1);
+    var base = parseInt(getbase);
+    
+    if(base >= 200){                                            //En cas de tindre maestria
+        if(throwdices <= 2){                                //Pifia
+            result = Math.floor((Math.random() * 100) + 1);
+            document.getElementById("resultdices").innerHTML = "<br><p>La tirada ha resultat ser una pifia de <b>0"+throwdices+"</b> amb un resultat de <b>"+result+"</b></p>";
+        }else{                                              //Tirada normal
+            result = throwdices;
+            moreresults = "<p>"+throwdices;
+            while(throwdices >= high){                     //En cas de que sigui una tirada obert
+                    throwdices = Math.floor((Math.random() * 100) + 1);
+                    result += throwdices;
+                    moreresults += " ; "+throwdices;
+                    if(high != 100){high++;};
+              }
+            moreresults += "</p>";
+            result += base;
+            document.getElementById("resultdices").innerHTML= "<br><p>El resultat de la teva tirada ha sigut: <b>"+result+"</b></p>"+moreresults;
+        }
+    }else if(getbase != ""){                                                      //En cas de no tindre maestria
+        if(throwdices <= 3){                                //Pifia
+            result = Math.floor((Math.random() * 100) + 1);
+            document.getElementById("resultdices").innerHTML = "<br><p>La tirada ha resultat ser una pifia de <b>0"+throwdices+"</b> amb un resultat de <b>"+result+"</b></p>";
+        }else{
+            result = throwdices;
+            moreresults = "<p>"+throwdices;
+            while(throwdices >= high){                     //En cas de que sigui una tirada obert
+                    throwdices = Math.floor((Math.random() * 100) + 1);
+                    result += throwdices;
+                    moreresults += " ; "+throwdices;
+                    if(high != 100){high++;};
+              }
+            moreresults += "</p>";
+            result += base;
+            document.getElementById("resultdices").innerHTML= "<br><p>El resultat de la teva tirada ha sigut: <b>"+result+"</b></p>"+moreresults;
+        }
+    }
+}
