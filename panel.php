@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>Panel</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.ico">
         <LINK REL=StyleSheet HREF="Public/css/bodyStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/asideStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/contentStyle.css" TYPE="text/css" MEDIA=screen>
@@ -53,20 +54,30 @@ and open the template in the editor.
                     </div>
                 </div>
                 <div id=panel-buttons" class="content-buttons">
-                    <button id="monstres">Monstres</button><button id="objectes">Objectes</button><button id="players">Players</button>
+                    <button id="add-partida">+</button>
                 </div>
-                <div id="taulamonstres" class="content-panel-zone">
-                    Panel de Monstres
-                    <br> <br> <br> <br> 
+                <div class="content-panel-zone">
+                    <div id="form-add-partida" class="content-panel-partida">
+                        <form method="post" action="System/Protocols/registrarPartida.php">
+                            <h2>Crea la teva Partida</h2>
+                            <input class="input-partida" id="titol" placeholder="Titol *" value="" type="text" name="TempTitol" maxlength="32" required autofocus>
+                            <input class="input-partida" id="descripcio" placeholder="Descripcio" value="" type="text" name="TempDescripcio" maxlength="250">
+                            <input class="input-partida" id="any_partida" placeholder="Any de la partida" value="" type="number" name="TempAny_partida" maxlength="10">
+                            <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural" value="" type="number" name="TempNivel_sobrenatural" maxlength="32">
+                            <select class="input-partida" disabled>
+                                <option value="0" >Anima</option>
+                                <option value="1" >.....</option>
+                                <option value="2" >.....</option>
+                            </select>
+                            <input class="input-crea" id="logbutton" type="submit" value="Crea">
+                        </form>
+                    </div>
+                    <div id="partida-1" class="content-panel-partida">
+                        Partida 1
+                    </div>
+                    
                 </div>
-                <div id="taulaobjectes" class="content-panel-zone">
-                    Panel d'objectes
-                    <br> <br> <br> <br>  
-                </div>
-                <div id="taulaplayers" class="content-panel-zone">
-                    Panel de Jugadors
-                    <br> <br> <br> <br>  
-                </div>
+                
             </div>
         </div>
         <!-- Footer content box -->

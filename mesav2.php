@@ -2,6 +2,7 @@
     <head>
         <title>Taula del master</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" href="favicon.ico">
         <LINK REL=StyleSheet HREF="Public/css/mesaStyle.css" TYPE="text/css" MEDIA=screen />
         <!-- <script src="fondo.js"></script> -->
         <script src="Public/jquery/jquery-1.12.0.min.js"></script>
