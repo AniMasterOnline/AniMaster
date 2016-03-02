@@ -1,6 +1,6 @@
 <?php
     include "../Errors.php";
-    require_once('../Classes/usuari.php');
+    require_once('../Classes/Usuari.php');
     
     $newUser = $_POST['TempUser'];
     $newPass = md5($_POST['TempPassword']);

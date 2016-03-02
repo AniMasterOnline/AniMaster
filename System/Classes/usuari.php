@@ -17,8 +17,13 @@
         }
         public function mod(){
             $db = new connexio();
-            $db->query("UPDATE Usuari SET password='".$this->password."', email='".$this->email."', telefon='".$this->telefon." WHERE id_usuari= '".$this->id_usuari."'");
+            $db->query("UPDATE Usuari SET password='$this->password', email='$this->email', telefon='$this->telefon WHERE id_usuari= '$this->id_usuari'");
             $db->close();
+        }
+        public function delete($var){
+            $db = new connexio();
+            $sql = "delete from Usuari where id_usuari = $var";
+            $db->query($sql);
         }
         function verificar_login($user,$password){ 
             $db = new connexio();
@@ -40,6 +45,19 @@
             }else{
                 return null;
             }
+        }
+        public function view_all(){
+            $db = new connexio();
+            $sql = "SELECT * FROM Usuari;";
+            $query = $db->query($sql);
+            $rtn = array();
+            while($obj = $query->fetch_assoc()){
+                $Usuari = new Usuari($obj["id_usuari"],$obj["user"],$obj["password"],$obj["email"], $obj["telefon"]);
+                //var_dump($Usuari);
+                array_push($rtn, $Usuari);
+            }
+            $db->close();
+            return $rtn;
         }
         public function test1($var){
             $db = new connexio();
@@ -83,25 +101,6 @@
             $db->close();
             return $res;
         }
-        public function view_all(){
-            $db = new connexio();
-            $sql = "SELECT * FROM Usuari;";
-            $query = $db->query($sql);
-            $rtn = array();
-            while($obj = $query->fetch_assoc()){
-                $Usuari = new Usuari($obj["id_usuari"],$obj["user"],$obj["password"],$obj["email"], $obj["telefon"]);
-                //var_dump($Usuari);
-                array_push($rtn, $Usuari);
-            }
-            $db->close();
-            return $rtn;
-        }
-        public function delete($var){
-            $db = new connexio();
-            $sql = "delete from Usuari where id_usuari = $var";
-            $db->query($sql);
-        }
-        
         //CONSTRUCTORS
         function __construct(){
             $args = func_get_args();
@@ -174,3 +173,4 @@
             return $this->telefon;
         }
     }
+?>

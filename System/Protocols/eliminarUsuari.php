@@ -12,14 +12,14 @@
         <div id="content">  
             <br>
                 <?php
-                    require_once('../Classes/usuari.php');
+                    require_once('../Classes/Usuari.php');
                     $TempId = $_POST['tempId'];
                     $TempConfirmacio = $_POST['tempConfirmacio'];
                     //var_dump($TempConfirmacio);
                     if($TempConfirmacio === "si"){
                         $Eliminar = new Usuari;
                         $Eliminar->delete($TempId);
-                        header('Location: /usuaris.php');  
+                        header('Location: /index.php');  
                     }else{
                         $TempNom = $_POST['tempNom'];
                         $TempCognom = $_POST['tempCognom'];
