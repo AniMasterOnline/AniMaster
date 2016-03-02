@@ -209,7 +209,7 @@ li #sidebar-toggle .bar:last-child{
     width: 20%;
     right: 0;
     bottom: 0;
-    background: #33cc33;
+    background: #444;
     padding: 1%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -223,7 +223,7 @@ li #sidebar-toggle .bar:last-child{
     width: 20%;
     right: -22%;
     bottom: 0;
-    background: #33cc33;
+    background: #444;
     padding: 1%;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -234,23 +234,21 @@ li #sidebar-toggle .bar:last-child{
         padding: 3px;
         width: 100%;
         height: 50px;
-        background-color: crimson;
         text-align: center;
         vertical-align: middle;
         margin-bottom: 6px;
     }
     .chat{
-        padding: 3px;
-        width: 100%;
-        height: 200px;
-        background-color: burlywood;
+        width: 97%;
+        height: 60%;
         text-align: center;
-        vertical-align: middle;
         margin-bottom: 6px;
+        border-style: inset;
+        border-color: #222;
+        border-width: 5px;
     }
     .musica{
         width: 100%;
-        background-color: orange;
         padding: 3px;
     }
     audio{
@@ -272,7 +270,7 @@ body{
     position: relative;
     overflow: auto;
     width:100%;
-    height: 5%;
+    height: 7%;
     background: #000000;
     color: white;
     list-style:none;
@@ -324,6 +322,35 @@ body{
     -webkit-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 27px 5px rgba(0,0,0,0.75);
+}
+.calculatedices{
+    position: fixed;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+    height: 25%;
+    background-color: #777;
+    text-align: center;
+    font-size: 140%;
+    padding: 5px;
+    -webkit-box-shadow: 1px 5px 18px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 5px 18px 5px rgba(0,0,0,0.75);
+    box-shadow: 1px 5px 18px 5px rgba(0,0,0,0.75);
+}
+.submitdices{
+    background-color: #777;
+    border: none;
+    width: 60px;
+    height: 25px;
+    font-weight: bold;
+    font-size: 80%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.submitdices:hover{
+    background-color: rgba(250,60,30,0.8);
 }
 /***********************************************************/
 /*Top Llista Monsters-Players-Objectes*/

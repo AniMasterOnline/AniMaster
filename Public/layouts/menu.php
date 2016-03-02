@@ -86,6 +86,8 @@
     echo'</div>';
     ?>
     <div class="header-logo">
-        
+        <?php
+            //var_dump($value);
+        ?>
     </div>
 </div>

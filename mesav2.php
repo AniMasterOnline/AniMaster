@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li style="float:right;"><a> <img src="Public/img/mesa/vida.png" class="accio"/> </a></li>
-                    <li style="float:right;"><a> <img src="Public/img/mesa/daus.png" class="accio"/> </a></li>
+                    <li style="float:right;"><a id="showdices"> <img src="Public/img/mesa/daus.png" class="accio"/> </a></li>
                     <li style="float:right;"><a> <img src="Public/img/mesa/batalla2.png" class="accio"/> </a></li>
                     
                 </ul>
@@ -41,8 +41,13 @@
         </div>
         <!-- Aside Multimedia content -->
         <div id="mesa-multimedia" class="mesa-multimedia-open">
-            <div class="hang"><p>HANGOUT</p></div>
-            <div class="chat"><p>CHAT</p></div>
+            <div class="hang">
+                <script src="https://apis.google.com/js/platform.js" async defer></script>
+                <div class="g-hangout" data-render="createhangout" ></div>
+            </div>
+            <div class="chat">
+                <img src="Public/img/slide1.jpg" style="width: 100%;height: 100%"/>
+            </div>
             <div class="musica">
                 <div class="clip">
                     <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
@@ -107,6 +112,14 @@
                 <center>
                 <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">AniMasterOnline</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Marc, Jacob i David</span> està subjecta a una llicència de <a class="link" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de Creative Commons</a>
                 </center>
+            </div>
+            <div class="calculatedices" id="windowdices" >
+                <p>Fica una base per a calcular la teva tirada</p>
+                <form>
+                    Base: <input type="number" id="base"/>
+                    <input class="submitdices" type="button" value="Envia" onclick="calculatedices()"/>
+                </form>
+                <p id="resultdices"></p>
             </div>
     </body>
 </html>
