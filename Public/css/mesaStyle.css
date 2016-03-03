@@ -1,6 +1,7 @@
 /***********************************************************/
 /*Menu Triar partida !!*/
 #contenidor-partida{
+    //display: none;
     z-index: 4;
     position: fixed;
     width:100%;
@@ -18,16 +19,81 @@
     top: 10%;
     left: 10%;
     width:80%;
-    height: 80%;
     margin: 0 auto;
-    background-color:rgba(0,173,237,0.75);
+    background-color:rgba(250,250,250,0.8);
     border: 3px solid whitesmoke;
     border-radius: 12px 12px 12px 12px;
-    margin-bottom: 6px;
     -webkit-box-shadow: 0px 0px 27px 5px rgba(0,173,237,0.8);
     -moz-box-shadow: 0px 0px 27px 5px rgba(0,173,237,0.8);
     box-shadow: 0px 0px 27px 5px rgba(80,80,80,0.8);
 }
+    #PartSel-title{
+        text-align: center;
+        border-radius: 12px 12px 0px 0px;
+        background-color: rgba(34,34,34,1);
+        color: whitesmoke;
+        padding: 3px;
+    }
+    #PartSel{
+        float: left;
+        width: 100%; 
+        background-color: rgba(0,0,0,0.3);
+        padding: 0px;
+        padding-bottom: 2px;
+    }
+        #selpart{
+            float: left;
+            width: 90%;
+            height: 30px;
+            background-color: rgba(24,24,24,0.9);
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            color: whitesmoke;
+            outline:0px;
+
+        }
+            #selPartida{
+                float: right;
+                width: 10%;
+                height: 30px;
+                background-color: rgba(0,0,0,0.6);
+                border: none;
+                color: whitesmoke;
+                font-weight: 600;
+                outline:0px;
+                
+            }
+            #selPartida:hover {
+                background-color:#00baff; 
+                color:#002000; 
+            }
+            #selPartida:active {
+                background-color:#00baff; 
+                color:#002000; 
+            }
+    #PartSel-llista{
+        float: left;
+        width: 100%; 
+        background-color: rgba(0,0,0,0.3);
+        border-radius: 0px 0px 12px 12px;
+    }
+    .input-partida{
+        float: left;
+        width: 100%; 
+        background-color: #333;
+        padding: 4px;
+        margin-bottom: 6px;
+        border: none;
+    }
+    .input-partida-bottom{
+        float: left;
+        width: 100%; 
+        background-color: #333;
+        padding: 3px;
+        border: none;
+        border-radius: 0px 0px 12px 12px;
+    }
     
 /***********************************************************/
 /*Header Menu !!*/

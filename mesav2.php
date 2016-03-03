@@ -20,15 +20,39 @@
         ?>
         <div id="contenidor-partida">
             <div id="panel-partida">
-                <h2 class="fitxa-title">Selecciona la teva partida!!</h2>
-                <div class="llista">
-                    <select name="npc" class="selfit">
-                        <option value="1">Soldado</option>
-                        <option value="2">Lobo</option>
-                        <option value="3">Araña gigante</option>
-                        <option value="4">Chutlu</option>
+                <h2 id="PartSel-title">Selecciona la teva partida!!</h2>
+                <div id="PartSel">
+                    <select name="selpart" id="selpart">
+                        <?php
+                        require_once(__DIR__.'/System/Classes/Usuari_Partida.php');
+                        require_once(__DIR__.'/System/Classes/Partida.php');
+                        $Usuari_Partida = new Usuari_Partida();
+                        $Taula_Usuari_Partida = $Usuari_Partida->view_user($value['id_usuari']);
+                        foreach ($Taula_Usuari_Partida as $row) {
+                            $Partida = new Partida();
+                                echo '<option  value="'.$row->id_partida.'">'.$Partida->get_titol($row->id_partida).'</option>';
+                        }
+                        ?>
                     </select>
-                    <button id="add-monster" class="selfit-button">+</button>
+                    <button onclick="selecciona(this);" id="selPartida">Jugar!</button>
+                    <?php
+                    $tup = $Usuari_Partida->view_user($value['id_usuari']);
+                    $Part= new Partida();
+                    $rtn = array();
+                    foreach ($tup as $row) {
+                        $var = $Part->get_all($row->id_partida);
+                        array_push($rtn, $var);
+                    }
+                    ?>
+                </div>
+                <div id="PartSel-llista">
+                    <input class="input-partida" id="descripcio" placeholder="Descripcio" value="<?php echo $rtn[0]['descripcio']; ?>" type="text" name="TempDescripcio" maxlength="250" disabled>
+                    <input class="input-partida" id="any_partida" placeholder="Any de la partida" value="<?php echo $rtn[0]['any_partida']; ?>" type="number" name="TempAny_partida" disabled>
+                    <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural" value="<?php echo $rtn[0]['nivel_sobrenatural']; ?>" type="number" name="TempNivel_sobrenatural" disabled>
+                    <select id="disabled-joc" class="input-partida-bottom" name="TempJoc" disabled>
+                        <option value="Anima" selected>Anima</option>
+                        <option value="Test" >Test</option>
+                    </select>
                 </div>
             </div>
         </div>

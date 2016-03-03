@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $( "#panel-partida" ).draggable({ disabled: false, revert: true, containment: "#contenidor-partida", scroll: false});
     /*Toggles dels ulls i de les fitxes*/
     var i = 1;
     $("#eyedrag").click(function() {
@@ -6,6 +7,7 @@ $(document).ready(function(){
         i++;
         if (i%2 == 0){
             opc = false;
+            
             $( ".fitxa-open" ).draggable({ disabled: opc, revert: opc, stack: ".mesa-content-open .fitxa-open", containment: ".mesa-content-open", scroll: false});
         }else{
             opc = true;
@@ -15,7 +17,6 @@ $(document).ready(function(){
     });
     $("#eyemonst").click(function(){
         $("#taulmonst").toggle(500);
-        
         $( "#taulmonst" ).draggable();
     });
     $("#eyepj").click(function(){
