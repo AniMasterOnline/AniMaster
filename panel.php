@@ -54,10 +54,22 @@ and open the template in the editor.
                     </div>
                 </div>
                 <div id=panel-buttons" class="content-buttons">
-                    <button id="add-partida">+</button>
+                    <?php
+                        require_once(__DIR__.'/System/Classes/Usuari_Partida.php');
+                        require_once(__DIR__.'/System/Classes/Partida.php');
+                        $Usuari_Partida = new Usuari_Partida();
+                        $partida = $Usuari_Partida->view_user($value['id_usuari']);
+                        $i = 1;
+                        echo '<button onclick="mostrar(this);" value="0" id="partida0">+</button>';
+                        foreach ($partida as $row) {
+                            $Partida = new Partida();
+                            echo '<button onclick="mostrar(this);" value="'.$row->id_partida.'" id="partida'.$row->id_partida.'">'.$Partida->get_titol($row->id_partida).'</button>';
+                            $i++;
+                        }
+                    ?>
                 </div>
                 <div class="content-panel-zone">
-                    <div id="form-add-partida" class="content-panel-partida">
+                    <div id="partida-0" class="content-panel-partida">
                         <form method="post" action="System/Protocols/registrarPartida.php">
                             <h2>Crea la teva Partida</h2>
                             <input class="input-partida" id="titol" placeholder="Titol *" value="" type="text" name="TempTitol" maxlength="32" required autofocus>
@@ -71,12 +83,17 @@ and open the template in the editor.
                             <input class="input-crea" id="logbutton" type="submit" value="Crea">
                         </form>
                     </div>
-                    <div id="partida-1" class="content-panel-partida">
-                        Partida 1
-                    </div>
-                    
+                    <?php
+                        $Usuari_Partida = new Usuari_Partida();
+                        $partida = $Usuari_Partida->view_user($value['id_usuari']);
+                        foreach ($partida as $row) {
+                            $Partida = new Partida();
+                            echo '<div id="partida-'.$row->id_partida.'" class="content-panel-partida">';
+                                echo 'Partida '.$Partida->get_titol($row->id_partida);
+                            echo'</div>';
+                        }
+                    ?>
                 </div>
-                
             </div>
         </div>
         <!-- Footer content box -->

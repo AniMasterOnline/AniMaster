@@ -1,10 +1,10 @@
 <?php
-    require_once "../config.php";
+    require_once __DIR__."/../config.php";
     class Usuari_Partida{
         /*Atributs*/
         private $id_usuari;
-        private $id_partida;
-        private $master;
+        public  $id_partida;
+        public  $master;
         
         //METODES
         public function add(){
@@ -17,6 +17,19 @@
             $db = new connexio();
             $sql = "delete from Usuari_Partida where id_usuari = '$user' and id_partida = '$partida'";
             $db->query($sql);
+        }
+        public function view_user($user){
+            $db = new connexio();
+            $sql = "SELECT * FROM Usuari_Partida where id_usuari = '$user' and master = '0';";
+            $query = $db->query($sql);
+            $rtn = array();
+            while($obj = $query->fetch_assoc()){
+                $Usuari_Partida = new Usuari_Partida($obj["id_usuari"],$obj["id_partida"],$obj["master"]);
+                //var_dump($Usuari_Partida);
+                array_push($rtn, $Usuari_Partida);
+            }
+            $db->close();
+            return $rtn;
         }
         public function view_all(){
             $db = new connexio();

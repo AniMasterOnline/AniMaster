@@ -1,6 +1,6 @@
 <?php
     include "../Errors.php";
-    require_once('../Classes/Usuari.php');
+    require_once('/../Classes/Usuari.php');
     
     $user = $_POST['user'];
     $pass = md5($_POST['pass']);

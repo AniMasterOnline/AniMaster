@@ -1,13 +1,13 @@
 <?php
-    require_once "../config.php";
+    require_once __DIR__."/../config.php";
     class Partida{
         /*Atributs*/
         private $id_partida;
-        private $titol;
-        private $descripcio;
-        private $any_partida;
-        private $nivel_sobrenatural;
-        private $joc;
+        public $titol;
+        public $descripcio;
+        public $any_partida;
+        public $nivel_sobrenatural;
+        public $joc;
         
         //METODES
         public function add(){
@@ -36,6 +36,27 @@
                 while($row = $query->fetch_assoc()) {
                     $count++;
                     $datos = $row;
+                }
+            } else {
+                $count = 0;
+            }
+            $db->close();
+            if($count == 1){
+                return $datos;
+            }else{
+                return null;
+            }
+        }
+        function get_Titol($id_partida){ 
+            $db = new connexio();
+            $sql = "SELECT titol FROM Partida WHERE id_partida = '$id_partida'";
+            $query = $db->query($sql);
+            $count = 0;
+            $datos = "";
+            if ($query->num_rows > 0) {
+                while($row = $query->fetch_assoc()) {
+                    $count++;
+                    $datos = $row['titol'];
                 }
             } else {
                 $count = 0;
