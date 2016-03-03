@@ -42,9 +42,10 @@ INSERT INTO `Usuari` (`id_usuari`, `user`, `password`, `email`, `telefon`) VALUE
 --
 DROP TABLE IF EXISTS `Usuari_Partida`;
 CREATE TABLE IF NOT EXISTS `Usuari_Partida` (
-  `id_usuari` int(10) NOT NULL PRIMARY KEY,
-  `id_partida` int(10) NOT NULL UNIQUE,
-  `master` tinyint(1) NOT NULL,
+  `id_usuari` int(10) NOT NULL,
+  `id_partida` int(10) NOT NULL,
+  `master` varchar(10) NOT NULL,
+  CONSTRAINT pk_idus_idpa PRIMARY KEY (id_usuari,id_partida),
   FOREIGN KEY (`id_usuari`) REFERENCES `Usuari` (`id_usuari`),
   FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

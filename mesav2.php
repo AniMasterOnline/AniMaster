@@ -6,6 +6,7 @@
         <LINK REL=StyleSheet HREF="Public/css/mesaStyle.css" TYPE="text/css" MEDIA=screen />
         <!-- <script src="fondo.js"></script> -->
         <script src="Public/jquery/jquery-1.12.0.min.js"></script>
+        <script src="Public/jquery/jquery-ui.min.js"></script>
         <script src="Public/jquery/mesa.js"></script>
     </head>
     <body>
@@ -25,6 +26,7 @@
                     <li><a id="eyemonst"> <img src="Public/img/mesa/eye.png" class="eye"/> Monstres</a></li>
                     <li><a id="eyepj"> <img src="Public/img/mesa/eye.png" class="eye"/> Jugadors</a></li>
                     <li><a id="eyeobj"> <img src="Public/img/mesa/eye.png" class="eye"/> Objectes</a></li>
+                    
                     <li style="float:right;">
                         <a id="sidebar-toggle">
                             <span class="bar"></span>
@@ -33,10 +35,10 @@
                             <span class="bar"></span>
                         </a>
                     </li>
-                    <li style="float:right;"><a> <img src="Public/img/mesa/vida.png" class="accio"/> </a></li>
-                    <li style="float:right;"><a id="showdices"> <img src="Public/img/mesa/daus.png" class="accio"/> </a></li>
-                    <li style="float:right;"><a> <img src="Public/img/mesa/batalla2.png" class="accio"/> </a></li>
-                    
+                    <li style="float:right;"><a> <img src="Public/img/favicon/heart.ico" class="accio"/> </a></li>
+                    <li style="float:right;"><a id="showdices"> <img src="Public/img/favicon/d20.ico" class="accio"/> </a></li>
+                    <li style="float:right;"><a> <img src="Public/img/favicon/damage.ico" class="accio"/> </a></li>
+                    <li style="float:right;"><a id="eyedrag"> <img src="Public/img/favicon/wings.ico" class="accio"/> </a></li>
                 </ul>
             </div>
         </div>
@@ -111,9 +113,11 @@
             <!-- Footer content box --> 
             <div id="footer">
                 <center>
-                <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">AniMasterOnline</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Marc, Jacob i David</span> està subjecta a una llicència de <a class="link" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de Creative Commons</a>
+                <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">AniMasterOnline</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Marc, Jacob i David</span> està subjecta a una llicència de Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de Creative Commons
                 </center>
             </div>
+            
+            <!-- Calculadora content box --> 
             <div class="calculatedices" id="windowdices" >
                 <p>Fica una base per a calcular la teva tirada</p>
                 <form>

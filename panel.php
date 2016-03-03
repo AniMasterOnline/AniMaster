@@ -61,13 +61,12 @@ and open the template in the editor.
                         <form method="post" action="System/Protocols/registrarPartida.php">
                             <h2>Crea la teva Partida</h2>
                             <input class="input-partida" id="titol" placeholder="Titol *" value="" type="text" name="TempTitol" maxlength="32" required autofocus>
-                            <input class="input-partida" id="descripcio" placeholder="Descripcio" value="" type="text" name="TempDescripcio" maxlength="250">
-                            <input class="input-partida" id="any_partida" placeholder="Any de la partida" value="" type="number" name="TempAny_partida" maxlength="10">
-                            <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural" value="" type="number" name="TempNivel_sobrenatural" maxlength="32">
-                            <select class="input-partida" disabled>
-                                <option value="0" >Anima</option>
-                                <option value="1" >.....</option>
-                                <option value="2" >.....</option>
+                            <input class="input-partida" id="descripcio" placeholder="Descripcio *" value="" type="text" name="TempDescripcio" maxlength="250" required>
+                            <input class="input-partida" id="any_partida" placeholder="Any de la partida *" value="" type="number" name="TempAny_partida" required>
+                            <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural *" value="" type="number" name="TempNivel_sobrenatural" required>
+                            <input class="input-partida" id="id_usuari" placeholder="id_usuari *" value="<?php echo $value['id_usuari'];?>" type="hidden" name="TempId_usuari" required>
+                            <select id="disabled-joc" class="input-partida" name="TempJoc">
+                                <option value="Anima" selected>Anima</option>
                             </select>
                             <input class="input-crea" id="logbutton" type="submit" value="Crea">
                         </form>

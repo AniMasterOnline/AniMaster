@@ -1,7 +1,22 @@
 $(document).ready(function(){
     /*Toggles dels ulls i de les fitxes*/
+    var i = 1;
+    $("#eyedrag").click(function() {
+        var opc;
+        i++;
+        if (i%2 == 0){
+            opc = false;
+            $( ".fitxa-open" ).draggable({ disabled: opc, revert: opc, stack: ".mesa-content-open .fitxa-open", grid: [ 20, 20 ] });
+        }else{
+            opc = true;
+            $( ".fitxa-open" ).draggable("destroy");
+        }
+        
+    });
     $("#eyemonst").click(function(){
         $("#taulmonst").toggle(500);
+        
+        $( "#taulmonst" ).draggable();
     });
     $("#eyepj").click(function(){
         $("#taulpj").toggle(500);
@@ -216,10 +231,12 @@ $(document).ready(function(){
     $("#windowdices").hide();
     /*Toggles dels ulls i de les fitxes*/
     $("#showdices").click(function(){
-        $("#windowdices").animate({height: 'toggle'},500,function(){
-            document.getElementById("resultdices").innerHTML = "";
-            document.getElementById("base").value = "";
-        });
+        var selectedEffect = "fade"; //Jquery-ui --> per a info de mes efectes
+        //He mopdificat aquesta part per poder afegir efectes att: David.
+        $("#windowdices").toggle(selectedEffect, 500);
+        document.getElementById("resultdices").innerHTML = "";
+        document.getElementById("base").value = "";
+        
     });
 });
 

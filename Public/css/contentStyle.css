@@ -57,14 +57,13 @@
                 
             }
         .content-buttons{
-            background-color:rgba(98,93,106,0.8);
-            background-color: #333;
+            background-color: #222222;
             overflow: hidden;
             
         }
             .content-buttons button{
                 outline: 0;
-                padding: 1.2%;
+                padding: 0.9%;
                 background-color: #333;
                 border: none;
                 color: wheat;
@@ -79,11 +78,7 @@
                 color:#00171F;
             }
         .content-panel-zone{
-            background-color:rgba(250,250,255,0.8);
-            border-radius: 0px 0px 6px 6px;
-            padding-left: 0.5%;
-            padding-right: 0.5%;
-            padding-bottom: 0.5%;
+            background-color:rgba(0,0,0,0);
         }
             .content-panel-partida{
                 display: none;
@@ -95,11 +90,11 @@
                 margin-left: 35%;
                 margin-right: 35%;
                 padding: 1%;
-                background-color: rgba(60,150,190,1);
-                
+                background-color: rgba(250,250,250,0.4);
+                border-radius: 3px 3px 3px 3px;
             }
                 .content-panel-partida form h2{
-                    color: wheat;
+                    color: #151515;
                     text-align: center;
                     margin-bottom: 7px;
                 } 
@@ -112,27 +107,29 @@
                     color: white;
                 }
                 .input-partida:focus{
-                    background-color: #ff2200;
-                    color: #333;
+                    background-color: #222;
+                    color: #fff;
                     border: none;
                 }
-                
                 .input-crea{
                     width: 100%;
                     margin-top: 12px; 
                     background-color: #b1ff00; 
                     color:#002000; 
                     padding: 4px; 
-                    border:none;
+                    border:1px solid #333;
                     font-weight: bold;
                     border-radius: 3px;
                 }
                 .input-crea:hover{
                     margin-top: 12px; 
-                    background-color:#ffaa00; 
+                    background-color:#00AFED; 
                     color:#002000; 
                     padding: 4px; 
-                    border:none;
+                    border:1px solid #333;
                     border-radius: 3px;
+                }
+                #disabled-joc{
+                    pointer-events:none;
                 }
     
