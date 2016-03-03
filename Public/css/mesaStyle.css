@@ -1,4 +1,35 @@
 /***********************************************************/
+/*Menu Triar partida !!*/
+#contenidor-partida{
+    z-index: 4;
+    position: fixed;
+    width:100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color:rgba(0,0,0,0.9);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#panel-partida{
+    z-index: 4;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width:80%;
+    height: 80%;
+    margin: 0 auto;
+    background-color:rgba(0,173,237,0.75);
+    border: 3px solid whitesmoke;
+    border-radius: 12px 12px 12px 12px;
+    margin-bottom: 6px;
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(0,173,237,0.8);
+    -moz-box-shadow: 0px 0px 27px 5px rgba(0,173,237,0.8);
+    box-shadow: 0px 0px 27px 5px rgba(80,80,80,0.8);
+}
+    
+/***********************************************************/
 /*Header Menu !!*/
 .header-box {
     z-index: 3;

@@ -18,7 +18,20 @@
                     header('Location: login.php'); 
             }
         ?>
-        
+        <div id="contenidor-partida">
+            <div id="panel-partida">
+                <h2 class="fitxa-title">Selecciona la teva partida!!</h2>
+                <div class="llista">
+                    <select name="npc" class="selfit">
+                        <option value="1">Soldado</option>
+                        <option value="2">Lobo</option>
+                        <option value="3">Araña gigante</option>
+                        <option value="4">Chutlu</option>
+                    </select>
+                    <button id="add-monster" class="selfit-button">+</button>
+                </div>
+            </div>
+        </div>
         <!-- Panel content box -->
         <div id="mpanel-box" class="mpanel-box-open">
             <div class="mpanel-nav">
