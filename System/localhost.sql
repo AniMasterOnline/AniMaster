@@ -1,3 +1,12 @@
+DROP TABLE IF EXISTS `Usuari_Partida`;
+DROP TABLE IF EXISTS `Partida_Enemigo`;
+DROP TABLE IF EXISTS `Partida_Player`;
+DROP TABLE IF EXISTS `Partida_Item`;
+DROP TABLE IF EXISTS `Usuari`;
+DROP TABLE IF EXISTS `Partida`;
+DROP TABLE IF EXISTS `Enemigo`;
+DROP TABLE IF EXISTS `Player`;
+DROP TABLE IF EXISTS `Item`;
 --
 -- Base de datos: `DB_AniMaster`
 --
@@ -7,7 +16,6 @@ USE `DB_AniMaster`;
 --
 -- TABLE: `Partida`
 --
-DROP TABLE IF EXISTS `Partida`;
 CREATE TABLE IF NOT EXISTS `Partida` (
   `id_partida` int(10) NOT NULL AUTO_INCREMENT,
   `titol` varchar(32) NOT NULL,
@@ -21,7 +29,6 @@ CREATE TABLE IF NOT EXISTS `Partida` (
 --
 -- TABLE: `Usuari`
 --
-DROP TABLE IF EXISTS `Usuari`;
 CREATE TABLE IF NOT EXISTS `Usuari` (
   `id_usuari` int(10) NOT NULL AUTO_INCREMENT,
   `user` varchar(30) NOT NULL,
@@ -40,7 +47,6 @@ INSERT INTO `Usuari` (`id_usuari`, `user`, `password`, `email`, `telefon`) VALUE
 --
 -- TABLE: `Usuari_Partida`
 --
-DROP TABLE IF EXISTS `Usuari_Partida`;
 CREATE TABLE IF NOT EXISTS `Usuari_Partida` (
   `id_usuari` int(10) NOT NULL,
   `id_partida` int(10) NOT NULL,
@@ -53,23 +59,22 @@ CREATE TABLE IF NOT EXISTS `Usuari_Partida` (
 --
 -- TABLE: `Enemigo`
 --
-DROP TABLE IF EXISTS `Enemigo`;
 CREATE TABLE IF NOT EXISTS `Enemigo` (
-  `id_enemigo` int(10) NOT NULL PRIMARY KEY,
+  `id_enemigo` int(10) NOT NULL AUTO_INCREMENT,
   `nom`  varchar(32) NOT NULL,
   `vida`  int(10) NOT NULL,
-  `ataque` int (3),
+  `ataque` int(3),
   `arma` int(3),
-  `defensa` int (3),
+  `defensa` int(3),
   `armadura` int(2),
-  `turno` int (3),
+  `turno` int(3),
   `poderes` varchar(200),
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id_enemigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
 --
 -- TABLE: `Partida_Enemigo`
 --
-DROP TABLE IF EXISTS `Partida_Enemigo`;
 CREATE TABLE IF NOT EXISTS `Partida_Enemigo` (
   `id_enemigo` int(10) NOT NULL,
   `id_partida` int(10) NOT NULL,
@@ -81,23 +86,22 @@ CREATE TABLE IF NOT EXISTS `Partida_Enemigo` (
 --
 -- TABLE: `Player`
 --
-DROP TABLE IF EXISTS `Player`;
 CREATE TABLE IF NOT EXISTS `Player` (
-  `id_player` int(10) NOT NULL PRIMARY KEY,
+  `id_player` int(10) NOT NULL AUTO_INCREMENT,
   `nom`  varchar(32) NOT NULL,
   `vida`  int(10) NOT NULL,
-  `ataque` int (3),
+  `ataque` int(3),
   `arma` int(3),
-  `defensa` int (3),
+  `defensa` int(3),
   `armadura` int(2),
-  `turno` int (3),
+  `turno` int(3),
   `poderes` varchar(200),
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id_player`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
 --
 -- TABLE: `Partida_Player`
 --
-DROP TABLE IF EXISTS `Partida_Player`;
 CREATE TABLE IF NOT EXISTS `Partida_Player` (
   `id_player` int(10) NOT NULL,
   `id_partida` int(10) NOT NULL,
@@ -109,20 +113,19 @@ CREATE TABLE IF NOT EXISTS `Partida_Player` (
 --
 -- TABLE: `Item`
 --
-DROP TABLE IF EXISTS `Item`;
 CREATE TABLE IF NOT EXISTS `Item` (
-  `id_item` int(10) NOT NULL PRIMARY KEY,
+  `id_item` int(10) NOT NULL AUTO_INCREMENT,
   `nom` varchar(32),
-  `descripcio` varchar(500)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `descripcio` varchar(500),
+  PRIMARY KEY (`id_item`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
 --
 -- TABLE: `Partida_Item`
 --
-DROP TABLE IF EXISTS `Partida_Item`;
 CREATE TABLE IF NOT EXISTS `Partida_Item` (
-  `id_item` int(10) NOT NULL UNIQUE,
-  `id_partida` int(10) NOT NULL PRIMARY KEY,
+  `id_item` int(10) NOT NULL,
+  `id_partida` int(10) NOT NULL,
   CONSTRAINT pk_part_item PRIMARY KEY (id_item,id_partida),
   FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`),
   FOREIGN KEY (`id_item`) REFERENCES `Item` (`id_item`)

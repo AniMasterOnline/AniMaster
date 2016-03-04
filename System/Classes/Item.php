@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__."/../config.php";
-    class Enemigo{
+    class Item{
         /*Atributs*/
         private $id_item;
         public $nom;
