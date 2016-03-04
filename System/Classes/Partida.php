@@ -28,7 +28,7 @@
         }
         function get_id(){ 
             $db = new connexio();
-            $sql = "SELECT id_partida FROM Partida WHERE titol = '$this->titol' and descripcio = '$this->descripcio' and any_partida='$this->any_partida' and nivel_sobrenatural='$this->nivel_sobrenatural' and joc='$this->joc'";
+            $sql = "SELECT id_partida FROM Partida WHERE titol = '$this->titol'";
             $query = $db->query($sql);
             $count = 0;
             $datos = "";

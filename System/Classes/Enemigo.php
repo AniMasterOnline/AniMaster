@@ -16,7 +16,7 @@
         public function add(){
             $db = new connexio();
             $db->query("INSERT INTO Enemigo(id_enemigo,id_equipo,vida,ataque,defensa,turno,poderes) "
-                    ."VALUES ('$this->id_enemigo', '$this->nom','$this->vida', '$this->ataque', '$this->arma','$this->defensa', '$this->armadura','$this->turno', '$this->poderes')");
+                    ."VALUES ('$this->id_enemigo', '$this->nom','$this->vida', '$this->ataque', '$this->ataque','$this->ataque', '$this->armadura','$this->turno', '$this->poderes')");
             $db->close();
         }
         public function mod(){
@@ -28,6 +28,27 @@
             $db = new connexio();
             $sql = "delete from Enemigo where id_enemigo = $var";
             $db->query($sql);
+        }
+        function get_id(){ 
+            $db = new connexio();
+            $sql = "SELECT id_enemigo FROM Partida WHERE nom = '$this->nom'";
+            $query = $db->query($sql);
+            $count = 0;
+            $datos = "";
+            if ($query->num_rows > 0) {
+                while($row = $query->fetch_assoc()) {
+                    $count++;
+                    $datos = $row;
+                }
+            } else {
+                $count = 0;
+            }
+            $db->close();
+            if($count == 1){
+                return $datos;
+            }else{
+                return null;
+            }
         }
         public function view_all(){
             $db = new connexio();

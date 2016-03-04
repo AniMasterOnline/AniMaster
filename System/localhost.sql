@@ -18,7 +18,7 @@ USE `DB_AniMaster`;
 --
 CREATE TABLE IF NOT EXISTS `Partida` (
   `id_partida` int(10) NOT NULL AUTO_INCREMENT,
-  `titol` varchar(32) NOT NULL,
+  `titol` varchar(32) NOT NULL UNIQUE,
   `descripcio` varchar(250) NOT NULL,
   `any_partida` int(10) NOT NULL,
   `nivel_sobrenatural` varchar(32) DEFAULT NULL COMMENT 'Animaster v2.0',
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `Usuari_Partida` (
 --
 CREATE TABLE IF NOT EXISTS `Enemigo` (
   `id_enemigo` int(10) NOT NULL AUTO_INCREMENT,
-  `nom`  varchar(32) NOT NULL,
+  `nom`  varchar(32) NOT NULL UNIQUE,
   `vida`  int(10) NOT NULL,
   `ataque` int(3),
   `arma` int(3),
@@ -88,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `Partida_Enemigo` (
 --
 CREATE TABLE IF NOT EXISTS `Player` (
   `id_player` int(10) NOT NULL AUTO_INCREMENT,
-  `nom`  varchar(32) NOT NULL,
+  `nom`  varchar(32) NOT NULL UNIQUE,
   `vida`  int(10) NOT NULL,
   `ataque` int(3),
   `arma` int(3),
@@ -115,7 +115,7 @@ CREATE TABLE IF NOT EXISTS `Partida_Player` (
 --
 CREATE TABLE IF NOT EXISTS `Item` (
   `id_item` int(10) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(32),
+  `nom` varchar(32) UNIQUE,
   `descripcio` varchar(500),
   PRIMARY KEY (`id_item`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
