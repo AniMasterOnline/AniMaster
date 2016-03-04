@@ -15,13 +15,13 @@
         //METODES
         public function add(){
             $db = new connexio();
-            $db->query("INSERT INTO Player(vida,ataque,defensa,turno,poderes,id_equipo) "
+            $db->query("INSERT INTO Player(id_player,nom,vida,ataque,defensa,turno,poderes) "
                     . "VALUES ('$this->id_player', '$this->nom','$this->vida', '$this->ataque', '$this->arma','$this->defensa', '$this->armadura','$this->turno', '$this->poderes')");
             $db->close();
         }
         public function mod(){
             $db = new connexio();
-            $db->query("UPDATE Player SET nom='$this->nom'vida='$this->vida',ataque='$this->ataque',arma='$this->arma',defensa='$this->defensa',armadura='$this->armadura',turno='$this->turno',poderes='$this->poderes' WHERE id_enemigo= '$this->id_player'");
+            $db->query("UPDATE Player SET nom='$this->nom'vida='$this->vida',ataque='$this->ataque',arma='$this->arma',defensa='$this->defensa',armadura='$this->armadura',turno='$this->turno',poderes='$this->poderes' WHERE id_player= '$this->id_player'");
             $db->close();
         }
         public function delete($var){

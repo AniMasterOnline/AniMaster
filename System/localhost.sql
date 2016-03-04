@@ -17,7 +17,6 @@ DROP TABLE IF EXISTS `Enemigo`;
 DROP TABLE IF EXISTS `Player`;
 DROP TABLE IF EXISTS `Item`;
 
-
 --
 -- TABLE: `Partida`
 --
