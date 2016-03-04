@@ -83,8 +83,9 @@ CREATE TABLE IF NOT EXISTS `Enemigo` (
 --
 DROP TABLE IF EXISTS `Partida_Enemigo`;
 CREATE TABLE IF NOT EXISTS `Partida_Enemigo` (
-  `id_enemigo` int(10) NOT NULL UNIQUE,
-  `id_partida` int(10) NOT NULL PRIMARY KEY,
+  `id_enemigo` int(10) NOT NULL,
+  `id_partida` int(10) NOT NULL,
+  CONSTRAINT pk_part_enem PRIMARY KEY (id_enemigo,id_partida),
   FOREIGN KEY (`id_enemigo`) REFERENCES `Enemigo` (`id_enemigo`),
   FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -110,8 +111,9 @@ CREATE TABLE IF NOT EXISTS `Player` (
 --
 DROP TABLE IF EXISTS `Partida_Player`;
 CREATE TABLE IF NOT EXISTS `Partida_Player` (
-  `id_partida` int(10) NOT NULL PRIMARY KEY,
-  `id_player` int(10) NOT NULL UNIQUE,
+  `id_player` int(10) NOT NULL,
+  `id_partida` int(10) NOT NULL,
+  CONSTRAINT pk_part_play PRIMARY KEY (id_player,id_partida),
   FOREIGN KEY (`id_player`) REFERENCES `Player` (`id_player`),
   FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -131,8 +133,9 @@ CREATE TABLE IF NOT EXISTS `Item` (
 --
 DROP TABLE IF EXISTS `Partida_Item`;
 CREATE TABLE IF NOT EXISTS `Partida_Item` (
-  `id_partida` int(10) NOT NULL PRIMARY KEY,
   `id_item` int(10) NOT NULL UNIQUE,
+  `id_partida` int(10) NOT NULL PRIMARY KEY,
+  CONSTRAINT pk_part_item PRIMARY KEY (id_item,id_partida),
   FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`),
   FOREIGN KEY (`id_item`) REFERENCES `Item` (`id_item`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
