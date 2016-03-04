@@ -25,7 +25,7 @@
         $Partida_Enemigo = new Partida_Enemigo($newId_Enemigo['id_enemigo'], $newId_Partida);
         $Partida_Enemigo->add();
         
-        echo 'Partida creada Correctament!!';
+        echo 'Enemic creat Correctament!!';
         header('Location: ../../panel.php');
     }else{
         echo'Error';
