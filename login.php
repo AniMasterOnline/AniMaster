@@ -17,7 +17,7 @@
         <div class="body-box">
             <!-- Login content box -->
             <div class="login-title">
-                Animaster Online Login
+                Animaster Online Login 
             </div>
             <div class="login-body">
                 <div class="login-box">
