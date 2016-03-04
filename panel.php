@@ -102,7 +102,7 @@ and open the template in the editor.
                                             <input class="input-partida" id="descripcio" placeholder="Descripcio *" value="" type="text" name="TempDescripcio" maxlength="250" required>
                                             <input class="input-partida" id="any_partida" placeholder="Any de la partida *" value="" type="number" name="TempAny_partida" required>
                                             <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural *" value="" type="number" name="TempNivel_sobrenatural" required>
-                                            <input class="input-partida" id="id_usuari" placeholder="id_usuari *" value="<?php echo $value['id_usuari'];?>" type="hidden" name="TempId_usuari" required>
+                                            <input class="input-partida" id="id_usuari" placeholder="id_usuari *" value="'.$value['id_usuari'].'" type="hidden" name="TempId_usuari" required>
                                             <select id="disabled-joc" class="input-partida" name="TempJoc">
                                                 <option value="Anima" selected>Anima</option>
                                             </select>

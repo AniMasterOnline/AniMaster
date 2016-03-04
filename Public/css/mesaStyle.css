@@ -1,7 +1,7 @@
 /***********************************************************/
 /*Menu Triar partida !!*/
 #contenidor-partida{
-    //display: none;
+    display: none;
     z-index: 4;
     position: fixed;
     width:100%;
