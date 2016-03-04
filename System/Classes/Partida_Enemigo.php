@@ -17,7 +17,7 @@
             $sql = "delete from Partida_Enemigo where id_enemigo = '$enemigo' and id_partida = '$partida'";
             $db->query($sql);
         }
-        public function view_user($partida){
+        public function view_partida($partida){
             $db = new connexio();
             $sql = "SELECT * FROM Partida_Enemigo where id_partida = '$partida'";
             $query = $db->query($sql);

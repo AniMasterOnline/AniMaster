@@ -17,9 +17,9 @@
             $sql = "delete from Partida_Item where id_partida = '$partida' and id_item = '$item'";
             $db->query($sql);
         }
-        public function view_item($item){
+        public function view_partida($partida){
             $db = new connexio();
-            $sql = "SELECT * FROM Partida_Item where id_item = '$item';";
+            $sql = "SELECT * FROM Partida_Item where id_partida= '$partida'";
             $query = $db->query($sql);
             $rtn = array();
             while($obj = $query->fetch_assoc()){
