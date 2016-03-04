@@ -125,7 +125,7 @@ and open the template in the editor.
                                         </form>
                                     </div>
                                     <div id="Item-'.$row->id_partida.'" class="content-panel-partida-content">
-                                        <form method="post" action="System/Protocols/registrarPlayer.php">
+                                        <form method="post" action="System/Protocols/registrarItem.php">
                                             <h2>Crea un Item</h2>
                                             <input class="input-partida" type="hidden" name="TempId_Partida" value="'.$row->id_partida.'">
                                             <input class="input-partida" placeholder="Nom *" type="text" name="TempNom"  required autofocus>
