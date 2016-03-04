@@ -7,6 +7,7 @@
         <script src="Public/jquery/jquery-1.12.0.min.js"></script>
         <script src="Public/jquery/jquery-ui.min.js"></script>
         <script src="Public/jquery/mesa.js"></script>
+        <script src="Public/jquery/load-mesa.js"></script>
     </head>
     <body>
         <!-- Header content box -->
@@ -45,7 +46,7 @@
                     }
                     $json = json_encode( (array)$rtn );
                     echo ' <script>jsonPartida = '.$json.';</script>';
-                    echo '<script src="Public/jquery/load-mesa.js"></script>';
+                    echo '';
                     ?>
                 </div>
                 <div id="PartSel-llista">
