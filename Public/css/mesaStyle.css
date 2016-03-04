@@ -7,7 +7,7 @@
     width:100%;
     height: 100%;
     margin: 0 auto;
-    background-color:rgba(0,0,0,0.9);
+    background-color:rgba(0,0,0,0.85);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -16,11 +16,12 @@
 #panel-partida{
     z-index: 4;
     position: fixed;
-    top: 10%;
-    left: 10%;
-    width:80%;
+    padding: 12px;
+    top: 20%;
+    left: 20%;
+    width:60%;
     margin: 0 auto;
-    background-color:rgba(250,250,250,0.8);
+    background-color:rgba(35,35,35,0.6);
     border: 3px solid whitesmoke;
     border-radius: 12px 12px 12px 12px;
     -webkit-box-shadow: 0px 0px 27px 5px rgba(0,173,237,0.8);
@@ -29,7 +30,7 @@
 }
     #PartSel-title{
         text-align: center;
-        border-radius: 12px 12px 0px 0px;
+        border-radius: 6px 6px 0px 0px;
         background-color: rgba(34,34,34,1);
         color: whitesmoke;
         padding: 3px;
@@ -37,7 +38,6 @@
     #PartSel{
         float: left;
         width: 100%; 
-        background-color: rgba(0,0,0,0.3);
         padding: 0px;
         padding-bottom: 2px;
     }
@@ -57,9 +57,9 @@
                 float: right;
                 width: 10%;
                 height: 30px;
-                background-color: rgba(0,0,0,0.6);
+                background-color: rgba(80,190,60,1);
                 border: none;
-                color: whitesmoke;
+                color: #002000 ;
                 font-weight: 600;
                 outline:0px;
                 
@@ -75,16 +75,16 @@
     #PartSel-llista{
         float: left;
         width: 100%; 
-        background-color: rgba(0,0,0,0.3);
-        border-radius: 0px 0px 12px 12px;
+        background-color: rgba(0,0,0,0);
+        border-radius: 0px 0px 0px 0px;
     }
     .input-partida{
         color: whitesmoke;
         float: left;
         width: 100%; 
         background-color: #333;
-        padding: 4px;
-        margin-bottom: 6px;
+        padding: 6px;
+        margin-bottom: 3px;
         border: none;
         pointer-events:none;
     }
@@ -95,7 +95,7 @@
         background-color: #333;
         padding: 3px;
         border: none;
-        border-radius: 0px 0px 12px 12px;
+        border-radius: 0px 0px 0px 0px;
         pointer-events:none;
     }
     

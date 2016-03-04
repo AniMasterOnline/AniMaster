@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $( "#panel-partida" ).draggable({ disabled: false, revert: true, containment: "#contenidor-partida", scroll: false});
+    $( "#panel-partida" ).draggable({ disabled: true, revert: true, containment: "#contenidor-partida", scroll: false});
     /*Toggles dels ulls i de les fitxes*/
     var i = 1;
     $("#eyedrag").click(function() {
