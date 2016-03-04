@@ -116,3 +116,23 @@ CREATE TABLE IF NOT EXISTS `Partida_Player` (
   FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- TABLE: `Item`
+--
+DROP TABLE IF EXISTS `Item`;
+CREATE TABLE IF NOT EXISTS `Item` (
+  `id_item` int(10) NOT NULL PRIMARY KEY,
+  `nom` varchar(32),
+  `descripcio` varchar(500)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- TABLE: `Partida_Item`
+--
+DROP TABLE IF EXISTS `Partida_Item`;
+CREATE TABLE IF NOT EXISTS `Partida_Item` (
+  `id_partida` int(10) NOT NULL PRIMARY KEY,
+  `id_item` int(10) NOT NULL UNIQUE,
+  FOREIGN KEY (`id_partida`) REFERENCES `Partida` (`id_partida`),
+  FOREIGN KEY (`id_item`) REFERENCES `Item` (`id_item`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
