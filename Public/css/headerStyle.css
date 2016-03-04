@@ -65,7 +65,7 @@
             min-width:250px;
         }
         .nav li .panel-ul{
-            right: 0px;
+            right: -1px;
         }
         .nav li .panel-ul .panel-zone{
             position:relative;
@@ -88,9 +88,9 @@
                 
             }
             .panel-img img{
-                margin: 4px;
-                width: 71px;
-                height: 70px;
+                margin: 0px;
+                width: 100%;
+                height: 100%;
             }
             .panel-links{
                 width:auto;
