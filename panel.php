@@ -49,7 +49,7 @@ and open the template in the editor.
                 </div>
                 <div class="content-panel">
                     <div class="user-box">
-                        <div class="user-img">&nbsp;</div>
+                        <div class="user-img"><img src="Public/img/jugador/login.png"/></div>
                         <div class="user-set">&nbsp;</div>
                     </div>
                 </div>
@@ -83,27 +83,39 @@ and open the template in the editor.
                             <input class="input-crea" id="logbutton" type="submit" value="Crea">
                         </form>
                     </div>
-                    <div id="test222" class="content-panel-partida">
-                        <div class="content-panel-menu">
-                            <button value="" onclick="funcio(this);">Enemic</button><button>Npc</button><button>Items</button>
-                        </div>
-                        <div class="content-panel-partida-content">
-                            <div>
-                                <button></button>
-                            </div>
-                            <div>
-                                LListat - contingut
-                            </div>
-                            
-                        </div>
-                    </div>
                     <?php
                         $Usuari_Partida = new Usuari_Partida();
                         $partida = $Usuari_Partida->view_user($value['id_usuari']);
                         foreach ($partida as $row) {
                             $Partida = new Partida();
                             echo '<div id="partida-'.$row->id_partida.'" class="content-panel-partida">';
-                                echo 'Partida '.$Partida->get_titol($row->id_partida);
+                                echo '
+                                    <div class="content-panel-menu">
+                                        <button value="'.$row->id_partida.'" onclick="desEnemic(this);">Enemic</button><button value="'.$row->id_partida.'" onclick="desNpc(this);">Npc</button><button value="'.$row->id_partida.'" onclick="desItem(this);">Items</button>
+                                    </div>
+                                    <div id="Enemic-'.$row->id_partida.'" class="content-panel-partida-content">
+                                        Enemic
+                                        <form method="post" action="System/Protocols/registrarEnemic.php">
+                                            <h2>Crea un Enemic</h2>
+                                            xxxxxxxxxx
+                                            <input class="input-partida" id="nom" placeholder="Nom *" value="" type="text" name="TempNom" maxlength="32" required autofocus>
+                                            <input class="input-partida" id="descripcio" placeholder="Descripcio *" value="" type="text" name="TempDescripcio" maxlength="250" required>
+                                            <input class="input-partida" id="any_partida" placeholder="Any de la partida *" value="" type="number" name="TempAny_partida" required>
+                                            <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural *" value="" type="number" name="TempNivel_sobrenatural" required>
+                                            <input class="input-partida" id="id_usuari" placeholder="id_usuari *" value="<?php echo $value['id_usuari'];?>" type="hidden" name="TempId_usuari" required>
+                                            <select id="disabled-joc" class="input-partida" name="TempJoc">
+                                                <option value="Anima" selected>Anima</option>
+                                            </select>
+                                            <input class="input-crea" id="logbutton" type="submit" value="Crea">
+                                        </form>
+                                    </div>
+                                    <div id="Npc-'.$row->id_partida.'" class="content-panel-partida-content">
+                                        Npc
+                                    </div>
+                                    <div id="Item-'.$row->id_partida.'" class="content-panel-partida-content">
+                                        Item
+                                    </div>
+                                    ';
                             echo'</div>';
                         }
                     ?>

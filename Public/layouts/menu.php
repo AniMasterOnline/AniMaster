@@ -44,7 +44,7 @@
                             echo'<ul class="panel-ul">';
                                 echo'<div class="panel-zone">';
                                     echo'<div class="panel-img">';
-                                        echo'<img src="Public/img/slide1.jpg">';
+                                        echo'<img src="Public/img/jugador/login.png">';
                                     echo'</div>';
                                     echo'<div class="panel-links">';
                                         echo'<a href="panel.php"> Panel de ';
@@ -63,7 +63,7 @@
                             echo'<ul class="panel-ul">';
                                 echo'<div class="panel-zone">';
                                     echo'<div class="panel-img">';
-                                        echo'<img src="Public/img/slide1.jpg">';
+                                        echo'<img src="Public/img/jugador/login.png">';
                                     echo'</div>';
                                     echo'<div class="panel-links">';
                                         echo'<a href="panel.php"> Panel de ';

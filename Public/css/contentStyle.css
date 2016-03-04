@@ -45,16 +45,18 @@
             .user-img{
                 height:150px;
                 width:150px;
-                background:blue;
+                margin-right: 2px;
                 float:left;
-                
+            }
+            .user-img img{
+                height:100%;
+                width:100%;
             }
             .user-set{
                 width:auto;
                 height:150px;
                 background:red;
                 overflow:hidden;
-                
             }
         .content-buttons{
             background-color: #222222;
@@ -84,9 +86,11 @@
                 display: none;
                 background-color:rgba(65,65,65,0.9);
                 border-radius: 0px 0px 6px 6px;
-                padding: 1%;
+                overflow: auto;
             }
             .content-panel-partida form{
+                margin-top: 1%;
+                margin-bottom: 1%;
                 margin-left: 35%;
                 margin-right: 35%;
                 padding: 1%;
@@ -134,14 +138,22 @@
                 }
         .content-panel-menu{
             background-color: rgba(65,239,245,0.8);
-            border-radius: 0px 0px 6px 6px;
-            padding: 1%;
+            border-radius: 0px 0px 0px 0px;
             width:100%;
+            height:30px;
+            text-align: center;
         }
         .content-panel-menu button{
+            outline: 0;
             background-color:red;
+            width: 150px;
+            height:100%;
+            border:none;
+        }
+        .content-panel-menu button:hover{
+            background-color:orange;
         }
         .content-panel-partida-content{
-            
+            display:none;
         }
     
