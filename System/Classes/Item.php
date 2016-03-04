@@ -9,7 +9,7 @@
         //METODES
         public function add(){
             $db = new connexio();
-            $db->query("INSERT INTO Item(id_enemigo,nom,descripcio) "
+            $db->query("INSERT INTO Item(id_item,nom,descripcio) "
                     ."VALUES ('$this->id_item', '$this->nom','$this->descripcio')");
             $db->close();
         }
