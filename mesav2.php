@@ -8,6 +8,7 @@
         <script src="Public/jquery/jquery-ui.min.js"></script>
         <script src="Public/jquery/mesa.js"></script>
         <script src="Public/jquery/load-mesa.js"></script>
+        <script src="Public/jquery/add-mesa.js"></script>
     </head>
     <body>
         <!-- Header content box -->
@@ -21,7 +22,7 @@
             <div id="panel-partida">
                 <h2 id="PartSel-title">Selecciona la teva partida!!</h2>
                 <div id="PartSel">
-                    <select name="selpart" id="selpart">
+                    <select name="selpart" id="selpart" autofocus>
                         <?php
                         require_once(__DIR__.'/System/Classes/Usuari_Partida.php');
                         require_once(__DIR__.'/System/Classes/Partida.php');
@@ -35,7 +36,7 @@
                         }
                         ?>
                     </select>
-                    <button onclick="selecciona(this);" id="selPartida">Jugar!</button>
+                    <button id="selPartida">Jugar!</button>
                     <?php
                     $tup = $Usuari_Partida->view_user($value['id_usuari']);
                     $Part= new Partida();
@@ -50,9 +51,12 @@
                     ?>
                 </div>
                 <div id="PartSel-llista">
-                    <input class="input-partida" id="descripcio" placeholder="Descripcio" value="<?php echo $rtn[0]['descripcio']; ?>" type="text" name="TempDescripcio" maxlength="250">
-                    <input class="input-partida" id="any_partida" placeholder="Any de la partida" value="<?php echo $rtn[0]['any_partida']; ?>" type="number" name="TempAny_partida">
-                    <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural" value="<?php echo $rtn[0]['nivel_sobrenatural']; ?>" type="number" name="TempNivel_sobrenatural" >
+                    <input class="input-partida" id="id_usuari" value="<?php echo $value['id_usuari']; ?>" type="hidden" name="TempId_usuari">
+                    <input class="input-partida" id="id_partida" value="<?php echo $rtn[0]['id_partida']; ?>" type="hidden" name="TempId_partida">
+                    <input class="input-partida" id="titol" value="<?php echo $rtn[0]['titol']; ?>" type="hidden" name="TempTitol">
+                    <input class="input-partida" id="descripcio" value="<?php echo $rtn[0]['descripcio']; ?>" type="text" name="TempDescripcio">
+                    <input class="input-partida" id="any_partida" value="<?php echo $rtn[0]['any_partida']; ?>" type="number" name="TempAny_partida">
+                    <input class="input-partida" id="nivel_sobrenatural" value="<?php echo $rtn[0]['nivel_sobrenatural']; ?>" type="number" name="TempNivel_sobrenatural" >
                     <select id="disabled-joc" class="input-partida-bottom" name="TempJoc">
                         <option value="Anima" selected>Anima</option>
                         <option value="Test" >Test</option>

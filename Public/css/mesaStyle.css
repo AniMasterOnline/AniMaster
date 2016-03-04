@@ -8,10 +8,6 @@
     height: 100%;
     margin: 0 auto;
     background-color:rgba(0,0,0,0.85);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
 }
 #panel-partida{
     z-index: 4;
@@ -19,7 +15,7 @@
     padding: 12px;
     top: 20%;
     left: 20%;
-    width:60%;
+    width:40%;
     margin: 0 auto;
     background-color:rgba(35,35,35,0.6);
     border: 3px solid whitesmoke;
@@ -162,7 +158,7 @@
             min-width:250px;
         }
         .nav li .panel-ul{
-            right: 0px;
+            right: 1px;
         }
         .nav li .panel-ul .panel-zone{
             position:relative;
@@ -186,9 +182,9 @@
                 
             }
             .panel-img img{
-                margin: 4px;
-                width: 71px;
-                height: 70px;
+                margin: 0px;
+                width: 100%;
+                height: 100%;
             }
             .panel-links{
                 width:auto;
