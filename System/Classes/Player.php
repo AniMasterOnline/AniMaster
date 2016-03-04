@@ -29,6 +29,27 @@
             $sql = "delete from Player where id_player = $var";
             $db->query($sql);
         }
+        function get_id(){ 
+            $db = new connexio();
+            $sql = "SELECT id_player FROM Player WHERE nom = '$this->nom'";
+            $query = $db->query($sql);
+            $count = 0;
+            $datos = "";
+            if ($query->num_rows > 0) {
+                while($row = $query->fetch_assoc()) {
+                    $count++;
+                    $datos = $row;
+                }
+            } else {
+                $count = 0;
+            }
+            $db->close();
+            if($count == 1){
+                return $datos;
+            }else{
+                return null;
+            }
+        }
         public function view_all(){
             $db = new connexio();
             $sql = "SELECT * FROM Player;";
