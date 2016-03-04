@@ -1,7 +1,7 @@
 /***********************************************************/
 /*Menu Triar partida !!*/
 #contenidor-partida{
-    display: none;
+    //display: none;
     z-index: 4;
     position: fixed;
     width:100%;
@@ -79,20 +79,24 @@
         border-radius: 0px 0px 12px 12px;
     }
     .input-partida{
+        color: whitesmoke;
         float: left;
         width: 100%; 
         background-color: #333;
         padding: 4px;
         margin-bottom: 6px;
         border: none;
+        pointer-events:none;
     }
     .input-partida-bottom{
+        color: whitesmoke;
         float: left;
         width: 100%; 
         background-color: #333;
         padding: 3px;
         border: none;
         border-radius: 0px 0px 12px 12px;
+        pointer-events:none;
     }
     
 /***********************************************************/

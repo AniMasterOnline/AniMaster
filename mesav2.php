@@ -50,10 +50,10 @@
                     ?>
                 </div>
                 <div id="PartSel-llista">
-                    <input class="input-partida" id="descripcio" placeholder="Descripcio" value="<?php echo $rtn[0]['descripcio']; ?>" type="text" name="TempDescripcio" maxlength="250" disabled>
-                    <input class="input-partida" id="any_partida" placeholder="Any de la partida" value="<?php echo $rtn[0]['any_partida']; ?>" type="number" name="TempAny_partida" disabled>
-                    <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural" value="<?php echo $rtn[0]['nivel_sobrenatural']; ?>" type="number" name="TempNivel_sobrenatural" disabled>
-                    <select id="disabled-joc" class="input-partida-bottom" name="TempJoc" disabled>
+                    <input class="input-partida" id="descripcio" placeholder="Descripcio" value="<?php echo $rtn[0]['descripcio']; ?>" type="text" name="TempDescripcio" maxlength="250">
+                    <input class="input-partida" id="any_partida" placeholder="Any de la partida" value="<?php echo $rtn[0]['any_partida']; ?>" type="number" name="TempAny_partida">
+                    <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural" value="<?php echo $rtn[0]['nivel_sobrenatural']; ?>" type="number" name="TempNivel_sobrenatural" >
+                    <select id="disabled-joc" class="input-partida-bottom" name="TempJoc">
                         <option value="Anima" selected>Anima</option>
                         <option value="Test" >Test</option>
                     </select>
