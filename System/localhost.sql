@@ -1,3 +1,12 @@
+--
+-- Base de datos: `DB_AniMaster`
+--
+CREATE DATABASE IF NOT EXISTS `DB_AniMaster` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `DB_AniMaster`;
+
+--
+-- Base de datos: Drop All
+--
 DROP TABLE IF EXISTS `Usuari_Partida`;
 DROP TABLE IF EXISTS `Partida_Enemigo`;
 DROP TABLE IF EXISTS `Partida_Player`;
@@ -7,11 +16,7 @@ DROP TABLE IF EXISTS `Partida`;
 DROP TABLE IF EXISTS `Enemigo`;
 DROP TABLE IF EXISTS `Player`;
 DROP TABLE IF EXISTS `Item`;
---
--- Base de datos: `DB_AniMaster`
---
-CREATE DATABASE IF NOT EXISTS `DB_AniMaster` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `DB_AniMaster`;
+
 
 --
 -- TABLE: `Partida`
