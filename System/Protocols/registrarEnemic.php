@@ -1,56 +1,34 @@
 <?php
     include "../Errors.php";
-    require_once('../Classes/Usuari.php');
+    require_once('../Classes/Enemigo.php');
+    require_once('../Classes/Partida_Enemigo.php');
     
-    $newUser = $_POST['TempUser'];
-    $newPass = md5($_POST['TempPassword']);
-    $newPass2 = md5($_POST['TempRepeatPassword']);
-    $newEmail = $_POST['TempEmail'];
-    $newTelefon = $_POST['TempTelefon'];
+    $newId_Partida = $_POST['TempId_Partida'];
     
+    $newNom = $_POST['TempNom'];
+    $newVida = $_POST['TempVida'];
+    $newAtaque = $_POST['TempAtaque'];
+    $newArma = $_POST['TempArma'];
+    $newDefensa = $_POST['TempDefensa'];
+    $newArmadura = $_POST['TempArmadura'];
+    $newTurno = $_POST['TempTurno'];
+    $newPoderes = $_POST['TempPoderes'];
     
-    $usuari = new Usuari();
+    $newEnemigo = new Enemigo($newNom, $newVida, $newAtaque, $newArma, $newDefensa, $newArmadura, $newTurno, $newPoderes);
     
-    $flag0 = true;
-    if($newPass == $newPass2){
-        $flag0 = false;
-    }
-    $flag1 = $usuari->test1($newUser);
-    $flag2 = $usuari->test2($newEmail);
-    $flag3 = $usuari->test3($newTelefon);
-    
-    if($flag0 || $flag1 || $flag2 || $flag3){
-        echo'<div><center>';
-        echo"<h2>Error Al crear L'usuari</h2>";
-        if($flag0){
-            echo '- Les contrasenyes no coincideixen!! <br>';
-        }
-        if($flag1){
-            echo '- Aquest Usuari no esta disponible!! <br>';
-        }
-        if($flag2){
-            echo '- Aquest Email ja esta registrat!! <br>';
-        }
-        if($flag3){
-            echo '- Aquest Telefon ja esta en us!! <br>';
-        }
-        echo '<br><form><input type="button" value="Torna atras" name="Torna atras" onclick="history.back()" /></form>';
-        echo'</center></div>';
-    }else{
-        //Afegir Usuari a la BD.
-        $newUsuari = new Usuari($newUser, $newPass, $newEmail, $newTelefon);
-        $newUsuari->add();
-        echo 'Usuari afegit Correctament!!';
+    if($newEnemigo->get_id() == null){
+        $newEnemigo->add();
         
-        //Iniciar sessió amb el nou usuari. 
-        $usuari = $usuari->verificar_login($newUser,$newPass);
-        if(!isset($_SESSION['usuari'])){
-            if( $usuari != null){ 
-                session_start();
-                $_SESSION['usuari'] = $usuari;
-                header('Location: ../../panel.php');
-
-            } 
-        }
+        $newId_Enemigo = $newEnemigo->get_id();
+        //var_dump($newId_Enemigo);
+        
+        $Partida_Enemigo = new Partida_Enemigo($newId_Enemigo['id_enemigo'], $newId_Partida);
+        $Partida_Enemigo->add();
+        
+        echo 'Partida creada Correctament!!';
+        header('Location: ../../panel.php');
+    }else{
+        echo'Error';
     }
+    
 ?>

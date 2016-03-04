@@ -15,8 +15,8 @@
         //METODES
         public function add(){
             $db = new connexio();
-            $db->query("INSERT INTO Enemigo(id_enemigo,id_equipo,vida,ataque,defensa,turno,poderes) "
-                    ."VALUES ('$this->id_enemigo', '$this->nom','$this->vida', '$this->ataque', '$this->ataque','$this->ataque', '$this->armadura','$this->turno', '$this->poderes')");
+            $db->query("INSERT INTO Enemigo(id_enemigo,nom,vida,ataque,arma,defensa,armadura,turno,poderes) "
+                    ."VALUES ('$this->id_enemigo', '$this->nom','$this->vida', '$this->ataque', '$this->arma','$this->defensa', '$this->armadura','$this->turno', '$this->poderes')");
             $db->close();
         }
         public function mod(){
@@ -31,11 +31,12 @@
         }
         function get_id(){ 
             $db = new connexio();
-            $sql = "SELECT id_enemigo FROM Partida WHERE nom = '$this->nom'";
+            $sql = "SELECT id_enemigo FROM Enemigo WHERE nom = '$this->nom'";
             $query = $db->query($sql);
             $count = 0;
             $datos = "";
             if ($query->num_rows > 0) {
+                
                 while($row = $query->fetch_assoc()) {
                     $count++;
                     $datos = $row;
