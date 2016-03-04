@@ -115,7 +115,7 @@
             $this->joc="";
         }
         function __construct5($a2, $a3, $a4, $a5, $a6){
-            $this->id_partida="";
+            $this->id_partida=0;
             $this->titol=$a2;
             $this->descripcio=$a3;
             $this->any_partida=$a4;
