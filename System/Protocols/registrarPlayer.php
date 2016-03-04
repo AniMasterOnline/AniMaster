@@ -20,12 +20,11 @@
         $newPlayer->add();
         
         $newId_Player = $newPlayer->get_id();
-        var_dump($newId_Player);
         
-        $Partida_Player = new Partida_Player($newId_player['id_player'], $newId_partida);
+        $Partida_Player = new Partida_Player($newId_Player['id_player'], $newId_Partida);
         $Partida_Player->add();
         
-        echo 'Partida creada Correctament!!';
+        echo 'Player creat Correctament!!';
         //header('Location: ../../panel.php');
     }else{
         echo'Error';

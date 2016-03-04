@@ -15,7 +15,7 @@
         //METODES
         public function add(){
             $db = new connexio();
-            $db->query("INSERT INTO Player(id_player,nom,vida,ataque,defensa,turno,poderes) "
+            $db->query("INSERT INTO Player(id_player,nom,vida,ataque,arma,defensa,armadura,turno,poderes) "
                     . "VALUES ('$this->id_player', '$this->nom','$this->vida', '$this->ataque', '$this->arma','$this->defensa', '$this->armadura','$this->turno', '$this->poderes')");
             $db->close();
         }
