@@ -83,6 +83,20 @@ and open the template in the editor.
                             <input class="input-crea" id="logbutton" type="submit" value="Crea">
                         </form>
                     </div>
+                    <div id="test222" class="content-panel-partida">
+                        <div class="content-panel-menu">
+                            <button value="" onclick="funcio(this);">Enemic</button><button>Npc</button><button>Items</button>
+                        </div>
+                        <div class="content-panel-partida-content">
+                            <div>
+                                <button></button>
+                            </div>
+                            <div>
+                                LListat - contingut
+                            </div>
+                            
+                        </div>
+                    </div>
                     <?php
                         $Usuari_Partida = new Usuari_Partida();
                         $partida = $Usuari_Partida->view_user($value['id_usuari']);

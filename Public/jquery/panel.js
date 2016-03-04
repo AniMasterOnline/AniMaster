@@ -1,7 +1,8 @@
 var selectedEffect = "fade";
 $(document).ready(function(){
     /*Toggles dels ulls i de les fitxes*/
-    $("#partida-0").show(selectedEffect, 500);
+    //$("#partida-0").show(selectedEffect, 500);
+     $("#test222").show(selectedEffect, 500);
     $("#partida0").addClass("button-active");
 });
 function mostrar(btp){

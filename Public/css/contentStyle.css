@@ -132,4 +132,16 @@
                 #disabled-joc{
                     pointer-events:none;
                 }
+        .content-panel-menu{
+            background-color: rgba(65,239,245,0.8);
+            border-radius: 0px 0px 6px 6px;
+            padding: 1%;
+            width:100%;
+        }
+        .content-panel-menu button{
+            background-color:red;
+        }
+        .content-panel-partida-content{
+            
+        }
     
