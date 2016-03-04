@@ -4,7 +4,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="shortcut icon" href="favicon.ico">
         <LINK REL=StyleSheet HREF="Public/css/mesaStyle.css" TYPE="text/css" MEDIA=screen />
-        <!-- <script src="fondo.js"></script> -->
         <script src="Public/jquery/jquery-1.12.0.min.js"></script>
         <script src="Public/jquery/jquery-ui.min.js"></script>
         <script src="Public/jquery/mesa.js"></script>
@@ -12,7 +11,6 @@
     <body>
         <!-- Header content box -->
         <?php include "Public/layouts/menu.php";?>
-        
         <?php
             if(!isset($_SESSION['usuari'])){
                     header('Location: login.php'); 
@@ -28,9 +26,11 @@
                         require_once(__DIR__.'/System/Classes/Partida.php');
                         $Usuari_Partida = new Usuari_Partida();
                         $Taula_Usuari_Partida = $Usuari_Partida->view_user($value['id_usuari']);
+                        $cont = 0;
                         foreach ($Taula_Usuari_Partida as $row) {
                             $Partida = new Partida();
-                                echo '<option  value="'.$row->id_partida.'">'.$Partida->get_titol($row->id_partida).'</option>';
+                                echo '<option  name="'.$row->id_partida.'" value="'.$cont.'">'.$Partida->get_titol($row->id_partida).'</option>';
+                                $cont++;
                         }
                         ?>
                     </select>
@@ -43,6 +43,9 @@
                         $var = $Part->get_all($row->id_partida);
                         array_push($rtn, $var);
                     }
+                    $json = json_encode( (array)$rtn );
+                    echo ' <script>jsonPartida = '.$json.';</script>';
+                    echo '<script src="Public/jquery/load-mesa.js"></script>';
                     ?>
                 </div>
                 <div id="PartSel-llista">

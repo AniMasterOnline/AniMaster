@@ -7,7 +7,6 @@ $(document).ready(function(){
         i++;
         if (i%2 == 0){
             opc = false;
-            
             $( ".fitxa-open" ).draggable({ disabled: opc, revert: opc, stack: ".mesa-content-open .fitxa-open", containment: ".mesa-content-open", scroll: false});
         }else{
             opc = true;
