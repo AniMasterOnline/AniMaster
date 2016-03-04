@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `Player` (
   `ataque` int (3),
   `arma` int(3),
   `defensa` int (3),
-
+  `armadura` int(2),
   `turno` int (3),
   `poderes` varchar(200),
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
