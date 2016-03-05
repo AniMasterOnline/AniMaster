@@ -49,7 +49,7 @@ and open the template in the editor.
                 </div>
                 <div class="content-panel">
                     <div class="user-box">
-                        <div class="user-img">&nbsp;</div>
+                        <div class="user-img"><img src="Public/img/jugador/login.png"/></div>
                         <div class="user-set">&nbsp;</div>
                     </div>
                 </div>

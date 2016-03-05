@@ -45,9 +45,14 @@
             .user-img{
                 height:150px;
                 width:150px;
-                background:blue;
+                margin-right: 2px;
+                //background:blue;
                 float:left;
                 
+            }
+            .user-img img{
+                height:100%;
+                width:100%;
             }
             .user-set{
                 width:auto;
