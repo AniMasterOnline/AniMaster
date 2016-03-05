@@ -29,5 +29,4 @@
     }else{
         echo'Error';
     }
-    
 ?>

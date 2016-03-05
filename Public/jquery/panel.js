@@ -6,7 +6,7 @@ $(document).ready(function(){
     $("#partida0").addClass("button-active");
     
     $( "#accordion" ).accordion();
-   
+    
 });
 function mostrar(btp){
     var id = btp.value;
@@ -31,4 +31,12 @@ function desItem(btp){
     var id = btp.value;
     $('.content-panel-partida-content').hide();
     $('#Item-'+id).show(selectedEffect, 500);
+}
+function ConfirmDelete()
+{
+  var x = confirm("Are you sure you want to delete?");
+  if (x)
+      return true;
+  else
+    return false;
 }

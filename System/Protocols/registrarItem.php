@@ -24,5 +24,4 @@
     }else{
         echo'Error';
     }
-    
 ?>

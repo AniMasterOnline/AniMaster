@@ -12,9 +12,9 @@
                     . "VALUES ('$this->id_enemigo', '$this->id_partida')");
             $db->close();
         }
-        public function delete($partida, $enemigo){
+        public function delete($enemigo){
             $db = new connexio();
-            $sql = "delete from Partida_Enemigo where id_enemigo = '$enemigo' and id_partida = '$partida'";
+            $sql = "delete from Partida_Enemigo where id_enemigo = '$enemigo'";
             $db->query($sql);
         }
         public function view_partida($partida){
