@@ -3,7 +3,7 @@
     require_once('../Classes/Enemigo.php');
     require_once('../Classes/Partida_Enemigo.php');
     
-    $newId_Partida = $_POST['TempId_Partida'];
+    $newId_Partida = isset($_POST["TempId_Partida"]) ? $_POST["TempId_Partida"] : "";
     
     $newNom = $_POST['TempNom'];
     $newVida = $_POST['TempVida'];
@@ -16,7 +16,7 @@
     
     $newEnemigo = new Enemigo($newNom, $newVida, $newAtaque, $newArma, $newDefensa, $newArmadura, $newTurno, $newPoderes);
     
-    if($newEnemigo->get_id() == null){
+    if(isset($_POST["TempId_Partida"]) && $newEnemigo->get_id() == null){
         $newEnemigo->add();
         
         $newId_Enemigo = $newEnemigo->get_id();

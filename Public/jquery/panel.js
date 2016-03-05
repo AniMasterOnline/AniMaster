@@ -4,6 +4,8 @@ $(document).ready(function(){
     //$("#partida-0").show(selectedEffect, 500);
     $("#partida-0").show(selectedEffect, 500);
     $("#partida0").addClass("button-active");
+    
+    $( "#accordion" ).accordion();
    
 });
 function mostrar(btp){
