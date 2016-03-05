@@ -3,7 +3,7 @@
     class Partida_Item{
         /*Atributs*/
         private $id_partida;
-        private $id_item;
+        public $id_item;
         
         //METODES
         public function add(){

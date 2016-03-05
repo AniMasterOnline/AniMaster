@@ -161,28 +161,160 @@ and open the template in the editor.
                     </div>
                     <?php
                         $Usuari_Partida = new Usuari_Partida();
-                        $partida = $Usuari_Partida->view_user($value['id_usuari']);
-                        foreach ($partida as $row) {
-                            $Partida = new Partida();
-                            echo '<div id="partida-'.$row->id_partida.'" class="content-panel-partida">';
-                                echo '
-                                    <div class="content-panel-menu">
-                                        <button value="'.$row->id_partida.'" onclick="desEnemic(this);">Enemic</button><button value="'.$row->id_partida.'" onclick="desNpc(this);">Npc</button><button value="'.$row->id_partida.'" onclick="desItem(this);">Items</button>
-                                    </div>
-                                    <div id="Enemic-'.$row->id_partida.'" class="content-panel-partida-content">
-                                        Enemic
-                                        
-                                    </div>
-                                    <div id="Npc-'.$row->id_partida.'" class="content-panel-partida-content">
-                                        Player
-                                        
-                                    </div>
-                                    <div id="Item-'.$row->id_partida.'" class="content-panel-partida-content">
-                                        Item
-                                    </div>
-                                    ';
-                            echo'</div>';
+                        $Usuari_Partida = $Usuari_Partida->view_user($value['id_usuari']);
+                        foreach ($Usuari_Partida as $row) {
+                            $id_Partida = $row->id_partida;
+                            
+                                echo'<div id="partida-'.$id_Partida.'" class="content-panel-partida">';
+                                    echo '<div class="content-panel-menu">';
+                                        echo'<button value="'.$id_Partida.'" onclick="desEnemic(this);">Enemic</button>';
+                                        echo'<button value="'.$id_Partida.'" onclick="desNpc(this);">Npc</button>';
+                                        echo'<button value="'.$id_Partida.'" onclick="desItem(this);">Items</button>';
+                                    echo'</div>';
+                                    echo'<div id="Enemic-'.$id_Partida.'" class="content-panel-partida-content">';
+                                        echo'<div class="rTable">'; 
+                                            echo'<div class="rTableRow">'; 
+                                                echo'<div class="rTableHead">Nom</div>'; 
+                                                echo'<div class="rTableHead">Vida</div>'; 
+                                                echo'<div class="rTableHead">Ataque</div>'; 
+                                                echo'<div class="rTableHead">Arma</div>'; 
+                                                echo'<div class="rTableHead">Defensa</div>';  
+                                                echo'<div class="rTableHead">Armadura</div>'; 
+                                                echo'<div class="rTableHead">Turno</div>';  
+                                                echo'<div class="rTableHead">Poderes</div>';  
+                                                echo'<div class="rTableHead">&nbsp;</div>'; 
+                                                echo'<div class="rTableHead">&nbsp;</div>'; 
+                                            echo'</div>';
+                                            require_once(__DIR__.'/System/Classes/Partida_Enemigo.php');
+                                            require_once(__DIR__.'/System/Classes/Enemigo.php');
+                                            $Partida_Enemigo = new Partida_Enemigo();
+                                            $Partida_Enemigo = $Partida_Enemigo->view_partida($id_Partida);
+                                            $i = 0;
+                                            foreach ($Partida_Enemigo as $row) {
+                                                $Enemigo = new Enemigo();
+                                                $Enemigo = $Enemigo->get_all($row->id_enemigo);
+                                                if ( $i%2 == 0){
+                                                    echo'<div class="rTableRow-0">';
+                                                        echo'<div class="rTableCell">'.$Enemigo['nom'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['vida'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['ataque'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['arma'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['defensa'].'</div>';  
+                                                        echo'<div class="rTableCell">'.$Enemigo['armadura'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['turno'].'</div>';  
+                                                        echo'<div class="rTableCell">'.$Enemigo['poderes'].'</div>';  
+                                                        echo'<div class="rTableCell">&nbsp;</div>'; 
+                                                        echo'<div class="rTableCell">&nbsp</div>';
+                                                    echo'</div>';
+                                                }else{
+                                                    echo'<div class="rTableRow-1">';
+                                                        echo'<div class="rTableCell">'.$Enemigo['nom'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['vida'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['ataque'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['arma'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['defensa'].'</div>';  
+                                                        echo'<div class="rTableCell">'.$Enemigo['armadura'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Enemigo['turno'].'</div>';  
+                                                        echo'<div class="rTableCell">'.$Enemigo['poderes'].'</div>';  
+                                                        echo'<div class="rTableCell">&nbsp;</div>'; 
+                                                        echo'<div class="rTableCell">&nbsp</div>';
+                                                    echo'</div>';
+                                                }
+                                                $i++;
+                                            }
+                                        echo'</div>';
+                                    echo'</div>';   
+                                    echo'<div id="Npc-'.$id_Partida.'" class="content-panel-partida-content">';
+                                        echo'<div class="rTable">'; 
+                                            echo'<div class="rTableRow">'; 
+                                                echo'<div class="rTableHead">Nom</div>'; 
+                                                echo'<div class="rTableHead">Vida</div>'; 
+                                                echo'<div class="rTableHead">Ataque</div>'; 
+                                                echo'<div class="rTableHead">Arma</div>'; 
+                                                echo'<div class="rTableHead">Defensa</div>';  
+                                                echo'<div class="rTableHead">Armadura</div>'; 
+                                                echo'<div class="rTableHead">Turno</div>';  
+                                                echo'<div class="rTableHead">Poderes</div>';  
+                                                echo'<div class="rTableHead">&nbsp;</div>'; 
+                                                echo'<div class="rTableHead">&nbsp;</div>'; 
+                                            echo'</div>';
+                                            require_once(__DIR__.'/System/Classes/Partida_Player.php');
+                                            require_once(__DIR__.'/System/Classes/Player.php');
+                                            $Partida_Player = new Partida_Player();
+                                            $Partida_Player = $Partida_Player->view_partida($id_Partida);
+                                            $i = 0;
+                                            foreach ($Partida_Player as $row) {
+                                                $Player = new Player();
+                                                $Player = $Player->get_all($row->id_player);
+                                                if ( $i%2 == 0){
+                                                    echo'<div class="rTableRow-0">';
+                                                        echo'<div class="rTableCell">'.$Player['nom'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['vida'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['ataque'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['arma'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['defensa'].'</div>';  
+                                                        echo'<div class="rTableCell">'.$Player['armadura'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['turno'].'</div>';  
+                                                        echo'<div class="rTableCell">'.$Player['poderes'].'</div>';  
+                                                        echo'<div class="rTableCell">&nbsp;</div>'; 
+                                                        echo'<div class="rTableCell">&nbsp</div>';
+                                                    echo'</div>';
+                                                }else{
+                                                    echo'<div class="rTableRow-1">';
+                                                        echo'<div class="rTableCell">'.$Player['nom'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['vida'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['ataque'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['arma'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['defensa'].'</div>';  
+                                                        echo'<div class="rTableCell">'.$Player['armadura'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Player['turno'].'</div>';  
+                                                        echo'<div class="rTableCell">'.$Player['poderes'].'</div>';  
+                                                        echo'<div class="rTableCell">&nbsp;</div>'; 
+                                                        echo'<div class="rTableCell">&nbsp</div>';
+                                                    echo'</div>';
+                                                }
+                                                $i++;
+                                            }
+                                        echo'</div>';
+                                    echo'</div>';   
+                                    echo'<div id="Item-'.$id_Partida.'" class="content-panel-partida-content">';
+                                        echo'<div class="rTable">'; 
+                                            echo'<div class="rTableRow">'; 
+                                                echo'<div class="rTableHead">Nom</div>'; 
+                                                echo'<div class="rTableHead">Descripció</div>';   
+                                                echo'<div class="rTableHead">&nbsp;</div>'; 
+                                                echo'<div class="rTableHead">&nbsp;</div>'; 
+                                            echo'</div>';
+                                            require_once(__DIR__.'/System/Classes/Partida_Item.php');
+                                            require_once(__DIR__.'/System/Classes/Item.php');
+                                            $Partida_Item = new Partida_Item();
+                                            $Partida_Item = $Partida_Item->view_partida($id_Partida);
+                                            $i = 0;
+                                            foreach ($Partida_Item as $row) {
+                                                $Item = new Item();
+                                                $Item = $Item->get_all($row->id_item);
+                                                if ( $i%2 == 0){
+                                                    echo'<div class="rTableRow-0">';
+                                                        echo'<div class="rTableCell">'.$Item['nom'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Item['descripcio'].'</div>';  
+                                                        echo'<div class="rTableCell">&nbsp</div>'; 
+                                                        echo'<div class="rTableCell">&nbsp</div>';
+                                                    echo'</div>';
+                                                }else{
+                                                    echo'<div class="rTableRow-1">';
+                                                        echo'<div class="rTableCell">'.$Item['nom'].'</div>'; 
+                                                        echo'<div class="rTableCell">'.$Item['descripcio'].'</div>';  
+                                                        echo'<div class="rTableCell">&nbsp;</div>'; 
+                                                        echo'<div class="rTableCell">&nbsp</div>';
+                                                    echo'</div>';
+                                                }
+                                                $i++;
+                                            }
+                                        echo'</div>';
+                                    echo'</div>';
+                                echo'</div>';
                         }
+                        echo'</div>';
                     ?>
                 </div>
             </div>

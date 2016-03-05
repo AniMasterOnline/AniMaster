@@ -15,7 +15,8 @@
         
         $newId_Item = $newItem->get_id();
         
-        $Partida_Item = new Partida_Item($newId_Item['id_item'], $newId_Partida);
+        $Partida_Item = new Partida_Item($newId_Partida, $newId_Item['id_item']);
+        //var_dump($Partida_Item);
         $Partida_Item->add();
         
         echo 'Item creat Correctament!!';

@@ -13,6 +13,7 @@ function mostrar(btp){
     $("button").removeClass("button-active");
     $('#partida'+id).addClass("button-active");
     $('.content-panel-partida').hide();
+    $('.content-panel-partida-content').hide();
     $('#partida-'+id).show(selectedEffect, 500);
     $('#Enemic-'+id).show(selectedEffect, 500);
 }

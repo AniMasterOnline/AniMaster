@@ -2,8 +2,8 @@
     require_once __DIR__."/../config.php";
     class Partida_Player{
         /*Atributs*/
-        private $id_player;
-        private  $id_partida;
+        public $id_player;
+        private $id_partida;
         
         //METODES
         public function add(){
