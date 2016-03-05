@@ -4,6 +4,7 @@
         /*Atributs*/
         private $id_enemigo;
         private $id_equipo;
+        public $nom;
         public $vida;
         public $ataque;
         public $defensa;
@@ -14,12 +15,12 @@
         public function add(){
             $db = new connexio();
             $db->query("INSERT INTO Enemigo(id_enemigo,id_equipo,vida,ataque,defensa,turno,poderes) "
-                    ."VALUES ('$this->id_enemigo', '$this->id_equipo', '$this->vida', '$this->ataque', '$this->defensa', '$this->turno', '$this->poderes')");
+                    ."VALUES ('$this->id_enemigo', '$this->id_equipo', '$this->nom','$this->vida', '$this->ataque', '$this->defensa', '$this->turno', '$this->poderes')");
             $db->close();
         }
         public function mod(){
             $db = new connexio();
-            $db->query("UPDATE Enemigo SET id_equipo='$this->id_equipo',vida='$this->vida',ataque='$this->ataque',defensa='$this->defensa',turno='$this->turno',poderes='$this->poderes' WHERE id_enemigo= '$this->id_enemigo'");
+            $db->query("UPDATE Enemigo SET id_equipo='$this->id_equipo',nom='$this->nom'vida='$this->vida',ataque='$this->ataque',defensa='$this->defensa',turno='$this->turno',poderes='$this->poderes' WHERE id_enemigo= '$this->id_enemigo'");
             $db->close();
         }
         public function delete($var){
@@ -33,7 +34,7 @@
             $query = $db->query($sql);
             $rtn = array();
             while($obj = $query->fetch_assoc()){
-                $Enemigo = new Enemigo($obj["id_enemigo"],$obj["id_equipo"],$obj["vida"],$obj["ataque"],$obj["defensa"], $obj["turno"], $obj["poderes"]);
+                $Enemigo = new Enemigo($obj["id_enemigo"],$obj["id_equipo"],$obj["nom"],$obj["vida"],$obj["ataque"],$obj["defensa"], $obj["turno"], $obj["poderes"]);
                 //var_dump($Usuari);
                 array_push($rtn, $Enemigo);
             }
@@ -52,6 +53,7 @@
         function __construct0(){
             $this->id_enemigo=0;
             $this->id_equipo="";
+            $this->nom="";
             $this->vida="";
             $this->ataque="";
             $this->defensa="";
@@ -61,29 +63,32 @@
         function __construct1($a1){
             $this->id_enemigo=$a1;
             $this->id_equipo="";
+            $this->nom="";
             $this->vida="";
             $this->ataque="";
             $this->defensa="";
             $this->turno="";
             $this->poderes="";
         }
-        function __construct6($a2, $a3, $a4, $a5, $a6, $a7){
+        function __construct6($a2, $a3, $a4, $a5, $a6, $a7, $a8){
             $this->id_enemigo=0;
             $this->id_equipo=$a2;
-            $this->vida=$a3;
-            $this->ataque=$a4;
-            $this->defensa=$a5;
-            $this->turno=$a6;
-            $this->poderes=$a7;
+            $this->nom=$a3;
+            $this->vida=$a4;
+            $this->ataque=$a5;
+            $this->defensa=$a6;
+            $this->turno=$a7;
+            $this->poderes=$a8;
         }
-        function __construct7($a1, $a2, $a3, $a4, $a5, $a6, $a7){
+        function __construct7($a1, $a2, $a3, $a4, $a5, $a6, $a7, $a8){
             $this->id_enemigo=$a1;
             $this->id_equipo=$a2;
-            $this->vida=$a3;
-            $this->ataque=$a4;
-            $this->defensa=$a5;
-            $this->turno=$a6;
-            $this->poderes=$a7;
+            $this->nom=$a3;
+            $this->vida=$a4;
+            $this->ataque=$a5;
+            $this->defensa=$a6;
+            $this->turno=$a7;
+            $this->poderes=$a8;
         }
            
         //METODES SET
@@ -92,6 +97,9 @@
         }
         public function setId_Equipo($var) {
             $this->id_equipo = $var;
+        }
+        public function setNom($var) {
+            $this->nom = $var;
         }
         public function setVida($var) {
             $this->vida = $var;
@@ -115,6 +123,9 @@
         }
         public function getId_Equipo(){
             return $this->id_equipo;
+        }
+        public function getNom(){
+            return $this->nom;
         }
         public function getVida(){
             return $this->vida;

@@ -69,6 +69,7 @@ DROP TABLE IF EXISTS `Enemigo`;
 CREATE TABLE IF NOT EXISTS `Enemigo` (
   `id_enemigo` int(10) NOT NULL PRIMARY KEY,
   `id_equipo` int(10) NOT NULL UNIQUE,
+  `nom`  varchar(32) NOT NULL,
   `vida`  int(10) NOT NULL,
   `ataque` int (3),
   `defensa` int (3),
@@ -95,6 +96,7 @@ DROP TABLE IF EXISTS `Player`;
 CREATE TABLE IF NOT EXISTS `Player` (
   `id_player` int(10) NOT NULL PRIMARY KEY,
   `id_equipo` int(10) NOT NULL UNIQUE,
+  `nom`  varchar(32) NOT NULL,
   `vida`  int(10) NOT NULL,
   `ataque` int (3),
   `defensa` int (3),
