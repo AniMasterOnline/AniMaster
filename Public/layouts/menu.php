@@ -14,14 +14,14 @@
                     echo'<li><a href="index.php">Inicio</a> <span class="flecha">&#9660</span></li>';
                 }
                 if (strpos($self,"media")) { 
-                    echo'<li><a id="active" href="#Media">Media <span class="flecha">&#9660</span></a></li>';
+                    echo'<li class="ocultar"><a id="active" href="#Media">Media <span class="flecha">&#9660</span></a></li>';
                 }else{
-                    echo'<li><a href="#Media">Media <span class="flecha">&#9660</span></a> </li>';
+                    echo'<li class="ocultar"><a href="#Media" >Media <span class="flecha">&#9660</span></a> </li>';
                 }
                 if (strpos($self,"novedades")) { 
-                    echo'<li><a id="active" href="#Novedades">Novedades <span class="flecha">&#9660</span></a></li>';
+                    echo'<li><a id="active" href="devblog.php">Novedades <span class="flecha">&#9660</span></a></li>';
                 }else{
-                    echo'<li><a href="#Novedades">Novedades <span class="flecha">&#9660</span></a></li>';
+                    echo'<li><a href="devblog.php">Novedades <span class="flecha">&#9660</span></a></li>';
                 }
             }
             session_start();
@@ -50,7 +50,6 @@
                                         echo'<a href="panel.php"> Panel de ';
                                         echo $value['user'];
                                         echo'</a>';
-                                        echo'<a href="#">Configuració</a>';
                                         echo'<a href="logout.php">Sortir</a>';
                                     echo'</div>';
                                 echo'</div>';
@@ -69,7 +68,6 @@
                                         echo'<a href="panel.php"> Panel de ';
                                         echo $value['user'];
                                         echo'</a>';
-                                        echo'<a href="#">Configuració</a>';
                                         echo'<a href="logout.php">Sortir</a>';
                                     echo'</div>';
                                 echo'</div>';

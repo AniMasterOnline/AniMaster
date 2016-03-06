@@ -2,8 +2,8 @@
     require_once __DIR__."/../config.php";
     class Partida_Player{
         /*Atributs*/
-        private $id_player;
-        private  $id_partida;
+        public $id_player;
+        private $id_partida;
         
         //METODES
         public function add(){
@@ -12,9 +12,9 @@
                     . "VALUES ('$this->id_player', '$this->id_partida')");
             $db->close();
         }
-        public function delete($partida, $player){
+        public function delete($player){
             $db = new connexio();
-            $sql = "delete from Partida_Player where id_player = '$player' and id_partida = '$partida'";
+            $sql = "delete from Partida_Player where id_player = '$player'";
             $db->query($sql);
         }
         public function view_partida($partida){

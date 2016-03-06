@@ -63,6 +63,27 @@
             $db->close();
             return $rtn;
         }
+        public function get_all($id){
+            $db = new connexio();
+            $sql = "SELECT * FROM Player WHERE id_player = '$id'";
+            $query = $db->query($sql);
+            $count = 0;
+            $datos = "";
+            if ($query->num_rows > 0) {
+                while($row = $query->fetch_assoc()) {
+                    $count++;
+                    $datos = $row;
+                }
+            } else {
+                $count = 0;
+            }
+            $db->close();
+            if($count == 1){
+                return $datos;
+            }else{
+                return null;
+            }
+        }
         //CONSTRUCTORS
         function __construct(){
             $args = func_get_args();

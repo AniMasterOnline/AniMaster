@@ -24,3 +24,6 @@ body{
     text-decoration: none;
     color: #55acee;
 }
+.ocultar{
+    display:none;
+}

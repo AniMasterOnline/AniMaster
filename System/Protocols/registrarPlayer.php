@@ -3,7 +3,7 @@
     require_once('../Classes/Player.php');
     require_once('../Classes/Partida_Player.php');
     
-    $newId_Partida = $_POST['TempId_Partida'];
+    $newId_Partida = isset($_POST["TempId_Partida"]) ? $_POST["TempId_Partida"] : "";
     
     $newNom = $_POST['TempNom'];
     $newVida= $_POST['TempVida'];
@@ -16,7 +16,7 @@
     
     $newPlayer = new Player($newNom, $newVida, $newAtaque, $newArma, $newDefensa, $newArmadura, $newTurno, $newPoderes);
     
-    if($newPlayer->get_id() == null){
+    if(isset($_POST["TempId_Partida"]) && $newPlayer->get_id() == null){
         $newPlayer->add();
         
         $newId_Player = $newPlayer->get_id();
@@ -25,9 +25,8 @@
         $Partida_Player->add();
         
         echo 'Player creat Correctament!!';
-        //header('Location: ../../panel.php');
+        header('Location: ../../panel.php');
     }else{
         echo'Error';
     }
-    
 ?>

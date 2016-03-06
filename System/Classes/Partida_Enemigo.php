@@ -2,8 +2,8 @@
     require_once __DIR__."/../config.php";
     class Partida_Enemigo{
         /*Atributs*/
-        private $id_enemigo;
-        private  $id_partida;
+        public $id_enemigo;
+        private $id_partida;
         
         //METODES
         public function add(){
@@ -12,9 +12,9 @@
                     . "VALUES ('$this->id_enemigo', '$this->id_partida')");
             $db->close();
         }
-        public function delete($partida, $enemigo){
+        public function delete($enemigo){
             $db = new connexio();
-            $sql = "delete from Partida_Enemigo where id_enemigo = '$enemigo' and id_partida = '$partida'";
+            $sql = "delete from Partida_Enemigo where id_enemigo = '$enemigo'";
             $db->query($sql);
         }
         public function view_partida($partida){
@@ -37,7 +37,7 @@
             $rtn = array();
             while($obj = $query->fetch_assoc()){
                 $Partida_Enemigo = new Partida_Enemigo($obj["id_enemigo"],$obj["id_partida"]);
-                //var_dump($Usuari_Partida);
+                //var_dump($Partida_Enemigo);
                 array_push($rtn, $Partida_Enemigo);
             }
             $db->close();
