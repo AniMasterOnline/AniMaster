@@ -35,10 +35,15 @@
                 </div>
                 <div class="content-slider">
                     <div id="slider">
-                        <img src="Public/img/slide1.jpg">
-                        <img src="Public/img/slide2.jpg">
-                        <img src="Public/img/slide3.jpg">
-                        <img src="Public/img/slide4.jpg">
+                        <img src="Public/img/slider1.jpg">
+                        <img src="Public/img/slider2.jpg">
+                        <img src="Public/img/slider3.jpg">
+                        <img src="Public/img/slider4.jpg">
+                        <img src="Public/img/slider5.jpg">
+                        <img src="Public/img/slider6.jpg">
+                        <img src="Public/img/slider7.jpg">
+                        <img src="Public/img/slider8.jpg">
+                        <img src="Public/img/slider9.jpg">
                     </div>
                 </div>
                 <div class="content-zone">
