@@ -39,7 +39,7 @@
                                 </TD>
                             </TR>
                             <TR>
-                                <TD class="chekbox">
+                                <TD class="chekbox, ocultar" >
                                     <input type="checkbox" name="autologin" value="1">
                                     <label for="checkbox_id">Recordam</label>
                                 </TD>

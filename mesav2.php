@@ -73,9 +73,9 @@
                             <span class="bar"></span>
                         </a>
                     </li>
-                    <li style="float:right;"><a> <img src="Public/img/favicon/heart.ico" class="accio"/> </a></li>
+                    <li style="float:right;" class='ocultar'><a> <img src="Public/img/favicon/heart.ico" class="accio"/> </a></li>
                     <li style="float:right;"><a id="showdices"> <img src="Public/img/favicon/d20.ico" class="accio"/> </a></li>
-                    <li style="float:right;"><a> <img src="Public/img/favicon/damage.ico" class="accio"/> </a></li>
+                    <li style="float:right;" class='ocultar'><a> <img src="Public/img/favicon/damage.ico" class="accio"/> </a></li>
                     <li style="float:right;"><a id="eyedrag"> <img src="Public/img/favicon/wings.ico" class="accio"/> </a></li>
                 </ul>
             </div>

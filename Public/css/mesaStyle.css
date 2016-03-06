@@ -634,4 +634,7 @@ body{
         width: auto;
         overflow: auto;
     }
+    .ocultar{
+        display:none;
+    }
 
