@@ -1,21 +1,21 @@
 $(document).ready(function(){
     var cont1 = 0;
     $("#add-monster").click(function(){
-        /*Variables per a poder controlar el div internament*/
+        //Per a saber quin monstre cargar
+        var $value = $("#selEnemigo").val();
+        //Variables del enemic
+        var monster = jsonEnemigo[$value].nom;
+        var imglink = "";
+        var vida = jsonEnemigo[$value].vida;
+        var armadura = jsonEnemigo[$value].armadura;
+        var turno = jsonEnemigo[$value].turno;
+        var arma = jsonEnemigo[$value].arma;
+        var atq = jsonEnemigo[$value].ataque;
+        var def = jsonEnemigo[$value].defensa;
+        var pod = jsonEnemigo[$value].poderes;
+        //Control de la variable per a poder eliminar
         cont1++;
         var del = "mob"+cont1;
-        
-        /*Variables del enemic*/
-        var monster = "Test";
-        var imglink = "";
-        var vida = "0";
-        var ta = "0";
-        var turn = "0";
-        var damage = "0";
-        var atq = "0";
-        var def = "0";
-        var pod = "n/a";
-        
         /*Generem el contingut que imprimirem*/
         var newmonster = ' \n\
                 <div id="'+del+'" class="dalt">\n\
@@ -28,29 +28,29 @@ $(document).ready(function(){
                             <div class="column3">'+vida+'</div>\n\
                         </div>\n\
                         <div class="row-middle">\n\
-                            <div class="column1">TA</div>\n\
-                            <div class="column2">= &nbsp;</div>\n\
-                            <div class="column3">'+ta+'</div>\n\
-                        </div>\n\
-                        <div class="row-middle">\n\
-                            <div class="column1">Turno</div>\n\
-                            <div class="column2">= &nbsp;</div>\n\
-                            <div class="column3">'+turn+'</div>\n\
-                        </div>\n\
-                        <div class="row-middle">\n\
-                            <div class="column1">Daño</div>\n\
-                            <div class="column2">= &nbsp;</div>\n\
-                            <div class="column3">'+damage+'</div>\n\
-                        </div>\n\
-                        <div class="row-middle">\n\
-                            <div class="column1">Ataque</div>\n\
+                            <div class="column1">H.Ataque</div>\n\
                             <div class="column2">= &nbsp;</div>\n\
                             <div class="column3">'+atq+'</div>\n\
                         </div>\n\
                         <div class="row-middle">\n\
-                            <div class="column1">Defensa</div>\n\
+                            <div class="column1">Arma</div>\n\
+                            <div class="column2">= &nbsp;</div>\n\
+                            <div class="column3">'+arma+'</div>\n\
+                        </div>\n\
+                        <div class="row-middle">\n\
+                            <div class="column1">H.Defensa</div>\n\
                             <div class="column2">= &nbsp;</div>\n\
                             <div class="column3">'+def+'</div>\n\
+                        </div>\n\
+                        <div class="row-middle">\n\
+                            <div class="column1">Armadura</div>\n\
+                            <div class="column2">= &nbsp;</div>\n\
+                            <div class="column3">'+armadura+'</div>\n\
+                        </div>\n\
+                        <div class="row-middle">\n\
+                            <div class="column1">Turno</div>\n\
+                            <div class="column2">= &nbsp;</div>\n\
+                            <div class="column3">'+turno+'</div>\n\
                         </div>\n\
                         <div class="row-bottom">\n\
                             <div class="column1">Poderes</div>\n\
@@ -58,7 +58,7 @@ $(document).ready(function(){
                             <div class="column3">'+pod+'</div>\n\
                         </div>\n\
                     </div>\n\
-                    <button value="'+del+'" class="modfitxa">Modifica!</button>\n\
+                    <button value="'+$value+'" class="modfitxa" disabled >&nbsp;</button>\n\
                     <button  value="'+del+'" onclick="deleete(this);" class="delfitxa">-</button>\n\
                 </div>\n\
             ';
@@ -69,20 +69,21 @@ $(document).ready(function(){
     
     var cont2 = 0;
     $("#add-player").click(function(){
-        /*Variables per a poder controlar el div internament*/
+        //Per a saber quin Player cargar
+        var $value = $("#selPlayer").val();
+        //Variables del Player
+        var npc = jsonPlayer[$value].nom;
+        var imglink = "";
+        var vida = jsonPlayer[$value].vida;
+        var armadura = jsonPlayer[$value].armadura;
+        var turno = jsonPlayer[$value].turno;
+        var arma = jsonPlayer[$value].arma;
+        var atq = jsonPlayer[$value].ataque;
+        var def = jsonPlayer[$value].defensa;
+        var pod = jsonPlayer[$value].poderes;
+        //Control de la variable per a poder eliminar
         cont2++;
         var del = "npc"+cont2;
-        
-        /*Variables del enemic*/
-        var npc = "Test";
-        var imglink = "";
-        var vida = "0";
-        var ta = "0";
-        var turn = "0";
-        var damage = "0";
-        var atq = "0";
-        var def = "0";
-        var pod = "n/a";
         
         /*Generem el contingut que imprimirem*/
         var newnpc = ' \n\
@@ -96,29 +97,29 @@ $(document).ready(function(){
                             <div class="column3">'+vida+'</div>\n\
                         </div>\n\
                         <div class="row-middle">\n\
-                            <div class="column1">TA</div>\n\
-                            <div class="column2">= &nbsp;</div>\n\
-                            <div class="column3">'+ta+'</div>\n\
-                        </div>\n\
-                        <div class="row-middle">\n\
-                            <div class="column1">Turno</div>\n\
-                            <div class="column2">= &nbsp;</div>\n\
-                            <div class="column3">'+turn+'</div>\n\
-                        </div>\n\
-                        <div class="row-middle">\n\
-                            <div class="column1">Daño</div>\n\
-                            <div class="column2">= &nbsp;</div>\n\
-                            <div class="column3">'+damage+'</div>\n\
-                        </div>\n\
-                        <div class="row-middle">\n\
-                            <div class="column1">Ataque</div>\n\
+                            <div class="column1">H.Ataque</div>\n\
                             <div class="column2">= &nbsp;</div>\n\
                             <div class="column3">'+atq+'</div>\n\
                         </div>\n\
                         <div class="row-middle">\n\
-                            <div class="column1">Defensa</div>\n\
+                            <div class="column1">Arma</div>\n\
+                            <div class="column2">= &nbsp;</div>\n\
+                            <div class="column3">'+arma+'</div>\n\
+                        </div>\n\
+                        <div class="row-middle">\n\
+                            <div class="column1">H.Defensa</div>\n\
                             <div class="column2">= &nbsp;</div>\n\
                             <div class="column3">'+def+'</div>\n\
+                        </div>\n\
+                        <div class="row-middle">\n\
+                            <div class="column1">Armadura</div>\n\
+                            <div class="column2">= &nbsp;</div>\n\
+                            <div class="column3">'+armadura+'</div>\n\
+                        </div>\n\
+                        <div class="row-middle">\n\
+                            <div class="column1">Turno</div>\n\
+                            <div class="column2">= &nbsp;</div>\n\
+                            <div class="column3">'+turno+'</div>\n\
                         </div>\n\
                         <div class="row-bottom">\n\
                             <div class="column1">Poderes</div>\n\
@@ -126,7 +127,7 @@ $(document).ready(function(){
                             <div class="column3">'+pod+'</div>\n\
                         </div>\n\
                     </div>\n\
-                    <button value="'+del+'" class="modfitxa">Modifica!</button>\n\
+                    <button value="'+$value+'" class="modfitxa" disabled >&nbsp;</button>\n\
                     <button  value="'+del+'" onclick="deleete(this);" class="delfitxa">-</button>\n\
                 </div>\n\
             ';
@@ -137,14 +138,15 @@ $(document).ready(function(){
     
     var cont3 = 0;
     $("#add-item").click(function(){
-        /*Variables per a poder controlar el div internament*/
+        //Per a saber quin Player cargar
+        var $value = $("#selItem").val();
+        //Variables del Item
+        var item = jsonItem[$value].nom;
+        var imglink = "";
+        var description = jsonItem[$value].descripcio;
+        //Control de la variable per a poder eliminar
         cont3++;
         var del = "item"+cont3;
-        
-        /*Variables del enemic*/
-        var item = "Test";
-        var imglink = "";
-        var description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
         
         /*Generem el contingut que imprimirem*/
         var newitem = ' \n\
@@ -159,7 +161,7 @@ $(document).ready(function(){
                                 <div class="column3">'+description+'</div>\n\
                             </div>\n\
                     </div>\n\
-                    <button value="'+del+'" class="modfitxa">Modifica!</button>\n\
+                    <button value="'+$value+'" class="modfitxa" disabled >&nbsp;</button>\n\
                     <button  value="'+del+'" onclick="deleete(this);" class="delfitxa">-</button>\n\
                 </div>\n\
             ';

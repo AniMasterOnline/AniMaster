@@ -9,6 +9,7 @@
         <script src="Public/jquery/mesa.js"></script>
         <script src="Public/jquery/load-mesa.js"></script>
         <script src="Public/jquery/add-mesa.js"></script>
+        
     </head>
     <body>
         <!-- Header content box -->
@@ -57,7 +58,7 @@
             </div>
         </div>
         <!-- Panel content box -->
-        <div id="mpanel-box" class="mpanel-box-open">
+        <div id="mpanel-box" class="mpanel-box-closed">
             <div class="mpanel-nav">
                 <ul class="mnav">
                     <li><a id="eyemonst"> <img src="Public/img/mesa/eye.png" class="eye"/> Monstres</a></li>
@@ -80,7 +81,7 @@
             </div>
         </div>
         <!-- Aside Multimedia content -->
-        <div id="mesa-multimedia" class="mesa-multimedia-open">
+        <div id="mesa-multimedia" class="mesa-multimedia-closed">
             <div class="hang">
                 <script src="https://apis.google.com/js/platform.js" async defer></script>
                 <div class="g-hangout" data-render="createhangout" ></div>
@@ -101,15 +102,12 @@
             </div>
         </div>
         <!-- Body content box -->
-        <div id="mesa-content" class="mesa-content-open">
+        <div id="mesa-content" class="mesa-content-closed">
             <div id="taulmonst" class="fitxa-open">
                 <h2 class="fitxa-title">Enemics</h2>
                 <div class="llista">
-                    <select name="npc" class="selfit">
-                        <option value="1">Soldado</option>
-                        <option value="2">Lobo</option>
-                        <option value="3">Araña gigante</option>
-                        <option value="4">Chutlu</option>
+                    <select id="selEnemigo" class="selfit">
+                        //Aqui se cargan los Enemigos
                     </select>
                     <button id="add-monster" class="selfit-button">+</button>
                 </div>
@@ -118,13 +116,10 @@
                 </div>
             </div>
             <div id="taulpj" class="fitxa-open">
-                <h2 class="fitxa-title">Jugadors</h2>
+                <h2 class="fitxa-title">Npc's</h2>
                 <div class="llista">
-                    <select name="pj" class="selfit">
-                        <option value="1">Marc</option>
-                        <option value="2">Eduard</option>
-                        <option value="3">Pau</option>
-                        <option value="4">David</option>
+                    <select id="selPlayer" class="selfit">
+                        //Aqui se cargan los Players
                     </select>
                     <button id="add-player" class="selfit-button">+</button>
                 </div>
@@ -133,13 +128,10 @@
                 </div>
             </div>
             <div id="taulobj" class="fitxa-open">
-                <h2 class="fitxa-title">Objectes</h2>
+                <h2 class="fitxa-title">Items</h2>
                 <div class="llista">
-                    <select name="obj" class="selfit">
-                        <option value="1">obj - 1</option>
-                        <option value="2">obj - 2</option>
-                        <option value="3">obj - 3</option>
-                        <option value="4">obj - 4</option>
+                    <select id="selItem" class="selfit">
+                        //Aqui se cargan los PItems
                     </select>
                     <button id="add-item" class="selfit-button">+</button>
                 </div>

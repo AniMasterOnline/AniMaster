@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `Enemigo` (
   `ataque` int(3),
   `arma` int(3),
   `defensa` int(3),
-  `armadura` int(2),
+  `armadura` int(3),
   `turno` int(3),
   `poderes` varchar(200),
   PRIMARY KEY (`id_enemigo`)
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `Player` (
   `ataque` int(3),
   `arma` int(3),
   `defensa` int(3),
-  `armadura` int(2),
+  `armadura` int(3),
   `turno` int(3),
   `poderes` varchar(200),
   PRIMARY KEY (`id_player`)

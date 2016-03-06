@@ -52,6 +52,16 @@ $(document).ready(function(){
                 success:  function (response) {
                         jsonEnemigo = JSON.parse(response);
                         console.log(jsonEnemigo);
+                        if(Object.keys(jsonEnemigo).length != 0){
+                            var $value;
+                            for ($value = 0; $value < Object.keys(jsonEnemigo).length; $value++){
+                                var txt = $('#selEnemigo').html();
+                                $('#selEnemigo').html(txt + '<option value="'+$value+'">'+jsonEnemigo[$value].nom+'</option>');
+                                //console.log($value, jsonPartida[$value].id_partida, jsonPartida[$value].titol);
+                            }
+                        }else if(Object.keys(jsonEnemigo).length == 0){
+                            alert("En el panel pots crear i gestionar els teus enemics");
+                        }
                 }
         });
         $.ajax({
@@ -63,6 +73,16 @@ $(document).ready(function(){
                 success:  function (response) {
                         jsonItem = JSON.parse(response);
                         console.log(jsonItem);
+                        if(Object.keys(jsonItem).length != 0){
+                            var $value;
+                            for ($value = 0; $value < Object.keys(jsonItem).length; $value++){
+                                var txt = $('#selItem').html();
+                                $('#selItem').html(txt + '<option value="'+$value+'">'+jsonItem[$value].nom+'</option>');
+                                //console.log($value, jsonPartida[$value].id_partida, jsonPartida[$value].titol);
+                            }
+                        }else if(Object.keys(jsonItem).length == 0){
+                            alert("En el panel pots crear i gestionar els teus items");
+                        }
                 }
         });
         $.ajax({
@@ -74,8 +94,19 @@ $(document).ready(function(){
                 success:  function (response) {
                         jsonPlayer = JSON.parse(response);
                         console.log(jsonPlayer);
+                        if(Object.keys(jsonPlayer).length != 0){
+                            var $value;
+                            for ($value = 0; $value < Object.keys(jsonPlayer).length; $value++){
+                                var txt = $('#selPlayer').html();
+                                $('#selPlayer').html(txt + '<option value="'+$value+'">'+jsonPlayer[$value].nom+'</option>');
+                                //console.log($value, jsonPartida[$value].id_partida, jsonPartida[$value].titol);
+                            }
+                        }else if(Object.keys(jsonPlayer).length == 0){
+                            alert("En el panel pots crear i gestionar els teus Npc's");
+                        }
                 }
         });
+        
     });
 });
 
