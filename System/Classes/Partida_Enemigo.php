@@ -37,7 +37,7 @@
             $rtn = array();
             while($obj = $query->fetch_assoc()){
                 $Partida_Enemigo = new Partida_Enemigo($obj["id_enemigo"],$obj["id_partida"]);
-                //var_dump($Usuari_Partida);
+                //var_dump($Partida_Enemigo);
                 array_push($rtn, $Partida_Enemigo);
             }
             $db->close();

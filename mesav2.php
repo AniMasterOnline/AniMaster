@@ -18,45 +18,37 @@
                     header('Location: login.php'); 
             }
         ?>
+        <?php
+            require_once(__DIR__.'/System/Classes/Usuari_Partida.php');
+            require_once(__DIR__.'/System/Classes/Partida.php');
+            $Usuari_Partida = new Usuari_Partida();
+            $Usuari_Partida = $Usuari_Partida->view_user($value['id_usuari']);
+            $Partida= new Partida();
+            $rtn = array();
+            foreach ($Usuari_Partida as $row) {
+                $var = $Partida->get_all($row->id_partida);
+                array_push($rtn, $var);
+            }
+            $json = json_encode( (array)$rtn );
+            echo ' <script>jsonPartida = '.$json.';</script>';
+        ?>
         <div id="contenidor-partida">
             <div id="panel-partida">
                 <h2 id="PartSel-title">Selecciona la teva partida!!</h2>
                 <div id="PartSel">
                     <select name="selpart" id="selpart" autofocus>
-                        <?php
-                        require_once(__DIR__.'/System/Classes/Usuari_Partida.php');
-                        require_once(__DIR__.'/System/Classes/Partida.php');
-                        $Usuari_Partida = new Usuari_Partida();
-                        $Taula_Usuari_Partida = $Usuari_Partida->view_user($value['id_usuari']);
-                        $cont = 0;
-                        foreach ($Taula_Usuari_Partida as $row) {
-                            $Partida = new Partida();
-                                echo '<option  name="'.$row->id_partida.'" value="'.$cont.'">'.$Partida->get_titol($row->id_partida).'</option>';
-                                $cont++;
-                        }
-                        ?>
+                        
                     </select>
                     <button id="selPartida">Jugar!</button>
-                    <?php
-                    $tup = $Usuari_Partida->view_user($value['id_usuari']);
-                    $Part= new Partida();
-                    $rtn = array();
-                    foreach ($tup as $row) {
-                        $var = $Part->get_all($row->id_partida);
-                        array_push($rtn, $var);
-                    }
-                    $json = json_encode( (array)$rtn );
-                    echo ' <script>jsonPartida = '.$json.';</script>';
-                    echo '';
-                    ?>
+                    
                 </div>
                 <div id="PartSel-llista">
-                    <input class="input-partida" id="id_usuari" value="<?php if ($rtn != null){ echo $value['id_usuari']; };?>" type="hidden" name="TempId_usuari">
-                    <input class="input-partida" id="id_partida" value="<?php if ($rtn != null){ echo $rtn[0]['id_partida']; };?>" type="hidden" name="TempId_partida">
-                    <input class="input-partida" id="titol" value="<?php if ($rtn != null){ echo $rtn[0]['titol']; };?>" type="hidden" name="TempTitol">
-                    <input class="input-partida" id="descripcio" value="<?php if ($rtn != null){ echo $rtn[0]['descripcio']; };?>" type="text" name="TempDescripcio">
-                    <input class="input-partida" id="any_partida" value="<?php if ($rtn != null){ echo $rtn[0]['any_partida']; };?>" type="number" name="TempAny_partida">
-                    <input class="input-partida" id="nivel_sobrenatural" value="<?php if ($rtn != null){ echo $rtn[0]['nivel_sobrenatural']; };?>" type="number" name="TempNivel_sobrenatural" >
+                    <input class="input-partida" id="id_usuari" value="" type="hidden" name="TempId_usuari">
+                    <input class="input-partida" id="id_partida" value="" type="hidden" name="TempId_partida">
+                    <input class="input-partida" id="titol" value="" type="hidden" name="TempTitol">
+                    <input class="input-partida" id="descripcio" value="" type="text" name="TempDescripcio">
+                    <input class="input-partida" id="any_partida" value="" type="number" name="TempAny_partida">
+                    <input class="input-partida" id="nivel_sobrenatural" value="" type="number" name="TempNivel_sobrenatural" >
                     <select id="disabled-joc" class="input-partida-bottom" name="TempJoc">
                         <option value="Anima" selected>Anima</option>
                         <option value="Test" >Test</option>

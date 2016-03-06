@@ -15,7 +15,6 @@ and open the template in the editor.
         <LINK REL=StyleSheet HREF="Public/css/contentStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/headerStyle.css" TYPE="text/css" MEDIA=screen>
         <LINK REL=StyleSheet HREF="Public/css/footerStyle.css" TYPE="text/css" MEDIA=screen>
-        <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="Public/jquery/jquery-1.12.0.min.js"></script>
         <script src="Public/jquery/jquery-ui.min.js"></script>
         <script src="Public/jquery/panel.js"></script>
@@ -204,7 +203,7 @@ and open the template in the editor.
                                                         echo'<div class="rTableCell">'.$Enemigo['turno'].'</div>';  
                                                         echo'<div class="rTableCell">'.$Enemigo['poderes'].'</div>';  
                                                         echo'<div class="rTableCell">&nbsp;</div>'; 
-                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarEnemigo.php"><input type="hidden" value="'.$Enemigo['id_enemigo'].'" name="TempDel"> <input value="Del" type="submit" Onclick="ConfirmDelete()"></form></div>';
+                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarEnemigo.php"><input type="hidden" value="'.$Enemigo['id_enemigo'].'" name="TempDel"> <input value="Del" type="submit"></form></div>';
                                                     echo'</div>';
                                                 }else{
                                                     echo'<div class="rTableRow-1">';
@@ -217,7 +216,7 @@ and open the template in the editor.
                                                         echo'<div class="rTableCell">'.$Enemigo['turno'].'</div>';  
                                                         echo'<div class="rTableCell">'.$Enemigo['poderes'].'</div>';  
                                                         echo'<div class="rTableCell">&nbsp;</div>'; 
-                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarEnemigo.php"><input type="hidden" value="'.$Enemigo['id_enemigo'].'" name="TempDel"> <input value="Del" type="submit" Onclick="ConfirmDelete()"></form></div>';
+                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarEnemigo.php"><input type="hidden" value="'.$Enemigo['id_enemigo'].'" name="TempDel"> <input value="Del" type="submit"></form></div>';
                                                     echo'</div>';
                                                 }
                                                 $i++;
@@ -257,7 +256,7 @@ and open the template in the editor.
                                                         echo'<div class="rTableCell">'.$Player['turno'].'</div>';  
                                                         echo'<div class="rTableCell">'.$Player['poderes'].'</div>';  
                                                         echo'<div class="rTableCell">&nbsp;</div>'; 
-                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarPlayer.php"><input type="hidden" value="'.$Player['id_player'].'" name="TempDel"> <input value="Del" type="submit" Onclick="ConfirmDelete()"></form></div>';
+                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarPlayer.php"><input type="hidden" value="'.$Player['id_player'].'" name="TempDel"> <input value="Del" type="submit"></form></div>';
                                                     echo'</div>';
                                                 }else{
                                                     echo'<div class="rTableRow-1">';
@@ -270,7 +269,7 @@ and open the template in the editor.
                                                         echo'<div class="rTableCell">'.$Player['turno'].'</div>';  
                                                         echo'<div class="rTableCell">'.$Player['poderes'].'</div>';  
                                                         echo'<div class="rTableCell">&nbsp;</div>'; 
-                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarPlayer.php"><input type="hidden" value="'.$Player['id_player'].'" name="TempDel"> <input value="Del" type="submit" Onclick="ConfirmDelete()"></form></div>';
+                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarPlayer.php"><input type="hidden" value="'.$Player['id_player'].'" name="TempDel"> <input value="Del" type="submit"></form></div>';
                                                     echo'</div>';
                                                 }
                                                 $i++;
@@ -298,14 +297,14 @@ and open the template in the editor.
                                                         echo'<div class="rTableCell">'.$Item['nom'].'</div>'; 
                                                         echo'<div class="rTableCell">'.$Item['descripcio'].'</div>';  
                                                         echo'<div class="rTableCell">&nbsp;</div>'; 
-                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarItem.php"><input type="hidden" value="'.$Item['id_item'].'" name="TempDel"> <input value="Del" type="submit" Onclick="ConfirmDelete()"></form></div>';
+                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarItem.php"><input type="hidden" value="'.$Item['id_item'].'" name="TempDel"> <input value="Del" type="submit"></form></div>';
                                                     echo'</div>';
                                                 }else{
                                                     echo'<div class="rTableRow-1">';
                                                         echo'<div class="rTableCell">'.$Item['nom'].'</div>'; 
                                                         echo'<div class="rTableCell">'.$Item['descripcio'].'</div>';  
                                                         echo'<div class="rTableCell">&nbsp;</div>'; 
-                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarItem.php"><input type="hidden" value="'.$Item['id_item'].'" name="TempDel"> <input value="Del" type="submit" Onclick="ConfirmDelete()"></form></div>';
+                                                        echo'<div class="rTableCell"><form style="background-color: rgba(0,0,0,0);" method="post" action="System/Protocols/eliminarItem.php"><input type="hidden" value="'.$Item['id_item'].'" name="TempDel"> <input value="Del" type="submit"></form></div>';
                                                     echo'</div>';
                                                 }
                                                 $i++;

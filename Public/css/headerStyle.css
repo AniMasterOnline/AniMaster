@@ -65,7 +65,7 @@
             min-width:250px;
         }
         .nav li .panel-ul{
-            right: -1px;
+            right: 0px;
         }
         .nav li .panel-ul .panel-zone{
             position:relative;
