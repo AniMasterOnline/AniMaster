@@ -48,7 +48,7 @@
                 </div>
                 <div class="content-zone-inici">
                     
-                    <ul><h1 class="title" ><span class='subrallat'>Instruccions a seguir...</span></h1>
+                    <ul><h1 class="title" >Instruccions a seguir...</h1>
                         <p class='top-p'>Amb 4 senzills passos et guiarem per poder crear la teva partida i gestionar els teus enemics, jugadors i items.</p>
                         <li><h2 class="subtitle">1. Registre</h2></li>
                         <p class="linia">Omplir el formulari de registre que tens a la dreta de la pàgina web amb les teves dades personals.</p><br>

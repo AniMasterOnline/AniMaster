@@ -12,6 +12,15 @@
         
     </head>
     <body>
+        <!-- Calculadora content box --> 
+            <div style="z-index:999;" class="calculatedices" id="windowdices" >
+                <p>Introdueix una base per a calcular la teva tirada</p>
+                <form>
+                    Base: <input type="number" id="base"/>
+                    <input class="submitdices" type="button" value="Envia" onclick="calculatedices()"/>
+                </form>
+                <p id="resultdices"></p>
+            </div>
         <!-- Header content box -->
         <?php include "Public/layouts/menu.php";?>
         <?php
@@ -19,6 +28,7 @@
                     header('Location: login.php'); 
             }
         ?>
+        
         <?php
             require_once(__DIR__.'/System/Classes/Usuari_Partida.php');
             require_once(__DIR__.'/System/Classes/Partida.php');
@@ -149,14 +159,6 @@
                 </center>
             </div>
             
-            <!-- Calculadora content box --> 
-            <div class="calculatedices" id="windowdices" >
-                <p>Introdueix una base per a calcular la teva tirada</p>
-                <form>
-                    Base: <input type="number" id="base"/>
-                    <input class="submitdices" type="button" value="Envia" onclick="calculatedices()"/>
-                </form>
-                <p id="resultdices"></p>
-            </div>
+            
     </body>
 </html>
