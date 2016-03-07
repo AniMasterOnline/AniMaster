@@ -104,6 +104,42 @@
                 display: none;
                 overflow: hidden;
             }
+			#accordion-devblog{
+                height: auto;
+            }
+            #accordion-devblog div{
+                margin-top: -2px;
+                background-color:rgba(33,33,33,0.8);
+                overflow: hidden;
+                color: whitesmoke;
+                font-family: monospace;
+                padding-left: 6px;
+                padding-top: 8px;
+                padding-bottom: 5px;
+                display: block;
+            }
+            #accordion-devblog div ul li{
+                margin-top: -2px;
+                overflow: hidden;
+                color: whitesmoke;
+                font-family: monospace;
+                padding-left: 6px;
+                padding-top: 8px;
+                padding-bottom: 5px;
+                display: block;
+            }
+            #accordion-devblog h3{
+                margin-top: 2px;
+                font-family: monospace;
+                background-color: #00AFED;
+                color: #222;
+                padding: 3px;
+                padding-left: 3px;
+                font-size: 15px;
+                outline: 0px;
+                margin-bottom: 2px;
+                cursor: default;
+            }
             #accordion{
                 height: 440px;
             }
@@ -243,6 +279,11 @@
         }
         .delbutton:hover{
             background-color: orangered;
+        }
+		.devblog-img{
+            height: 150px;
+            width: 100%;
+            overflow: hidden;
         }
     .title{
         font-family: monospace;

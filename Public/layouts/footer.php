@@ -14,7 +14,7 @@
     <a href="#" class='ocultar'><img src="Public/img/social01.png"></a>
     <a href="#" class='ocultar'><img src="Public/img/social02.png"></a>
     <a href="#" class='ocultar'><img src="Public/img/social03.png"></a>
-    <a href="#" class='ocultar'><img src="Public/img/social04.png"></a>
+    <a href="mapa-web.php" ><img class='footer-img' src="Public/img/map.png"></a>
     <a class="link" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Llicència de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
     </center>
 </div>

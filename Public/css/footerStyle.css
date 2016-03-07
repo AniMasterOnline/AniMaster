@@ -9,6 +9,19 @@
     font-size: 90%;
     margin-bottom: 3px;
     margin-left: 10%;
+    font-family: monospace;
+}
+.footer-img{
+    width: 30px;
+}
+.footer-other span{
+    font-family: monospace;
+}
+.footer-other center{
+    font-family: monospace;
+}
+.footer-other center a{
+    font-family: monospace;
 }
 
 
