@@ -70,7 +70,7 @@ $(document).ready(function(){
 function calculatedices(){
     var getbase = document.getElementById("base").value;
     if(getbase == ""){
-        document.getElementById("resultdices").innerHTML = "<br><p>No has ficat una base a la teva tirada!</p><p>Perfavor, fica-la</p>";
+        document.getElementById("resultdices").innerHTML = "<br><p>No has introduit una base a la teva tirada!</p><p>Si us plau, introdueix-la</p>";
     };
     var throwdices;
     var result;
@@ -82,7 +82,7 @@ function calculatedices(){
     if(base >= 200){                                            //En cas de tindre maestria
         if(throwdices <= 2){                                //Pifia
             result = Math.floor((Math.random() * 100) + 1);
-            document.getElementById("resultdices").innerHTML = "<br><p>La tirada ha resultat ser una pifia de <b>0"+throwdices+"</b> amb un resultat de <b>"+result+"</b></p>";
+            document.getElementById("resultdices").innerHTML = "<br><p>La tirada ha resultat ser una pífia de <b>0"+throwdices+"</b> amb un resultat de <b>"+result+"</b></p>";
         }else{                                              //Tirada normal
             result = throwdices;
             moreresults = "<p>"+throwdices;
@@ -99,7 +99,7 @@ function calculatedices(){
     }else if(getbase != ""){                                                      //En cas de no tindre maestria
         if(throwdices <= 3){                                //Pifia
             result = Math.floor((Math.random() * 100) + 1);
-            document.getElementById("resultdices").innerHTML = "<br><p>La tirada ha resultat ser una pifia de <b>0"+throwdices+"</b> amb un resultat de <b>"+result+"</b></p>";
+            document.getElementById("resultdices").innerHTML = "<br><p>La tirada ha resultat ser una pífia de <b>0"+throwdices+"</b> amb un resultat de <b>"+result+"</b></p>";
         }else{
             result = throwdices;
             moreresults = "<p>"+throwdices;
