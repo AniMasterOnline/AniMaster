@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Panel</title>
+        <title>Panell</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="favicon.ico">
@@ -43,7 +43,7 @@ and open the template in the editor.
             <div class="content-box-100">
                 <div class="content-title">
                     <?php
-                        echo "Panel de ".$value['user'];
+                        echo "Panell de ".$value['user'];
                     ?>
                 </div>
                 <div class="content-panel">
@@ -82,8 +82,8 @@ and open the template in the editor.
                             <h3>Crear una partida</h3>
                             <div>
                                 <form method="post" action="System/Protocols/registrarPartida.php">
-                                    <input class="input-partida" id="titol" placeholder="Titol *" value="" type="text" name="TempTitol" maxlength="32" required autofocus>
-                                    <input class="input-partida" id="descripcio" placeholder="Descripcio *" value="" type="text" name="TempDescripcio" maxlength="250" required>
+                                    <input class="input-partida" id="titol" placeholder="Títol *" value="" type="text" name="TempTitol" maxlength="32" required autofocus>
+                                    <input class="input-partida" id="descripcio" placeholder="Descripció *" value="" type="text" name="TempDescripcio" maxlength="250" required>
                                     <input class="input-partida" id="any_partida" placeholder="Any de la partida *" value="" type="number" name="TempAny_partida" required>
                                     <input class="input-partida" id="nivel_sobrenatural" placeholder="Nivell sobrenatural *" value="" type="number" name="TempNivel_sobrenatural" required>
                                     <input class="input-partida" id="id_usuari" placeholder="id_usuari *" value="<?php echo $value['id_usuari'];?>" type="hidden" name="TempId_usuari" required>
@@ -110,11 +110,11 @@ and open the template in the editor.
                                     </select>
                                     <input class="input-partida" placeholder="Nom *" type="text" name="TempNom" maxlength="32" required autofocus>
                                     <input class="input-partida" placeholder="Vida *" type="number" name="TempVida" required>
-                                    <input class="input-partida" placeholder="Habilidad de ataque *" type="number" name="TempAtaque" required>
-                                    <input class="input-partida" placeholder="Daño de arma *" type="number" name="TempArma" required>
-                                    <input class="input-partida" placeholder="Habilidad de defensa *" type="number" name="TempDefensa" required>
-                                    <input class="input-partida" placeholder="Defensa del armadura *" type="number" name="TempArmadura" required>
-                                    <input class="input-partida" placeholder="Turno *" type="number" name="TempTurno" required>
+                                    <input class="input-partida" placeholder="Habilitat d'atac *" type="number" name="TempAtaque" required>
+                                    <input class="input-partida" placeholder="Mal del arma *" type="number" name="TempArma" required>
+                                    <input class="input-partida" placeholder="Habilitat de defensa *" type="number" name="TempDefensa" required>
+                                    <input class="input-partida" placeholder="Defensa de l'armadura *" type="number" name="TempArmadura" required>
+                                    <input class="input-partida" placeholder="Torn *" type="number" name="TempTurno" required>
                                     <input class="input-partida" placeholder="Descripció dels poders" type="text" maxlength="200" name="TempPoderes">
                                     <input class="input-crea" id="logbutton" type="submit" value="Crea">
                                 </form>
@@ -136,11 +136,11 @@ and open the template in the editor.
                                     </select>
                                     <input class="input-partida" placeholder="Nom *" type="text" name="TempNom" maxlength="32" required autofocus>
                                     <input class="input-partida" placeholder="Vida *" type="number" name="TempVida" required>
-                                    <input class="input-partida" placeholder="Habilidad de ataque *" type="number" name="TempAtaque" required>
-                                    <input class="input-partida" placeholder="Daño de arma *" type="number" name="TempArma" required>
-                                    <input class="input-partida" placeholder="Habilidad de defensa *" type="number" name="TempDefensa" required>
-                                    <input class="input-partida" placeholder="Defensa del armadura *" type="number" name="TempArmadura" required>
-                                    <input class="input-partida" placeholder="Turno *" type="number" name="TempTurno" required>
+                                    <input class="input-partida" placeholder="Habilitat d'atac *" type="number" name="TempAtaque" required>
+                                    <input class="input-partida" placeholder="Mal del arma *" type="number" name="TempArma" required>
+                                    <input class="input-partida" placeholder="Habilitat de defensa *" type="number" name="TempDefensa" required>
+                                    <input class="input-partida" placeholder="Defensa del'armadura *" type="number" name="TempArmadura" required>
+                                    <input class="input-partida" placeholder="Torn *" type="number" name="TempTurno" required>
                                     <input class="input-partida" placeholder="Descripció dels poders" type="text" maxlength="200" name="TempPoderes">
                                     <input class="input-crea" id="logbutton" type="submit" value="Crea">
                                 </form>
@@ -161,7 +161,7 @@ and open the template in the editor.
                                         ?>
                                     </select>
                                     <input class="input-partida" placeholder="Nom *" type="text" name="TempNom"  required autofocus>
-                                    <input class="input-partida" placeholder="Descripcio *" type="text" name="TempDescripcio" maxlength="500" required>
+                                    <input class="input-partida" placeholder="Descripció *" type="text" name="TempDescripcio" maxlength="500" required>
                                     <input class="input-crea" id="logbutton" type="submit" value="Crea">
                                 </form>
                             </div>
@@ -184,12 +184,12 @@ and open the template in the editor.
                                             echo'<div class="rTableRow">'; 
                                                 echo'<div class="rTableHead">Nom</div>'; 
                                                 echo'<div class="rTableHead">Vida</div>'; 
-                                                echo'<div class="rTableHead">Ataque</div>'; 
+                                                echo'<div class="rTableHead">Atac</div>'; 
                                                 echo'<div class="rTableHead">Arma</div>'; 
                                                 echo'<div class="rTableHead">Defensa</div>';  
                                                 echo'<div class="rTableHead">Armadura</div>'; 
-                                                echo'<div class="rTableHead">Turno</div>';  
-                                                echo'<div class="rTableHead">Poderes</div>';  
+                                                echo'<div class="rTableHead">Torn</div>';  
+                                                echo'<div class="rTableHead">Poders</div>';  
                                                 echo'<div class="rTableHead">&nbsp;</div>'; 
                                                 echo'<div class="rTableHead">&nbsp;</div>'; 
                                             echo'</div>';
@@ -237,12 +237,12 @@ and open the template in the editor.
                                             echo'<div class="rTableRow">'; 
                                                 echo'<div class="rTableHead">Nom</div>'; 
                                                 echo'<div class="rTableHead">Vida</div>'; 
-                                                echo'<div class="rTableHead">Ataque</div>'; 
+                                                echo'<div class="rTableHead">Atac</div>'; 
                                                 echo'<div class="rTableHead">Arma</div>'; 
                                                 echo'<div class="rTableHead">Defensa</div>';  
                                                 echo'<div class="rTableHead">Armadura</div>'; 
-                                                echo'<div class="rTableHead">Turno</div>';  
-                                                echo'<div class="rTableHead">Poderes</div>';  
+                                                echo'<div class="rTableHead">Torn</div>';  
+                                                echo'<div class="rTableHead">Poders</div>';  
                                                 echo'<div class="rTableHead">&nbsp;</div>'; 
                                                 echo'<div class="rTableHead">&nbsp;</div>'; 
                                             echo'</div>';

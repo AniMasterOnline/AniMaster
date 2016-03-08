@@ -9,9 +9,9 @@
         echo'<ul class="nav">';
             if (!strpos($self,"mesa")) { 
                 if (strpos($self,"index")) { 
-                    echo'<li><a id="active" href="index.php">Inicio</a> <span class="flecha">&#9660</span></li>';
+                    echo'<li><a id="active" href="index.php">Inici</a> <span class="flecha">&#9660</span></li>';
                 }else{
-                    echo'<li><a href="index.php">Inicio</a> <span class="flecha">&#9660</span></li>';
+                    echo'<li><a href="index.php">Inici</a> <span class="flecha">&#9660</span></li>';
                 }
                 if (strpos($self,"media")) { 
                     echo'<li class="ocultar"><a id="active" href="#Media">Media <span class="flecha">&#9660</span></a></li>';
@@ -19,9 +19,9 @@
                     echo'<li class="ocultar"><a href="#Media" >Media <span class="flecha">&#9660</span></a> </li>';
                 }
                 if (strpos($self,"novedades")) { 
-                    echo'<li><a id="active" href="devblog.php">Novedades <span class="flecha">&#9660</span></a></li>';
+                    echo'<li><a id="active" href="devblog.php">Novetats<span class="flecha">&#9660</span></a></li>';
                 }else{
-                    echo'<li><a href="devblog.php">Novedades <span class="flecha">&#9660</span></a></li>';
+                    echo'<li><a href="devblog.php">Novetats <span class="flecha">&#9660</span></a></li>';
                 }
             }
             session_start();
@@ -47,7 +47,7 @@
                                         echo'<img src="Public/img/jugador/login.png">';
                                     echo'</div>';
                                     echo'<div class="panel-links">';
-                                        echo'<a href="panel.php"> Panel de ';
+                                        echo'<a href="panel.php"> Panell de ';
                                         echo $value['user'];
                                         echo'</a>';
                                         echo'<a href="logout.php">Sortir</a>';
@@ -65,7 +65,7 @@
                                         echo'<img src="Public/img/jugador/login.png">';
                                     echo'</div>';
                                     echo'<div class="panel-links">';
-                                        echo'<a href="panel.php"> Panel de ';
+                                        echo'<a href="panel.php"> Panell de ';
                                         echo $value['user'];
                                         echo'</a>';
                                         echo'<a href="logout.php">Sortir</a>';
@@ -75,9 +75,9 @@
                         echo'</li>';
                     }
                     if (strpos($self,"mesa")) { 
-                        echo'<li><a id="active" href="mesav2.php">Mi Mesa <span class="flecha">&#9660</span></a></li>';
+                        echo'<li><a id="active" href="mesav2.php">Taulell <span class="flecha">&#9660</span></a></li>';
                     }else{
-                        echo'<li><a href="mesav2.php">Mi Mesa <span class="flecha">&#9660</span></a></li>';
+                        echo'<li><a href="mesav2.php">Taulell <span class="flecha">&#9660</span></a></li>';
                     }
             }
         echo'</ul>';

@@ -7,34 +7,34 @@
         </TR>
         <TR>
             <TD>
-            <input class="input" id="pass" placeholder="Contraseña *" value="" type="password" name="TempPassword" maxlength="16" required>
+            <input class="input" id="pass" placeholder="Contrasenya *" value="" type="password" name="TempPassword" maxlength="16" required>
             </TD>
         </TR>
         <TR>
             <TD>
-            <input class="input" id="pass2" placeholder="Repeteix Contraseña *" value="" type="password" name="TempRepeatPassword" maxlength="16" required>
+            <input class="input" id="pass2" placeholder="Repeteix Contrasenya *" value="" type="password" name="TempRepeatPassword" maxlength="16" required>
             </TD>
         </TR>
         <TR>
             <TD>
-            <input class="input" id="email" placeholder="email *" value="" type="text" name="TempEmail" maxlength="30" required>
+            <input class="input" id="email" placeholder="Correu Electrònic *" value="" type="text" name="TempEmail" maxlength="30" required>
             </TD>
         </TR>
         <TR>
             <TD>
-            <input class="input" id="phone" placeholder="Telefon" value="" type="number" name="TempTelefon" maxlength="9">
+            <input class="input" id="phone" placeholder="Telèfon" value="" type="number" name="TempTelefon" maxlength="9">
             </TD>
         </TR>
         <TR>
             <TD>
-            <input class="input" id="logbutton" type="submit" value="Registrat">
+            <input class="input" id="logbutton" type="submit" value="Registra't">
             </TD>
         </TR>
         <TR>
             <TD>
-            <p>Al registrarte, aceptes les <a class="link" href="#">Condicions del Servei</a> i la <a class="link" href="#">Politica de Privacitat</a>, 
-            incluint el <a class="link" href="#">Us de Cookies</a>. Altres podran trobarte per correu electronic 
-            o per numero de telefon quan sigui proporcionat.</p>
+            <p>Al registrar-te, acceptes les <a class="link" href="#">Condicions del Servei</a> i la <a class="link" href="#">Política de Privacitat</a>, 
+            incluïnt el <a class="link" href="#">Ús de Cookies</a>.<!-- Altres podran trobar-te per correu electònic 
+            o per número de telèfon quan sigui proporcionat.--></p>
             </TD>
         </TR>
     </table>

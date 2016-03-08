@@ -41,7 +41,7 @@
                             <TR>
                                 <TD class="chekbox, ocultar" >
                                     <input type="checkbox" name="autologin" value="1">
-                                    <label for="checkbox_id">Recordam</label>
+                                    <label for="checkbox_id">Recorda'm</label>
                                 </TD>
                             </TR>
                         </table>
@@ -53,8 +53,8 @@
         
         <!-- Footer content box -->
         <div class="footer-box">
-            ¿Ets nou a <span>AniMaster Online</span>? <a class="link" href="signup.php">Registrat ara »</a><br>
-            ¿Necesites ajuda? <a class="link" href="mailto:adminmaster@Animaster.com">Per favor contacta amb el Soport de AniMasterOnline</a><br>
+            Ets nou a <span>AniMaster Online</span>? <a class="link" href="signup.php">Registra't ara »</a><br>
+            Necessites ajuda? <a class="link" href="mailto:adminmaster@Animaster.com">Contacta amb el Suport de AniMasterOnline</a><br>
         </div>
         
     </body>

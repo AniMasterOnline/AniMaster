@@ -13,7 +13,7 @@
     }
 </style>
 <?php
-$opc = true;
+$opc = false;
 if($opc){
     if (!ini_get('display_errors')) {
         ini_set('display_errors', '1');

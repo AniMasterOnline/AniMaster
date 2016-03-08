@@ -60,7 +60,7 @@ $(document).ready(function(){
                                 //console.log($value, jsonPartida[$value].id_partida, jsonPartida[$value].titol);
                             }
                         }else if(Object.keys(jsonEnemigo).length == 0){
-                            alert("En el panel pots crear i gestionar els teus enemics");
+                            alert("En el panell pots crear i gestionar els teus Enemics");
                         }
                 }
         });
@@ -81,7 +81,7 @@ $(document).ready(function(){
                                 //console.log($value, jsonPartida[$value].id_partida, jsonPartida[$value].titol);
                             }
                         }else if(Object.keys(jsonItem).length == 0){
-                            alert("En el panel pots crear i gestionar els teus items");
+                            alert("En el panell pots crear i gestionar els teus Items");
                         }
                 }
         });
@@ -102,7 +102,7 @@ $(document).ready(function(){
                                 //console.log($value, jsonPartida[$value].id_partida, jsonPartida[$value].titol);
                             }
                         }else if(Object.keys(jsonPlayer).length == 0){
-                            alert("En el panel pots crear i gestionar els teus Npc's");
+                            alert("En el panell pots crear i gestionar els teus Npc's");
                         }
                 }
         });

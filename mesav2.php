@@ -35,7 +35,7 @@
         ?>
         <div id="contenidor-partida">
             <div id="panel-partida">
-                <h2 id="PartSel-title">Selecciona la teva partida!!</h2>
+                <h2 id="PartSel-title">Selecciona la teva partida!</h2>
                 <div id="PartSel">
                     <select name="selpart" id="selpart" autofocus>
                         
@@ -87,17 +87,20 @@
                 <div class="g-hangout" data-render="createhangout" ></div>
             </div>
             <div class="chat">
-                <img src="Public/img/slide1.jpg" style="width: 100%;height: 100%"/>
+                <img src="Public/img/mesa/map.jpg" style="width: 100%;height: 100%"/>
             </div>
             <div class="musica">
                 <div class="clip">
                     <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
                 </div>
                 <div class="clip">
-                    <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
+                    <audio controls loop><source src="Public/musica/Kai_Engel_-_04_-_River.mp3" type="audio/mpeg"></audio>
                 </div>
                 <div class="clip">
-                    <audio controls loop><source src="Public/musica/classica.mp3" type="audio/mpeg"></audio>
+                    <audio controls loop><source src="Public/musica/Simon_Mathewson_-_03_-_Metallic_Attack.mp3" type="audio/mpeg"></audio>
+                </div>
+                <div class="clip">
+                    <audio controls loop><source src="Public/musica/BoxCat_Games_-_10_-_Epic_Song.mp3" type="audio/mpeg"></audio>
                 </div>
             </div>
         </div>
@@ -107,7 +110,7 @@
                 <h2 class="fitxa-title">Enemics</h2>
                 <div class="llista">
                     <select id="selEnemigo" class="selfit">
-                        //Aqui se cargan los Enemigos
+                        //Aqui es carreguen els Enemics
                     </select>
                     <button id="add-monster" class="selfit-button">+</button>
                 </div>
@@ -119,7 +122,7 @@
                 <h2 class="fitxa-title">Npc's</h2>
                 <div class="llista">
                     <select id="selPlayer" class="selfit">
-                        //Aqui se cargan los Players
+                        //Aqui es carreguen els Players
                     </select>
                     <button id="add-player" class="selfit-button">+</button>
                 </div>
@@ -131,7 +134,7 @@
                 <h2 class="fitxa-title">Items</h2>
                 <div class="llista">
                     <select id="selItem" class="selfit">
-                        //Aqui se cargan los PItems
+                        //Aqui es carreguen els Items
                     </select>
                     <button id="add-item" class="selfit-button">+</button>
                 </div>
@@ -148,7 +151,7 @@
             
             <!-- Calculadora content box --> 
             <div class="calculatedices" id="windowdices" >
-                <p>Fica una base per a calcular la teva tirada</p>
+                <p>Introdueix una base per a calcular la teva tirada</p>
                 <form>
                     Base: <input type="number" id="base"/>
                     <input class="submitdices" type="button" value="Envia" onclick="calculatedices()"/>
