@@ -6,6 +6,7 @@ $(document).ready(function(){
     $("#partida0").addClass("button-active");
     
     $( "#accordion" ).accordion();
+    $( "#accordion-devblog" ).accordion();
     
 });
 function mostrar(btp){
