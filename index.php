@@ -58,8 +58,17 @@
                         <p class="linia">Un cop logejats, ens trovarem en el nostre panell des d'on podrem crear o eliminar Enemics, Jugadors i Items. Però abans haurem de crear una partida.</p>
                         </li><h2 class="subtitle">4. A Dirigir!</h2>
                         <p class="linia">Fem clic a Taulell, en el menú superior. Seleccionem la partida que desitgem administrar.</p>
-                        <li><h3 class="subsubtitle">Enemics / NPC's / Items</h3>
+                        <li><h3 class="subsubtitle">4.1 Enemics / NPC's / Items</h3>
                         <p class="linia">Seleccionem l'enemic que volem mostrar. Si desitgem eliminar-lo de la pantalla, fem clic al botó de sota amb el signe ( - ).</p></li>
+                        <li><h3 class="subsubtitle">4.2 Movilitat</h3>
+                        <p class="linia">Seleccionem la icona del ala, per poder moure dintre de la pàgina web les tres columnes que tenim de enemics, npc's i items.</p></li>
+                        <li><h3 class="subsubtitle">4.3 Calculadora</h3>
+                        <p class="linia">Seleccionem la icona del dau roig per poder introduir la base de les habilitats i tirar automàticament els daus sumant el resultat.</p></li>
+                        <li><h3 class="subsubtitle">4.4 Hangout</h3>
+                        <p class="linia">Si cliques en el botó de la dreta amb les 3 ratlles, s'obirà un menú a la dreta. Si volem dur a terme una partida amb els nostres amics podem trucar-los des de l'aplicació de Hangout fent clic a la icona de Play.</p></li>
+                        <li><h3 class="subsubtitle">4.5 Música</h3>
+                        <p class="linia">Si desitjem ambientar les nostres partides, podem fer clic a sobre les músiques predefinides a sota del mapa d'ambientació.</p></li>
+                    
                     </ul>
                     <br> <br>
                 </div>
